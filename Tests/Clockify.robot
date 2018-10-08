@@ -30,3 +30,7 @@ Test case 5 Add Time Using Timer
 
 Test case 6 Delete Time Entry
       Clockify_App.Delete Time Entry
+
+
+Test case 7 Create Project
+      Clockify_App.Create Project
