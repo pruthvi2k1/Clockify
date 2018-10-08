@@ -15,6 +15,11 @@ Logout
     LandingPage.Login
     TimeTrackerPage.Logout
 
+Create Project
+    LandingPage.Login
+    TimeTrackerPage.Create Project
+
+
 
 Add Time Manually In Future
     LandingPage.Login

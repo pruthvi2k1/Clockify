@@ -29,8 +29,22 @@ ${Log Out Link}=  Log out
 
 ${Previous Month Button}=  xpath=//th[@class="prev available"]
 
+${PROJECTS Element}=  xpath=//li/a/span[contains(text(),'projects')]
+${CREATE NEW PROJECT BUTTON}=  xpath=//button[@class="button-create-new"]
+${project name text box}=  xpath=//input[@placeholder="Project name..."]
+${project name element}=  xpath=//td[@title="sample project32"]
 
 *** keywords ***
+
+
+Create Project
+    wait until page contains element  ${PROJECTS Element}
+    click element  ${PROJECTS Element}
+    click button  ${CREATE NEW PROJECT BUTTON}
+    input text  ${project name text box}  sample project32
+    click button  CREATE
+    page should contain element  ${project name element}
+
 
 
 Add Time Manually In Future
