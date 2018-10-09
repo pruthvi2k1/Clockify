@@ -19,7 +19,11 @@ Create Project
     LandingPage.Login
     TimeTrackerPage.Create Project
 
-
+Delete Project
+    LandingPage.Login
+    #Creating a project just to make sure there is atleast a project to delete
+    TimeTrackerPage.Create Project
+    TimeTrackerPage.Delete Project
 
 Add Time Manually In Future
     LandingPage.Login

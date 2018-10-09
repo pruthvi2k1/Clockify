@@ -33,7 +33,7 @@ ${PROJECTS Element}=  xpath=//li/a/span[contains(text(),'projects')]
 ${CREATE NEW PROJECT BUTTON}=  xpath=//button[@class="button-create-new"]
 ${project name text box}=  xpath=//input[@placeholder="Project name..."]
 ${project name element}=  xpath=//td[@title="sample project32"]
-
+${Dots Icon In Projects Page}=  xpath=//table/tbody/tr[1]/td[1]/section/i[@class="icon--dots"]
 *** keywords ***
 
 
@@ -45,7 +45,18 @@ Create Project
     click button  CREATE
     page should contain element  ${project name element}
 
+Delete Project
 
+    Reload Page
+    wait until page contains element  ${PROJECTS Element}
+    click element  ${PROJECTS Element}
+    click element  ${Dots Icon In Projects Page}
+    wait until page contains  Delete
+    click link  Delete
+    click button  YES
+    Reload Page
+    wait until page contains element  ${PROJECTS Element}
+    page should not contain  sample project32
 
 Add Time Manually In Future
 
