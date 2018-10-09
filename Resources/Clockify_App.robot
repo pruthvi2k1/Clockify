@@ -77,3 +77,7 @@ Delete Tags
     TimeTrackerPage.Create Tags
     # Deletes always the first found Tag in the system from the top
     TimeTrackerPage.Delete Tags
+
+Add Team Member
+    LandingPage.Login
+    TimeTrackerPage.Add Team Member

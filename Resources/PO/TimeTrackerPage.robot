@@ -55,6 +55,10 @@ ${Tag ADD Button}=  xpath=//span[contains(text(),'Add')]
 
 ${Delete Tag Button}=  xpath=//a[@class="buttons-workspaces--cross"]
 
+${TEAM Element}=  xpath=//a/span[contains(text(),'team')]
+${TEAM Member name text box}=  xpath=//input[@placeholder="Add new members by email address..."]
+${TEAM Member ADD Button}=  xpath=//button[@type="button"]
+
 *** keywords ***
 
 Create Client
@@ -207,7 +211,7 @@ Delete Work Space
 Create Tags
     wait until page contains element  ${TAGS Element}
     click element  ${TAGS Element}
-    wait until page contains element   xpath=//input[@placeholder="New tag name..."]
+    wait until page contains element   ${Tag name text box}
     input text  ${Tag name text box}  tag55
     click element  ${Tag ADD Button}
     page should contain  tag55
@@ -220,6 +224,18 @@ Delete Tags
     click button  YES
     wait until page contains  Tag deleted
     page should contain  Tag deleted
+
+Add Team Member
+    wait until page contains element  ${TEAM Element}
+    click element  ${TEAM Element}
+    wait until page contains element  ${TEAM Member name text box}
+    input text  ${TEAM Member name text box}  newmember7@newmember7.com
+    click element  ${TEAM Member ADD Button}
+    wait until page contains  Users invited
+    page should contain  Users invited
+    sleep  5s
+
+
 Logout
     wait until page contains element  ${User Name Element}
     mouse over  ${User Name Element}
