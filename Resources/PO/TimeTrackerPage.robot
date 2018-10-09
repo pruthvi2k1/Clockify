@@ -39,7 +39,7 @@ ${CLIENTS Element}=  xpath=//a/span[contains(text(),'clients')]
 ${client name text box}=  xpath=//input[@placeholder="New Client name..."]
 ${Client ADD Button}=  xpath=//span[contains(text(),'Add')]
 
-${Delete Client Button}  xpath=//a[@class="buttons-workspaces--cross"]
+${Delete Client Button}=  xpath=//a[@class="buttons-workspaces--cross"]
 
 
 ${WORKSPACES Element}=  xpath=//li/a/span[contains(text(),'workspaces')]
@@ -53,6 +53,7 @@ ${TAGS Element}=  xpath=//a/span[contains(text(),'tags')]
 ${Tag name text box}=  xpath=//input[@placeholder="New tag name..."]
 ${Tag ADD Button}=  xpath=//span[contains(text(),'Add')]
 
+${Delete Tag Button}=  xpath=//a[@class="buttons-workspaces--cross"]
 
 *** keywords ***
 
@@ -210,8 +211,15 @@ Create Tags
     input text  ${Tag name text box}  tag55
     click element  ${Tag ADD Button}
     page should contain  tag55
-    
 
+Delete Tags
+    wait until page contains element  ${TAGS Element}
+    click element  ${TAGS Element}
+    wait until page contains element  ${Delete Tag Button}
+    click element  ${Delete Tag Button}
+    click button  YES
+    wait until page contains  Tag deleted
+    page should contain  Tag deleted
 Logout
     wait until page contains element  ${User Name Element}
     mouse over  ${User Name Element}

@@ -70,3 +70,10 @@ Delete Work Space
 Create Tags
     LandingPage.Login
     TimeTrackerPage.Create Tags
+
+Delete Tags
+    LandingPage.Login
+    # Creating a Tag just to make sure that there is atleast one Tag to delete
+    TimeTrackerPage.Create Tags
+    # Deletes always the first found Tag in the system from the top
+    TimeTrackerPage.Delete Tags

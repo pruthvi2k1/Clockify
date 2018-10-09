@@ -49,5 +49,8 @@ Test case 12 Delete Work Space
       Clockify_App.Delete Work Space
 
 Test case 13 Create Tags
-      [Tags]  current
       Clockify_App.Create Tags
+
+Test case 14 Delete Tags
+      [Tags]  current
+      Clockify_App.Delete Tags
