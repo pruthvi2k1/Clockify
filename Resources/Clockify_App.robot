@@ -66,3 +66,7 @@ Delete Work Space
     TimeTrackerPage.Create Work Space
     # Deletes always the first found workspace in the system from the top
     TimeTrackerPage.Delete Work Space
+
+Create Tags
+    LandingPage.Login
+    TimeTrackerPage.Create Tags

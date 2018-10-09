@@ -49,6 +49,11 @@ ${WORKSPACE NAME text box}=  xpath=//create-new-workspace/div/div/div[2]/div/inp
 ${DELETE WORKSPACE BUTTON}=  xpath=//span[@class="item--leave-workspace"]
 ${Check Box}=  xpath=//input[@id="checkbox"]
 
+${TAGS Element}=  xpath=//a/span[contains(text(),'tags')]
+${Tag name text box}=  xpath=//input[@placeholder="New tag name..."]
+${Tag ADD Button}=  xpath=//span[contains(text(),'Add')]
+
+
 *** keywords ***
 
 Create Client
@@ -197,6 +202,15 @@ Delete Work Space
     click button  LEAVE
     Wait Until Page Does Not Contain  workspace55
     page should not contain  workspace55
+
+Create Tags
+    wait until page contains element  ${TAGS Element}
+    click element  ${TAGS Element}
+    wait until page contains element   xpath=//input[@placeholder="New tag name..."]
+    input text  ${Tag name text box}  tag55
+    click element  ${Tag ADD Button}
+    page should contain  tag55
+    
 
 Logout
     wait until page contains element  ${User Name Element}
