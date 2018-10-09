@@ -56,3 +56,13 @@ Delete Time Entry
     # Deletes always the first found record in the system from the top
     TimeTrackerPage.Delete Time Entry
 
+Create Work Space
+    LandingPage.Login
+    TimeTrackerPage.Create Work Space
+
+Delete Work Space
+    LandingPage.Login
+    # Creating a workspace just to make sure that there is atleast one workspace to delete
+    TimeTrackerPage.Create Work Space
+    # Deletes always the first found workspace in the system from the top
+    TimeTrackerPage.Delete Work Space

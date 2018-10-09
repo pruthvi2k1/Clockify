@@ -41,6 +41,14 @@ ${Client ADD Button}=  xpath=//span[contains(text(),'Add')]
 
 ${Delete Client Button}  xpath=//a[@class="buttons-workspaces--cross"]
 
+
+${WORKSPACES Element}=  xpath=//li/a/span[contains(text(),'workspaces')]
+${CREATE NEW WORKSPACE BUTTON}=  xpath=//a[@class="workspace__button-create-new"]
+${WORKSPACE NAME text box}=  xpath=//create-new-workspace/div/div/div[2]/div/input
+
+${DELETE WORKSPACE BUTTON}=  xpath=//span[@class="item--leave-workspace"]
+${Check Box}=  xpath=//input[@id="checkbox"]
+
 *** keywords ***
 
 Create Client
@@ -165,6 +173,30 @@ Delete Time Entry
     click button  YES
     page should contain  Time entry deleted
 
+Create Work Space
+
+    wait until page contains element  ${WORKSPACES Element}
+    click element  ${WORKSPACES Element}
+    wait until page contains element  ${CREATE NEW WORKSPACE BUTTON}
+    click element  ${CREATE NEW WORKSPACE BUTTON}
+    wait until page contains element  ${WORKSPACE NAME text box}
+    input text  ${WORKSPACE NAME text box}  workspace55
+    click button  Continue
+    wait until page contains  Create
+    click button  Create
+    page should contain  workspace55
+
+Delete Work Space
+    wait until page contains element  ${WORKSPACES Element}
+    click element  ${WORKSPACES Element}
+    wait until page contains element  ${DELETE WORKSPACE BUTTON}
+    Wait Until Element Is Visible  ${DELETE WORKSPACE BUTTON}
+    click element  ${DELETE WORKSPACE BUTTON}
+    Select Checkbox  ${Check Box}
+    wait until page contains  LEAVE
+    click button  LEAVE
+    Wait Until Page Does Not Contain  workspace55
+    page should not contain  workspace55
 
 Logout
     wait until page contains element  ${User Name Element}

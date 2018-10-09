@@ -22,7 +22,7 @@ Test case 3 Create Client
       Clockify_App.Create Client
 
 Test case 4 Delete Client
-      [Tags]  current
+
       Clockify_App.Delete Client
 
 Test case 5 Create Project
@@ -45,3 +45,9 @@ Test case 9 Add Time Using Timer
 Test case 10 Delete Time Entry
       Clockify_App.Delete Time Entry
 
+Test case 11 Create Work Space
+      Clockify_App.Create Work Space
+
+Test case 12 Delete Work Space
+      [Tags]  current
+      Clockify_App.Delete Work Space
