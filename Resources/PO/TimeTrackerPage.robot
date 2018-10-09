@@ -34,7 +34,31 @@ ${CREATE NEW PROJECT BUTTON}=  xpath=//button[@class="button-create-new"]
 ${project name text box}=  xpath=//input[@placeholder="Project name..."]
 ${project name element}=  xpath=//td[@title="sample project32"]
 ${Dots Icon In Projects Page}=  xpath=//table/tbody/tr[1]/td[1]/section/i[@class="icon--dots"]
+
+${CLIENTS Element}=  xpath=//a/span[contains(text(),'clients')]
+${client name text box}=  xpath=//input[@placeholder="New Client name..."]
+${Client ADD Button}=  xpath=//span[contains(text(),'Add')]
+
+${Delete Client Button}  xpath=//a[@class="buttons-workspaces--cross"]
+
 *** keywords ***
+
+Create Client
+    wait until page contains element  ${CLIENTS Element}
+    click element  ${CLIENTS Element}
+    wait until page contains element  ${client name text box}
+    input text  ${client name text box}  client55
+    click element  ${Client ADD Button}
+    page should contain  client55
+
+Delete Client
+    wait until page contains element  ${CLIENTS Element}
+    click element  ${CLIENTS Element}
+    wait until page contains element  ${Delete Client Button}
+    click element  ${Delete Client Button}
+    click button  YES
+    wait until page contains  Client deleted
+    page should contain  Client deleted
 
 
 Create Project

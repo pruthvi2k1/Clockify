@@ -15,6 +15,16 @@ Logout
     LandingPage.Login
     TimeTrackerPage.Logout
 
+Create Client
+    LandingPage.Login
+    TimeTrackerPage.Create Client
+
+Delete Client
+    LandingPage.Login
+    #Creating a client just to make sure there is atleast a client to delete
+    TimeTrackerPage.Create Client
+    TimeTrackerPage.Delete Client
+
 Create Project
     LandingPage.Login
     TimeTrackerPage.Create Project
