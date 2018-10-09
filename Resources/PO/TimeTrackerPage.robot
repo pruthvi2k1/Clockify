@@ -128,6 +128,7 @@ Add Time Using Timer
       click button  ${Timer Mode Button}
       input text  ${Description Box}  Final Testing Using Timer
       click button  ${Stop Watchh START Button}
+      #Below sleep statement is needed to to enter the time in to the system
       sleep  5s
       click button  ${Stop Watchh END Button}
       Page should contain element  ${Description Element3}
