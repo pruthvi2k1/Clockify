@@ -61,5 +61,4 @@ Test case 16 Report Checking
       Clockify_App.Report Checking
 
 Test case 17 Dashboard Checking
-      [Tags]  current
       Clockify_App.Dashboard Checking
