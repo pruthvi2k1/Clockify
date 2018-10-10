@@ -81,3 +81,7 @@ Delete Tags
 Add Team Member
     LandingPage.Login
     TimeTrackerPage.Add Team Member
+
+Report Checking
+    LandingPage.Login
+    TimeTrackerPage.Report Checking

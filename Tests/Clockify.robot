@@ -54,6 +54,9 @@ Test case 13 Create Tags
 Test case 14 Delete Tags
       Clockify_App.Delete Tags
 
-Test case 14 Add Team Member
-      [Tags]  current
+Test case 15 Add Team Member
       Clockify_App.Add Team Member
+
+Test case 16 Report Checking
+      [Tags]  current
+      Clockify_App.Report Checking

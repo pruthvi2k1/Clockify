@@ -59,6 +59,8 @@ ${TEAM Element}=  xpath=//a/span[contains(text(),'team')]
 ${TEAM Member name text box}=  xpath=//input[@placeholder="Add new members by email address..."]
 ${TEAM Member ADD Button}=  xpath=//button[@type="button"]
 
+
+${REPORTS Element}=  xpath=//a/span[contains(text(),'reports')]
 *** keywords ***
 
 Create Client
@@ -234,6 +236,13 @@ Add Team Member
     wait until page contains  Users invited
     page should contain  Users invited
     sleep  5s
+
+
+Report Checking
+    wait until page contains element  ${REPORTS Element}
+    click element  ${REPORTS Element}
+    wait until page contains  Summary report
+    page should contain  Summary report
 
 
 Logout
