@@ -85,3 +85,7 @@ Add Team Member
 Report Checking
     LandingPage.Login
     TimeTrackerPage.Report Checking
+
+Dashboard Checking
+    LandingPage.Login
+    TimeTrackerPage.Dashboard Checking

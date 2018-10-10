@@ -244,6 +244,11 @@ Report Checking
     wait until page contains  Summary report
     page should contain  Summary report
 
+Dashboard Checking
+    wait until page contains element  xpath=//a/span[contains(text(),'dashboard')]
+    click element  xpath=//a/span[contains(text(),'dashboard')]
+    wait until page contains  Dashboard
+    page should contain  Dashboard
 
 Logout
     wait until page contains element  ${User Name Element}
