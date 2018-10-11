@@ -13,11 +13,11 @@ Suite Teardown  End web test
 ${BROWSER} =  firefox
 ${URL} =  https://clockify.me/login
 
-${NEW_CLIENT_NAME} =  stupid client
-${NEW_PROJECT_NAME} =  stupid project
-${NEW_WORKSPACE_NAME} =  stupid workspace
-${NEW_TAG_NAME} =  stupid tag
-${NEW_TEAM_MEMBER_NAME} =  stupid@stupid.com
+${NEW_CLIENT_NAME} =  some client
+${NEW_PROJECT_NAME} =  some project
+${NEW_WORKSPACE_NAME} =  some workspace
+${NEW_TAG_NAME} =  some tag
+${NEW_TEAM_MEMBER_NAME} =  some@some.com
 ${TASK_DESCRIPTION_FOR_HOUR_REPORTING_IN_FUTURE} =  Final Testing on oct 16th 2022
 ${TASK_DESCRIPTION_FOR_HOUR_REPORTING_IN_PAST} =  Final Testing on oct 16th 2016
 ${TASK_DESCRIPTION_FOR_HOUR_REPORTING_USING_TIMER} =  Final Testing Using Timer
