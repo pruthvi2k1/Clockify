@@ -6,6 +6,7 @@ Resource  ../Resources/Common.robot
 Test Setup  Begin web test
 Test Teardown  End web test
 
+
 *** Variables ***
 ${BROWSER} =  firefox
 ${URL} =  https://clockify.me/login

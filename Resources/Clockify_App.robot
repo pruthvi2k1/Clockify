@@ -11,80 +11,109 @@ Login
     LandingPage.Login
 
 Logout
-    LandingPage.Login
     TimeTrackerPage.Logout
 
 Create Client
-    LandingPage.Login
-    TimeTrackerPage.Create Client
+    [Arguments]  ${NEW_CLIENT_NAME}
+    TimeTrackerPage.Create Client  ${NEW_CLIENT_NAME}
 
 Delete Client
-    LandingPage.Login
+    [Arguments]  ${NEW_CLIENT_NAME}
     #Creating a client just to make sure there is atleast a client to delete
-    TimeTrackerPage.Create Client
-    TimeTrackerPage.Delete Client
+    TimeTrackerPage.Create Client  ${NEW_CLIENT_NAME}
+    # Below function deletes first client it sees
+    TimeTrackerPage.Delete Client  ${NEW_CLIENT_NAME}
 
 Create Project
-    LandingPage.Login
-    TimeTrackerPage.Create Project
+    [Arguments]  ${NEW_PROJECT_NAME}
+    TimeTrackerPage.Create Project  ${NEW_PROJECT_NAME}
 
 Delete Project
-    LandingPage.Login
+    [Arguments]  ${NEW_PROJECT_NAME}
     #Creating a project just to make sure there is atleast a project to delete
-    TimeTrackerPage.Create Project
-    TimeTrackerPage.Delete Project
+    TimeTrackerPage.Create Project  ${NEW_PROJECT_NAME}
+    # Below function deletes first project it sees
+    TimeTrackerPage.Delete Project  ${NEW_PROJECT_NAME}
 
 Add Time Manually In Future
-    LandingPage.Login
-    TimeTrackerPage.Add Time Manually In Future
+    [Arguments]  ${TASK_DESCRIPTION_FOR_HOUR_REPORTING}
+    TimeTrackerPage.Add Time Manually In Future  ${TASK_DESCRIPTION_FOR_HOUR_REPORTING}
 
 
 Add Time Manually In Past
-    LandingPage.Login
-    TimeTrackerPage.Add Time Manually In Past
+    [Arguments]  ${TASK_DESCRIPTION_FOR_HOUR_REPORTING_IN_PAST}
+    TimeTrackerPage.Add Time Manually In Past  ${TASK_DESCRIPTION_FOR_HOUR_REPORTING_IN_PAST}
 
 Add Time Using Timer
-    LandingPage.Login
-    TimeTrackerPage.Add Time Using Timer
+    [Arguments]  ${TASK_DESCRIPTION_FOR_HOUR_REPORTING_USING_TIMER}
+    TimeTrackerPage.Add Time Using Timer  ${TASK_DESCRIPTION_FOR_HOUR_REPORTING_USING_TIMER}
 
 
 Delete Time Entry
-    LandingPage.Login
+    [Arguments]  ${TASK_DESCRIPTION_FOR_HOUR_REPORTING_IN_FUTURE}
     # Adding some time to the system just to make sure there is atleast one record to delete
-    TimeTrackerPage.Add Time Manually In Future
+    TimeTrackerPage.Add Time Manually In Future  ${TASK_DESCRIPTION_FOR_HOUR_REPORTING_IN_FUTURE}
     # Deletes always the first found record in the system from the top
-    TimeTrackerPage.Delete Time Entry
+    TimeTrackerPage.Delete Time Entry  ${TASK_DESCRIPTION_FOR_HOUR_REPORTING_IN_FUTURE}
 
 Create Work Space
-    LandingPage.Login
-    TimeTrackerPage.Create Work Space
+    [Arguments]  ${NEW_WORKSPACE_NAME}
+    TimeTrackerPage.Create Work Space  ${NEW_WORKSPACE_NAME}
 
 Delete Work Space
-    LandingPage.Login
+    [Arguments]  ${NEW_WORKSPACE_NAME}
     # Creating a workspace just to make sure that there is atleast one workspace to delete
-    TimeTrackerPage.Create Work Space
+    TimeTrackerPage.Create Work Space  ${NEW_WORKSPACE_NAME}
     # Deletes always the first found workspace in the system from the top
-    TimeTrackerPage.Delete Work Space
+    TimeTrackerPage.Delete Work Space  ${NEW_WORKSPACE_NAME}
 
 Create Tags
-    LandingPage.Login
-    TimeTrackerPage.Create Tags
+    [Arguments]  ${NEW_TAG_NAME}
+    TimeTrackerPage.Create Tags  ${NEW_TAG_NAME}
 
 Delete Tags
-    LandingPage.Login
+    [Arguments]  ${NEW_TAG_NAME}
     # Creating a Tag just to make sure that there is atleast one Tag to delete
-    TimeTrackerPage.Create Tags
+    TimeTrackerPage.Create Tags  ${NEW_TAG_NAME}
+
     # Deletes always the first found Tag in the system from the top
-    TimeTrackerPage.Delete Tags
+    TimeTrackerPage.Delete Tags  ${NEW_TAG_NAME}
 
 Add Team Member
-    LandingPage.Login
-    TimeTrackerPage.Add Team Member
+    [Arguments]  ${NEW_TEAM_MEMBER_NAME}
+    TimeTrackerPage.Add Team Member  ${NEW_TEAM_MEMBER_NAME}
 
 Report Checking
-    LandingPage.Login
     TimeTrackerPage.Report Checking
 
 Dashboard Checking
-    LandingPage.Login
     TimeTrackerPage.Dashboard Checking
+
+
+
+################################################# State Management Keywords###########################################################################################
+
+Delete Client and Logout
+    [Arguments]  ${NEW_CLIENT_NAME}
+    TimeTrackerPage.Delete Client  ${NEW_CLIENT_NAME}
+    TimeTrackerPage.Logout
+
+Delete Project and Logout
+    [Arguments]  ${NEW_PROJECT_NAME}
+    TimeTrackerPage.Delete Project  ${NEW_PROJECT_NAME}
+    TimeTrackerPage.Logout
+
+Delete Work Space and Logout
+    [Arguments]  ${NEW_WORKSPACE_NAME}
+    TimeTrackerPage.Delete Work Space  ${NEW_WORKSPACE_NAME}
+    TimeTrackerPage.Logout
+
+Delete Tags and Logout
+    [Arguments]  ${NEW_TAG_NAME}
+    TimeTrackerPage.Delete Tags  ${NEW_TAG_NAME}
+    TimeTrackerPage.Logout
+
+Delete Time Entry and Logout
+    [Arguments]  ${TASK_DESCRIPTION_FOR_HOUR_REPORTING}
+    TimeTrackerPage.Delete Time Entry  ${TASK_DESCRIPTION_FOR_HOUR_REPORTING}
+    TimeTrackerPage.Logout

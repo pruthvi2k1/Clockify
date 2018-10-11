@@ -32,7 +32,6 @@ ${Previous Month Button}=  xpath=//th[@class="prev available"]
 ${PROJECTS Element}=  xpath=//li/a/span[contains(text(),'projects')]
 ${CREATE NEW PROJECT BUTTON}=  xpath=//button[@class="button-create-new"]
 ${project name text box}=  xpath=//input[@placeholder="Project name..."]
-${project name element}=  xpath=//td[@title="sample project32"]
 ${Dots Icon In Projects Page}=  xpath=//table/tbody/tr[1]/td[1]/section/i[@class="icon--dots"]
 
 ${CLIENTS Element}=  xpath=//a/span[contains(text(),'clients')]
@@ -64,14 +63,16 @@ ${REPORTS Element}=  xpath=//a/span[contains(text(),'reports')]
 *** keywords ***
 
 Create Client
+    [Arguments]  ${NEW_CLIENT_NAME}
     wait until page contains element  ${CLIENTS Element}
     click element  ${CLIENTS Element}
     wait until page contains element  ${client name text box}
-    input text  ${client name text box}  client55
+    input text  ${client name text box}  ${NEW_CLIENT_NAME}
     click element  ${Client ADD Button}
-    page should contain  client55
+    page should contain  ${NEW_CLIENT_NAME}
 
 Delete Client
+    [Arguments]  ${NEW_CLIENT_NAME}
     wait until page contains element  ${CLIENTS Element}
     click element  ${CLIENTS Element}
     wait until page contains element  ${Delete Client Button}
@@ -82,15 +83,16 @@ Delete Client
 
 
 Create Project
+    [Arguments]  ${NEW_PROJECT_NAME}
     wait until page contains element  ${PROJECTS Element}
     click element  ${PROJECTS Element}
     click button  ${CREATE NEW PROJECT BUTTON}
-    input text  ${project name text box}  sample project32
+    input text  ${project name text box}  ${NEW_PROJECT_NAME}
     click button  CREATE
-    page should contain element  ${project name element}
+    page should contain  ${NEW_PROJECT_NAME}
 
 Delete Project
-
+    [Arguments]  ${NEW_PROJECT_NAME}
     Reload Page
     wait until page contains element  ${PROJECTS Element}
     click element  ${PROJECTS Element}
@@ -98,15 +100,17 @@ Delete Project
     wait until page contains  Delete
     click link  Delete
     click button  YES
+    wait until page contains  Project deleted
+    page should contain  Project deleted
     Reload Page
     wait until page contains element  ${PROJECTS Element}
-    page should not contain  sample project32
+
 
 Add Time Manually In Future
-
+      [Arguments]  ${TASK_DESCRIPTION_FOR_HOUR_REPORTING}
       Wait Until Page Contains Element  ${Manual Mode Button}
       click button  ${Manual Mode Button}
-      input text  ${Description Box}  Final Testing on oct 16th 2022
+      input text  ${Description Box}  ${TASK_DESCRIPTION_FOR_HOUR_REPORTING}
       input text  ${Starting Time Box}  1:20PM
       input text  ${Ending Time Box}  1:40PM
 
@@ -136,9 +140,10 @@ Add Time Manually In Future
 
 
 Add Time Manually In Past
+      [Arguments]  ${TASK_DESCRIPTION_FOR_HOUR_REPORTING_IN_PAST}
       Wait Until Page Contains Element  ${Manual Mode Button}
       click button  ${Manual Mode Button}
-      input text  ${Description Box}  Final Testing on oct 16th 2016
+      input text  ${Description Box}  ${TASK_DESCRIPTION_FOR_HOUR_REPORTING_IN_PAST}
       input text  ${Starting Time Box}  1:20PM
       input text  ${Ending Time Box}  1:40PM
 
@@ -167,10 +172,10 @@ Add Time Manually In Past
 
 
 Add Time Using Timer
-
+      [Arguments]  ${TASK_DESCRIPTION_FOR_HOUR_REPORTING_USING_TIMER}
       Wait Until Page Contains Element  ${Timer Mode Button}
       click button  ${Timer Mode Button}
-      input text  ${Description Box}  Final Testing Using Timer
+      input text  ${Description Box}  ${TASK_DESCRIPTION_FOR_HOUR_REPORTING_USING_TIMER}
       click button  ${Stop Watchh START Button}
       #Below sleep statement is needed to to enter the time in to the system
       sleep  5s
@@ -178,7 +183,9 @@ Add Time Using Timer
       Page should contain element  ${Description Element3}
 
 Delete Time Entry
-
+    #Deletes the first time entry
+    [Arguments]  ${TASK_DESCRIPTION_FOR_HOUR_REPORTING}
+    Reload Page
     wait until page contains element  ${Dots Icon}
     click element  ${Dots Icon}
     click link  Delete
@@ -186,19 +193,23 @@ Delete Time Entry
     page should contain  Time entry deleted
 
 Create Work Space
+    [Arguments]  ${NEW_WORKSPACE_NAME}
 
     wait until page contains element  ${WORKSPACES Element}
     click element  ${WORKSPACES Element}
     wait until page contains element  ${CREATE NEW WORKSPACE BUTTON}
     click element  ${CREATE NEW WORKSPACE BUTTON}
     wait until page contains element  ${WORKSPACE NAME text box}
-    input text  ${WORKSPACE NAME text box}  workspace55
+    input text  ${WORKSPACE NAME text box}  ${NEW_WORKSPACE_NAME}
     click button  Continue
     wait until page contains  Create
     click button  Create
-    page should contain  workspace55
+    wait until page contains  ${NEW_WORKSPACE_NAME}
+    page should contain  ${NEW_WORKSPACE_NAME}
+
 
 Delete Work Space
+    [Arguments]  ${NEW_WORKSPACE_NAME}
     wait until page contains element  ${WORKSPACES Element}
     click element  ${WORKSPACES Element}
     wait until page contains element  ${DELETE WORKSPACE BUTTON}
@@ -207,18 +218,21 @@ Delete Work Space
     Select Checkbox  ${Check Box}
     wait until page contains  LEAVE
     click button  LEAVE
-    Wait Until Page Does Not Contain  workspace55
-    page should not contain  workspace55
+    Wait Until Page Does Not Contain  ${NEW_WORKSPACE_NAME}
+    page should not contain  ${NEW_WORKSPACE_NAME}
 
 Create Tags
+    [Arguments]  ${NEW_TAG_NAME}
     wait until page contains element  ${TAGS Element}
     click element  ${TAGS Element}
     wait until page contains element   ${Tag name text box}
-    input text  ${Tag name text box}  tag55
+    input text  ${Tag name text box}  ${NEW_TAG_NAME}
     click element  ${Tag ADD Button}
-    page should contain  tag55
+    page should contain  ${NEW_TAG_NAME}
+
 
 Delete Tags
+    [Arguments]  ${NEW_TAG_NAME}
     wait until page contains element  ${TAGS Element}
     click element  ${TAGS Element}
     wait until page contains element  ${Delete Tag Button}
@@ -228,14 +242,15 @@ Delete Tags
     page should contain  Tag deleted
 
 Add Team Member
+    [Arguments]  ${NEW_TEAM_MEMBER_NAME}
     wait until page contains element  ${TEAM Element}
     click element  ${TEAM Element}
     wait until page contains element  ${TEAM Member name text box}
-    input text  ${TEAM Member name text box}  newmember7@newmember7.com
+    input text  ${TEAM Member name text box}  ${NEW_TEAM_MEMBER_NAME}
     click element  ${TEAM Member ADD Button}
     wait until page contains  Users invited
     page should contain  Users invited
-    sleep  5s
+
 
 
 Report Checking
@@ -254,5 +269,7 @@ Logout
     wait until page contains element  ${User Name Element}
     mouse over  ${User Name Element}
     click link  ${Log Out Link}
+    wait until page contains  Log in
+    page should contain  Log in
 
 

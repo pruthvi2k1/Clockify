@@ -15,9 +15,13 @@ Login
 
       Go To  ${URL}
       wait until page contains element  ${UserName}
+      wait until page contains element  ${PassWord}
+      wait until page contains element  ${LoginButton}
       input text  ${UserName}  pruthvi2k1@yahoo.com
       input text  ${PassWord}  pruthviraj
       click button  ${LoginButton}
+      Wait Until Page Does Not Contain  Log in
       Page Should Not Contain  'Log in'
+
 
 
