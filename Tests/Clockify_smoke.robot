@@ -25,6 +25,7 @@ ${TASK_DESCRIPTION_FOR_HOUR_REPORTING_USING_TIMER} =  Final Testing Using Timer
 
 Test case 1 Login to Clockify
       Clockify_App.Login
+      [Teardown]  Clockify_App.Logout
 
 Test case 2 Log out of Clockify
       [Setup]  Clockify_App.Login
