@@ -8,15 +8,14 @@ Resource  ../Resources/Common.robot
 Suite Setup    Begin web test
 Suite Teardown  End web test
 
-
 *** Variables ***
 ${BROWSER} =  firefox
 ${URL} =  https://clockify.me/login
 
-
 ${TASK_DESCRIPTION_FOR_HOUR_REPORTING_IN_FUTURE} =  Final Testing on oct 16th 2022
 ${TASK_DESCRIPTION_FOR_HOUR_REPORTING_IN_PAST} =  Final Testing on oct 16th 2016
 ${TASK_DESCRIPTION_FOR_HOUR_REPORTING_USING_TIMER} =  Final Testing Using Timer
+
 *** Test Cases ***
 
 Test case 1 Login to Clockify
