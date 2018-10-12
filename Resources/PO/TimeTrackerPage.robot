@@ -16,16 +16,13 @@ ${Description Element1}=  xpath=//input[@title="Final Testing on oct 16th 2022"]
 ${Description Element2}=  xpath=//input[@title="Final Testing on oct 16th 2016"]
 ${Dots Icon}=  xpath=//button[@class="icon--dots"]
 
-
 ${Timer Mode Button}=  xpath=//button[@title="Timer Mode"]
 ${Stop Watchh START Button}=  xpath=//button[@class="stopwatch--button"]
 ${Stop Watchh END Button}=  xpath=//button[@class="stopwatch--button stopwatch--button--started"]
 ${Description Element3}=  xpath=//input[@title="Final Testing Using Timer"]
 
-
 ${User Name Element}=  xpath=//sidebar/div/section/a/div[1]/span
 ${Log Out Link}=  Log out
-
 
 ${Previous Month Button}=  xpath=//th[@class="prev available"]
 
@@ -39,7 +36,6 @@ ${client name text box}=  xpath=//input[@placeholder="New Client name..."]
 ${Client ADD Button}=  xpath=//span[contains(text(),'Add')]
 
 ${Delete Client Button}=  xpath=//a[@class="buttons-workspaces--cross"]
-
 
 ${WORKSPACES Element}=  xpath=//li/a/span[contains(text(),'workspaces')]
 ${CREATE NEW WORKSPACE BUTTON}=  xpath=//a[@class="workspace__button-create-new"]
@@ -58,8 +54,8 @@ ${TEAM Element}=  xpath=//a/span[contains(text(),'team')]
 ${TEAM Member name text box}=  xpath=//input[@placeholder="Add new members by email address..."]
 ${TEAM Member ADD Button}=  xpath=//button[@type="button"]
 
-
 ${REPORTS Element}=  xpath=//a/span[contains(text(),'reports')]
+
 *** keywords ***
 
 Create Client
@@ -80,7 +76,6 @@ Delete Client
     click button  YES
     wait until page contains  Client deleted
     page should contain  Client deleted
-
 
 Create Project
     [Arguments]  ${NEW_PROJECT_NAME}
@@ -105,7 +100,6 @@ Delete Project
     Reload Page
     wait until page contains element  ${PROJECTS Element}
 
-
 Add Time Manually In Future
       [Arguments]  ${TASK_DESCRIPTION_FOR_HOUR_REPORTING}
       Wait Until Page Contains Element  ${Manual Mode Button}
@@ -113,7 +107,6 @@ Add Time Manually In Future
       input text  ${Description Box}  ${TASK_DESCRIPTION_FOR_HOUR_REPORTING}
       input text  ${Starting Time Box}  1:20PM
       input text  ${Ending Time Box}  1:40PM
-
       click element  ${Calendar Icon}
       click element  ${Calendar Icon}
       ${monthyear}=  Get Text  ${Month And Year column}
@@ -136,8 +129,6 @@ Add Time Manually In Future
       wait until page contains  Sun, 16th Oct
       Page should contain  Sun, 16th Oct
       Page should contain element  ${Description Element1}
-
-
 
 Add Time Manually In Past
       [Arguments]  ${TASK_DESCRIPTION_FOR_HOUR_REPORTING_IN_PAST}
@@ -169,7 +160,6 @@ Add Time Manually In Past
       wait until page contains  Sun, 16th Oct
       Page should contain  Sun, 16th Oct
       Page should contain element  ${Description Element2}
-
 
 Add Time Using Timer
       [Arguments]  ${TASK_DESCRIPTION_FOR_HOUR_REPORTING_USING_TIMER}
@@ -207,7 +197,6 @@ Create Work Space
     wait until page contains  ${NEW_WORKSPACE_NAME}
     page should contain  ${NEW_WORKSPACE_NAME}
 
-
 Delete Work Space
     [Arguments]  ${NEW_WORKSPACE_NAME}
     wait until page contains element  ${WORKSPACES Element}
@@ -230,7 +219,6 @@ Create Tags
     click element  ${Tag ADD Button}
     page should contain  ${NEW_TAG_NAME}
 
-
 Delete Tags
     [Arguments]  ${NEW_TAG_NAME}
     wait until page contains element  ${TAGS Element}
@@ -250,8 +238,6 @@ Add Team Member
     click element  ${TEAM Member ADD Button}
     wait until page contains  Users invited
     page should contain  Users invited
-
-
 
 Report Checking
     wait until page contains element  ${REPORTS Element}
