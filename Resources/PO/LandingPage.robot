@@ -1,7 +1,5 @@
 *** Settings ***
 library  Selenium2Library
-library  Selenium2Library
-library  Selenium2Library
 
 *** Variables ***
 ${UserName}=  xpath=//*[@id="email"]
