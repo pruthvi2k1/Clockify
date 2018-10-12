@@ -1,18 +1,16 @@
 *** Settings ***
 library  Selenium2Library
 library  Selenium2Library
+library  Selenium2Library
 
 *** Variables ***
 ${UserName}=  xpath=//*[@id="email"]
 ${PassWord}=  xpath=//*[@id="password"]
 ${LoginButton}=  xpath=//*[@type="button"]
 
-
 *** keywords ***
 
-
 Login
-
       Go To  ${URL}
       wait until page contains element  ${UserName}
       wait until page contains element  ${PassWord}
