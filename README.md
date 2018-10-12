@@ -4,4 +4,4 @@ https://clockify.me/login is an Employee working hour reporting system where emp
 This GITHUB repository contains basic automated smoke tests for the system.
  The Tests Directory contains test cases in *.robot files. These test cases are the calls to other files which are located in Resouces directory and the execution continues from there.
  Robot Framework and python is used to automate these tests.
- As This is an attempt only to demonstarte basic automation framework and simple test case creation, hard coded input is used to keep things simple. 
+ As This is an attempt only to demonstarte basic automation framework and simple test case creation, hard coded input is used to keep things simple.. 
