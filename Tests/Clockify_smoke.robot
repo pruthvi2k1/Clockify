@@ -8,8 +8,8 @@ Resource  ../Resources/Common.robot
 Suite Setup    Begin web test
 Suite Teardown  End web test
 
-
 *** Variables ***
+
 ${BROWSER} =  firefox
 ${URL} =  https://clockify.me/login
 
@@ -21,6 +21,7 @@ ${NEW_TEAM_MEMBER_NAME} =  some@some.com
 ${TASK_DESCRIPTION_FOR_HOUR_REPORTING_IN_FUTURE} =  Final Testing on oct 16th 2022
 ${TASK_DESCRIPTION_FOR_HOUR_REPORTING_IN_PAST} =  Final Testing on oct 16th 2016
 ${TASK_DESCRIPTION_FOR_HOUR_REPORTING_USING_TIMER} =  Final Testing Using Timer
+
 *** Test Cases ***
 
 Test case 1 Login to Clockify
@@ -37,7 +38,6 @@ Test case 3 Create Client
       [Tags]
       Clockify_App.Create Client  ${NEW_CLIENT_NAME}
       [Teardown]  Clockify_App.Delete Client and Logout  ${NEW_CLIENT_NAME}
-
 
 Test case 4 Delete Client
       [Setup]  Clockify_App.Login
