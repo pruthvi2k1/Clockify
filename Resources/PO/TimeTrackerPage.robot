@@ -56,6 +56,8 @@ ${TEAM Member ADD Button}=  xpath=//button[@type="button"]
 
 ${REPORTS Element}=  xpath=//a/span[contains(text(),'reports')]
 
+${DASHBOARD Element}=  xpath=//a/span[contains(text(),'dashboard')]
+
 *** keywords ***
 
 Create Client
@@ -246,8 +248,8 @@ Report Checking
     page should contain  Summary report
 
 Dashboard Checking
-    wait until page contains element  xpath=//a/span[contains(text(),'dashboard')]
-    click element  xpath=//a/span[contains(text(),'dashboard')]
+    wait until page contains element  ${DASHBOARD Element}
+    click element  ${DASHBOARD Element}
     wait until page contains  Dashboard
     page should contain  Dashboard
 
