@@ -3,9 +3,7 @@
 Resource  PO/LandingPage.robot
 Resource  PO/TimeTrackerPage.robot
 
-
 *** keywords ***
-
 
 Login
     LandingPage.Login
@@ -39,7 +37,6 @@ Add Time Manually In Future
     [Arguments]  ${TASK_DESCRIPTION_FOR_HOUR_REPORTING}
     TimeTrackerPage.Add Time Manually In Future  ${TASK_DESCRIPTION_FOR_HOUR_REPORTING}
 
-
 Add Time Manually In Past
     [Arguments]  ${TASK_DESCRIPTION_FOR_HOUR_REPORTING_IN_PAST}
     TimeTrackerPage.Add Time Manually In Past  ${TASK_DESCRIPTION_FOR_HOUR_REPORTING_IN_PAST}
@@ -47,7 +44,6 @@ Add Time Manually In Past
 Add Time Using Timer
     [Arguments]  ${TASK_DESCRIPTION_FOR_HOUR_REPORTING_USING_TIMER}
     TimeTrackerPage.Add Time Using Timer  ${TASK_DESCRIPTION_FOR_HOUR_REPORTING_USING_TIMER}
-
 
 Delete Time Entry
     [Arguments]  ${TASK_DESCRIPTION_FOR_HOUR_REPORTING_IN_FUTURE}
@@ -89,9 +85,7 @@ Report Checking
 Dashboard Checking
     TimeTrackerPage.Dashboard Checking
 
-
-
-################################################# State Management Keywords###########################################################################################
+################################################# State Management Keywords#################################################
 
 Delete Client and Logout
     [Arguments]  ${NEW_CLIENT_NAME}
