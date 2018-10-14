@@ -2,6 +2,7 @@
 
 Resource  ../Resources/Clockify_App.robot
 Resource  ../Resources/Common.robot
+Resource  ../Resources/DataManager.robot
 
 #Test Setup  Begin web test
 #Test Teardown  End web test
@@ -21,8 +22,14 @@ ${NEW_TEAM_MEMBER_NAME} =  some@some.com
 ${TASK_DESCRIPTION_FOR_HOUR_REPORTING_IN_FUTURE} =  Final Testing on oct 16th 2022
 ${TASK_DESCRIPTION_FOR_HOUR_REPORTING_IN_PAST} =  Final Testing on oct 16th 2016
 ${TASK_DESCRIPTION_FOR_HOUR_REPORTING_USING_TIMER} =  Final Testing Using Timer
+${INVALID_CREDENTIALS_PATH_CSV} =  C:\\Users\\Owner\\PycharmProjects\\Clockify\\Data\\Users.csv
 
 *** Test Cases ***
+
+Test case 0 Check Many Invalid Login Scenarios
+      [Tags]  current
+      ${Invalid Login Scenarios} =  DataManager.Get CSV Data  ${INVALID_CREDENTIALS_PATH_CSV}
+      Clockify_App.Check Many Invalid Login Scenarios  ${Invalid Login Scenarios}
 
 Test case 1 Login to Clockify
       Clockify_App.Login
@@ -119,6 +126,6 @@ Test case 16 Add Time Using Timer
 
 Test case 17 Delete Time Entry
       [Setup]  Clockify_App.Login
-      [Tags]  current
+      [Tags]
       Clockify_App.Delete Time Entry  ${TASK_DESCRIPTION_FOR_HOUR_REPORTING_IN_FUTURE}
       [Teardown]  Clockify_App.Logout

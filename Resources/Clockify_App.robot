@@ -5,6 +5,10 @@ Resource  PO/TimeTrackerPage.robot
 
 *** keywords ***
 
+Check Many Invalid Login Scenarios
+    [Arguments]  ${Invalid Login Scenarios}
+    LandingPage.Check Many Invalid Login Scenarios  ${Invalid Login Scenarios}
+
 Login
     LandingPage.Login
 

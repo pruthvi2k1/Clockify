@@ -9,6 +9,4 @@ def read_csv_file(filename):
     return data
 
 
-
-
 #read_csv_file("C:\\Users\\Owner\\PycharmProjects\\Clockify\\Data\\Users.csv")

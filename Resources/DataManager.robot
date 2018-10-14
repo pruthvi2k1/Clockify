@@ -1,5 +1,5 @@
 *** settings ***
-#Docuentation  Use this layer to get data from external files
+Documentation  Use this layer to get data from external files
 
 library  ../Custom_Libs/Csv.py
 
@@ -8,5 +8,5 @@ library  ../Custom_Libs/Csv.py
 
 Get CSV Data
     [Arguments]  ${FilePath}
-    ${Data} =  read csv file(FilePath)
+    ${Data} =  Csv.read csv file  ${FilePath}
     [Return]  ${Data}
