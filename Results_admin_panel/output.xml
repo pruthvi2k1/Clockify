@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20181011 09:07:30.117" generator="Robot 3.0.3.dev20170213 (Python 2.7.14 on win32)">
+<robot generated="20181021 15:48:02.818" generator="Robot 3.0.3.dev20170213 (Python 2.7.14 on win32)">
 <suite source="C:\Users\Owner\PycharmProjects\Clockify\Tests\Clockify_admin_panel.robot" id="s1" name="Clockify admin panel">
 <kw type="setup" name="Begin web test" library="Common">
 <kw name="Open Browser" library="Selenium2Library">
@@ -8,139 +8,16 @@
 <arg>about:blank</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20181011 09:07:30.351" level="INFO">Opening browser 'firefox' to base url 'about:blank'.</msg>
-<status status="PASS" endtime="20181011 09:07:37.357" starttime="20181011 09:07:30.351"></status>
+<msg timestamp="20181021 15:48:04.267" level="INFO">Opening browser 'firefox' to base url 'about:blank'.</msg>
+<status status="PASS" endtime="20181021 15:48:11.798" starttime="20181021 15:48:04.266"></status>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20181011 09:07:40.875" starttime="20181011 09:07:37.357"></status>
+<status status="PASS" endtime="20181021 15:48:15.312" starttime="20181021 15:48:11.799"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:07:40.875" starttime="20181011 09:07:30.351"></status>
+<status status="PASS" endtime="20181021 15:48:15.312" starttime="20181021 15:48:04.266"></status>
 </kw>
-<test id="s1-t1" name="Test case 1 Login to Clockify">
-<kw name="Login" library="Clockify_App">
-<kw name="Login" library="LandingPage">
-<kw name="Go To" library="Selenium2Library">
-<doc>Navigates the active browser instance to the provided ``url``.</doc>
-<arguments>
-<arg>${URL}</arg>
-</arguments>
-<msg timestamp="20181011 09:07:40.881" level="INFO">Opening url 'https://clockify.me/login'</msg>
-<status status="PASS" endtime="20181011 09:07:44.417" starttime="20181011 09:07:40.881"></status>
-</kw>
-<kw name="Wait Until Page Contains Element" library="Selenium2Library">
-<doc>Waits until element ``locator`` appears on current page.</doc>
-<arguments>
-<arg>${UserName}</arg>
-</arguments>
-<status status="PASS" endtime="20181011 09:07:44.426" starttime="20181011 09:07:44.418"></status>
-</kw>
-<kw name="Wait Until Page Contains Element" library="Selenium2Library">
-<doc>Waits until element ``locator`` appears on current page.</doc>
-<arguments>
-<arg>${PassWord}</arg>
-</arguments>
-<status status="PASS" endtime="20181011 09:07:44.437" starttime="20181011 09:07:44.427"></status>
-</kw>
-<kw name="Wait Until Page Contains Element" library="Selenium2Library">
-<doc>Waits until element ``locator`` appears on current page.</doc>
-<arguments>
-<arg>${LoginButton}</arg>
-</arguments>
-<status status="PASS" endtime="20181011 09:07:44.445" starttime="20181011 09:07:44.437"></status>
-</kw>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>${UserName}</arg>
-<arg>pruthvi2k1@yahoo.com</arg>
-</arguments>
-<msg timestamp="20181011 09:07:44.445" level="INFO">Typing text 'pruthvi2k1@yahoo.com' into text field 'xpath=//*[@id="email"]'.</msg>
-<status status="PASS" endtime="20181011 09:07:44.545" starttime="20181011 09:07:44.445"></status>
-</kw>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>${PassWord}</arg>
-<arg>pruthviraj</arg>
-</arguments>
-<msg timestamp="20181011 09:07:44.546" level="INFO">Typing text 'pruthviraj' into text field 'xpath=//*[@id="password"]'.</msg>
-<status status="PASS" endtime="20181011 09:07:44.585" starttime="20181011 09:07:44.545"></status>
-</kw>
-<kw name="Click Button" library="Selenium2Library">
-<doc>Clicks button identified by ``locator``.</doc>
-<arguments>
-<arg>${LoginButton}</arg>
-</arguments>
-<msg timestamp="20181011 09:07:44.585" level="INFO">Clicking button 'xpath=//*[@type="button"]'.</msg>
-<status status="PASS" endtime="20181011 09:07:44.854" starttime="20181011 09:07:44.585"></status>
-</kw>
-<kw name="Wait Until Page Does Not Contain" library="Selenium2Library">
-<doc>Waits until ``text`` disappears from current page.</doc>
-<arguments>
-<arg>Log in</arg>
-</arguments>
-<status status="PASS" endtime="20181011 09:07:45.078" starttime="20181011 09:07:44.854"></status>
-</kw>
-<kw name="Page Should Not Contain" library="Selenium2Library">
-<doc>Verifies the current page does not contain ``text``.</doc>
-<arguments>
-<arg>'Log in'</arg>
-</arguments>
-<msg timestamp="20181011 09:07:45.119" level="INFO">Current page does not contain text ''Log in''.</msg>
-<status status="PASS" endtime="20181011 09:07:45.119" starttime="20181011 09:07:45.079"></status>
-</kw>
-<status status="PASS" endtime="20181011 09:07:45.119" starttime="20181011 09:07:40.880"></status>
-</kw>
-<status status="PASS" endtime="20181011 09:07:45.119" starttime="20181011 09:07:40.879"></status>
-</kw>
-<kw type="teardown" name="Logout" library="Clockify_App">
-<kw name="Logout" library="TimeTrackerPage">
-<kw name="Wait Until Page Contains Element" library="Selenium2Library">
-<doc>Waits until element ``locator`` appears on current page.</doc>
-<arguments>
-<arg>${User Name Element}</arg>
-</arguments>
-<status status="PASS" endtime="20181011 09:07:45.125" starttime="20181011 09:07:45.120"></status>
-</kw>
-<kw name="Mouse Over" library="Selenium2Library">
-<doc>Simulates hovering mouse over the element ``locator``.</doc>
-<arguments>
-<arg>${User Name Element}</arg>
-</arguments>
-<msg timestamp="20181011 09:07:45.126" level="INFO">Simulating Mouse Over on element 'xpath=//sidebar/div/section/a/div[1]/span'.</msg>
-<status status="PASS" endtime="20181011 09:07:45.414" starttime="20181011 09:07:45.125"></status>
-</kw>
-<kw name="Click Link" library="Selenium2Library">
-<doc>Clicks a link identified by ``locator``.</doc>
-<arguments>
-<arg>${Log Out Link}</arg>
-</arguments>
-<msg timestamp="20181011 09:07:45.415" level="INFO">Clicking link 'Log out'.</msg>
-<status status="PASS" endtime="20181011 09:07:45.667" starttime="20181011 09:07:45.415"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on current page.</doc>
-<arguments>
-<arg>Log in</arg>
-</arguments>
-<status status="PASS" endtime="20181011 09:07:45.692" starttime="20181011 09:07:45.668"></status>
-</kw>
-<kw name="Page Should Contain" library="Selenium2Library">
-<doc>Verifies that current page contains ``text``.</doc>
-<arguments>
-<arg>Log in</arg>
-</arguments>
-<msg timestamp="20181011 09:07:45.723" level="INFO">Current page contains text 'Log in'.</msg>
-<status status="PASS" endtime="20181011 09:07:45.724" starttime="20181011 09:07:45.693"></status>
-</kw>
-<status status="PASS" endtime="20181011 09:07:45.724" starttime="20181011 09:07:45.120"></status>
-</kw>
-<status status="PASS" endtime="20181011 09:07:45.725" starttime="20181011 09:07:45.120"></status>
-</kw>
-<status status="PASS" endtime="20181011 09:07:45.726" critical="yes" starttime="20181011 09:07:40.876"></status>
-</test>
-<test id="s1-t2" name="Test case 2 Log out of Clockify">
+<test id="s1-t1" name="Test case 1 Create Client">
 <kw type="setup" name="Login" library="Clockify_App">
 <kw name="Login" library="LandingPage">
 <kw name="Go To" library="Selenium2Library">
@@ -148,29 +25,29 @@
 <arguments>
 <arg>${URL}</arg>
 </arguments>
-<msg timestamp="20181011 09:07:45.733" level="INFO">Opening url 'https://clockify.me/login'</msg>
-<status status="PASS" endtime="20181011 09:07:47.360" starttime="20181011 09:07:45.732"></status>
+<msg timestamp="20181021 15:48:15.315" level="INFO">Opening url 'https://clockify.me/login'</msg>
+<status status="PASS" endtime="20181021 15:48:19.114" starttime="20181021 15:48:15.315"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${UserName}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:07:47.369" starttime="20181011 09:07:47.360"></status>
+<status status="PASS" endtime="20181021 15:48:19.135" starttime="20181021 15:48:19.115"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${PassWord}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:07:47.379" starttime="20181011 09:07:47.369"></status>
+<status status="PASS" endtime="20181021 15:48:19.155" starttime="20181021 15:48:19.136"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${LoginButton}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:07:47.389" starttime="20181011 09:07:47.379"></status>
+<status status="PASS" endtime="20181021 15:48:19.168" starttime="20181021 15:48:19.157"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -178,8 +55,8 @@
 <arg>${UserName}</arg>
 <arg>pruthvi2k1@yahoo.com</arg>
 </arguments>
-<msg timestamp="20181011 09:07:47.390" level="INFO">Typing text 'pruthvi2k1@yahoo.com' into text field 'xpath=//*[@id="email"]'.</msg>
-<status status="PASS" endtime="20181011 09:07:47.476" starttime="20181011 09:07:47.389"></status>
+<msg timestamp="20181021 15:48:19.169" level="INFO">Typing text 'pruthvi2k1@yahoo.com' into text field 'xpath=//*[@id="email"]'.</msg>
+<status status="PASS" endtime="20181021 15:48:19.339" starttime="20181021 15:48:19.168"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -187,158 +64,35 @@
 <arg>${PassWord}</arg>
 <arg>pruthviraj</arg>
 </arguments>
-<msg timestamp="20181011 09:07:47.478" level="INFO">Typing text 'pruthviraj' into text field 'xpath=//*[@id="password"]'.</msg>
-<status status="PASS" endtime="20181011 09:07:47.542" starttime="20181011 09:07:47.477"></status>
+<msg timestamp="20181021 15:48:19.340" level="INFO">Typing text 'pruthviraj' into text field 'xpath=//*[@id="password"]'.</msg>
+<status status="PASS" endtime="20181021 15:48:19.475" starttime="20181021 15:48:19.339"></status>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks button identified by ``locator``.</doc>
 <arguments>
 <arg>${LoginButton}</arg>
 </arguments>
-<msg timestamp="20181011 09:07:47.543" level="INFO">Clicking button 'xpath=//*[@type="button"]'.</msg>
-<status status="PASS" endtime="20181011 09:07:47.885" starttime="20181011 09:07:47.543"></status>
+<msg timestamp="20181021 15:48:19.476" level="INFO">Clicking button 'xpath=//*[@type="button"]'.</msg>
+<status status="PASS" endtime="20181021 15:48:19.814" starttime="20181021 15:48:19.476"></status>
 </kw>
 <kw name="Wait Until Page Does Not Contain" library="Selenium2Library">
 <doc>Waits until ``text`` disappears from current page.</doc>
 <arguments>
 <arg>Log in</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:07:48.131" starttime="20181011 09:07:47.885"></status>
+<status status="PASS" endtime="20181021 15:48:20.128" starttime="20181021 15:48:19.814"></status>
 </kw>
 <kw name="Page Should Not Contain" library="Selenium2Library">
 <doc>Verifies the current page does not contain ``text``.</doc>
 <arguments>
 <arg>'Log in'</arg>
 </arguments>
-<msg timestamp="20181011 09:07:48.161" level="INFO">Current page does not contain text ''Log in''.</msg>
-<status status="PASS" endtime="20181011 09:07:48.161" starttime="20181011 09:07:48.131"></status>
+<msg timestamp="20181021 15:48:20.367" level="INFO">Current page does not contain text ''Log in''.</msg>
+<status status="PASS" endtime="20181021 15:48:20.367" starttime="20181021 15:48:20.129"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:07:48.161" starttime="20181011 09:07:45.732"></status>
+<status status="PASS" endtime="20181021 15:48:20.367" starttime="20181021 15:48:15.314"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:07:48.161" starttime="20181011 09:07:45.731"></status>
-</kw>
-<kw name="Logout" library="Clockify_App">
-<kw name="Logout" library="TimeTrackerPage">
-<kw name="Wait Until Page Contains Element" library="Selenium2Library">
-<doc>Waits until element ``locator`` appears on current page.</doc>
-<arguments>
-<arg>${User Name Element}</arg>
-</arguments>
-<status status="PASS" endtime="20181011 09:07:48.167" starttime="20181011 09:07:48.163"></status>
-</kw>
-<kw name="Mouse Over" library="Selenium2Library">
-<doc>Simulates hovering mouse over the element ``locator``.</doc>
-<arguments>
-<arg>${User Name Element}</arg>
-</arguments>
-<msg timestamp="20181011 09:07:48.168" level="INFO">Simulating Mouse Over on element 'xpath=//sidebar/div/section/a/div[1]/span'.</msg>
-<status status="PASS" endtime="20181011 09:07:48.863" starttime="20181011 09:07:48.167"></status>
-</kw>
-<kw name="Click Link" library="Selenium2Library">
-<doc>Clicks a link identified by ``locator``.</doc>
-<arguments>
-<arg>${Log Out Link}</arg>
-</arguments>
-<msg timestamp="20181011 09:07:48.864" level="INFO">Clicking link 'Log out'.</msg>
-<status status="PASS" endtime="20181011 09:07:49.191" starttime="20181011 09:07:48.864"></status>
-</kw>
-<kw name="Wait Until Page Contains" library="Selenium2Library">
-<doc>Waits until ``text`` appears on current page.</doc>
-<arguments>
-<arg>Log in</arg>
-</arguments>
-<status status="PASS" endtime="20181011 09:07:49.212" starttime="20181011 09:07:49.191"></status>
-</kw>
-<kw name="Page Should Contain" library="Selenium2Library">
-<doc>Verifies that current page contains ``text``.</doc>
-<arguments>
-<arg>Log in</arg>
-</arguments>
-<msg timestamp="20181011 09:07:49.243" level="INFO">Current page contains text 'Log in'.</msg>
-<status status="PASS" endtime="20181011 09:07:49.243" starttime="20181011 09:07:49.213"></status>
-</kw>
-<status status="PASS" endtime="20181011 09:07:49.244" starttime="20181011 09:07:48.162"></status>
-</kw>
-<status status="PASS" endtime="20181011 09:07:49.244" starttime="20181011 09:07:48.162"></status>
-</kw>
-<status status="PASS" endtime="20181011 09:07:49.245" critical="yes" starttime="20181011 09:07:45.730"></status>
-</test>
-<test id="s1-t3" name="Test case 3 Create Client">
-<kw type="setup" name="Login" library="Clockify_App">
-<kw name="Login" library="LandingPage">
-<kw name="Go To" library="Selenium2Library">
-<doc>Navigates the active browser instance to the provided ``url``.</doc>
-<arguments>
-<arg>${URL}</arg>
-</arguments>
-<msg timestamp="20181011 09:07:49.274" level="INFO">Opening url 'https://clockify.me/login'</msg>
-<status status="PASS" endtime="20181011 09:07:50.772" starttime="20181011 09:07:49.273"></status>
-</kw>
-<kw name="Wait Until Page Contains Element" library="Selenium2Library">
-<doc>Waits until element ``locator`` appears on current page.</doc>
-<arguments>
-<arg>${UserName}</arg>
-</arguments>
-<status status="PASS" endtime="20181011 09:07:50.822" starttime="20181011 09:07:50.772"></status>
-</kw>
-<kw name="Wait Until Page Contains Element" library="Selenium2Library">
-<doc>Waits until element ``locator`` appears on current page.</doc>
-<arguments>
-<arg>${PassWord}</arg>
-</arguments>
-<status status="PASS" endtime="20181011 09:07:50.831" starttime="20181011 09:07:50.822"></status>
-</kw>
-<kw name="Wait Until Page Contains Element" library="Selenium2Library">
-<doc>Waits until element ``locator`` appears on current page.</doc>
-<arguments>
-<arg>${LoginButton}</arg>
-</arguments>
-<status status="PASS" endtime="20181011 09:07:50.837" starttime="20181011 09:07:50.831"></status>
-</kw>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>${UserName}</arg>
-<arg>pruthvi2k1@yahoo.com</arg>
-</arguments>
-<msg timestamp="20181011 09:07:50.838" level="INFO">Typing text 'pruthvi2k1@yahoo.com' into text field 'xpath=//*[@id="email"]'.</msg>
-<status status="PASS" endtime="20181011 09:07:50.911" starttime="20181011 09:07:50.837"></status>
-</kw>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>${PassWord}</arg>
-<arg>pruthviraj</arg>
-</arguments>
-<msg timestamp="20181011 09:07:50.912" level="INFO">Typing text 'pruthviraj' into text field 'xpath=//*[@id="password"]'.</msg>
-<status status="PASS" endtime="20181011 09:07:50.951" starttime="20181011 09:07:50.911"></status>
-</kw>
-<kw name="Click Button" library="Selenium2Library">
-<doc>Clicks button identified by ``locator``.</doc>
-<arguments>
-<arg>${LoginButton}</arg>
-</arguments>
-<msg timestamp="20181011 09:07:50.952" level="INFO">Clicking button 'xpath=//*[@type="button"]'.</msg>
-<status status="PASS" endtime="20181011 09:07:51.193" starttime="20181011 09:07:50.951"></status>
-</kw>
-<kw name="Wait Until Page Does Not Contain" library="Selenium2Library">
-<doc>Waits until ``text`` disappears from current page.</doc>
-<arguments>
-<arg>Log in</arg>
-</arguments>
-<status status="PASS" endtime="20181011 09:07:51.405" starttime="20181011 09:07:51.193"></status>
-</kw>
-<kw name="Page Should Not Contain" library="Selenium2Library">
-<doc>Verifies the current page does not contain ``text``.</doc>
-<arguments>
-<arg>'Log in'</arg>
-</arguments>
-<msg timestamp="20181011 09:07:51.429" level="INFO">Current page does not contain text ''Log in''.</msg>
-<status status="PASS" endtime="20181011 09:07:51.430" starttime="20181011 09:07:51.405"></status>
-</kw>
-<status status="PASS" endtime="20181011 09:07:51.430" starttime="20181011 09:07:49.272"></status>
-</kw>
-<status status="PASS" endtime="20181011 09:07:51.430" starttime="20181011 09:07:49.272"></status>
+<status status="PASS" endtime="20181021 15:48:20.367" starttime="20181021 15:48:15.314"></status>
 </kw>
 <kw name="Create Client" library="Clockify_App">
 <arguments>
@@ -353,22 +107,22 @@
 <arguments>
 <arg>${CLIENTS Element}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:07:51.436" starttime="20181011 09:07:51.432"></status>
+<status status="PASS" endtime="20181021 15:48:20.400" starttime="20181021 15:48:20.370"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${CLIENTS Element}</arg>
 </arguments>
-<msg timestamp="20181011 09:07:51.437" level="INFO">Clicking element 'xpath=//a/span[contains(text(),'clients')]'.</msg>
-<status status="PASS" endtime="20181011 09:07:51.660" starttime="20181011 09:07:51.437"></status>
+<msg timestamp="20181021 15:48:20.401" level="INFO">Clicking element 'xpath=//a/span[contains(text(),'clients')]'.</msg>
+<status status="PASS" endtime="20181021 15:48:20.715" starttime="20181021 15:48:20.400"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${client name text box}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:07:51.687" starttime="20181011 09:07:51.660"></status>
+<status status="PASS" endtime="20181021 15:48:20.936" starttime="20181021 15:48:20.715"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -376,28 +130,28 @@
 <arg>${client name text box}</arg>
 <arg>${NEW_CLIENT_NAME}</arg>
 </arguments>
-<msg timestamp="20181011 09:07:51.688" level="INFO">Typing text 'some client' into text field 'xpath=//input[@placeholder="New Client name..."]'.</msg>
-<status status="PASS" endtime="20181011 09:07:51.782" starttime="20181011 09:07:51.687"></status>
+<msg timestamp="20181021 15:48:20.938" level="INFO">Typing text 'some client' into text field 'xpath=//input[@placeholder="New Client name..."]'.</msg>
+<status status="PASS" endtime="20181021 15:48:21.062" starttime="20181021 15:48:20.937"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${Client ADD Button}</arg>
 </arguments>
-<msg timestamp="20181011 09:07:51.782" level="INFO">Clicking element 'xpath=//span[contains(text(),'Add')]'.</msg>
-<status status="PASS" endtime="20181011 09:07:52.017" starttime="20181011 09:07:51.782"></status>
+<msg timestamp="20181021 15:48:21.063" level="INFO">Clicking element 'xpath=//span[contains(text(),'Add')]'.</msg>
+<status status="PASS" endtime="20181021 15:48:21.302" starttime="20181021 15:48:21.062"></status>
 </kw>
 <kw name="Page Should Contain" library="Selenium2Library">
 <doc>Verifies that current page contains ``text``.</doc>
 <arguments>
 <arg>${NEW_CLIENT_NAME}</arg>
 </arguments>
-<msg timestamp="20181011 09:07:52.030" level="INFO">Current page contains text 'some client'.</msg>
-<status status="PASS" endtime="20181011 09:07:52.030" starttime="20181011 09:07:52.017"></status>
+<msg timestamp="20181021 15:48:21.323" level="INFO">Current page contains text 'some client'.</msg>
+<status status="PASS" endtime="20181021 15:48:21.323" starttime="20181021 15:48:21.303"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:07:52.030" starttime="20181011 09:07:51.431"></status>
+<status status="PASS" endtime="20181021 15:48:21.324" starttime="20181021 15:48:20.369"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:07:52.030" starttime="20181011 09:07:51.431"></status>
+<status status="PASS" endtime="20181021 15:48:21.324" starttime="20181021 15:48:20.368"></status>
 </kw>
 <kw type="teardown" name="Delete Client and Logout" library="Clockify_App">
 <arguments>
@@ -412,55 +166,55 @@
 <arguments>
 <arg>${CLIENTS Element}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:07:52.039" starttime="20181011 09:07:52.032"></status>
+<status status="PASS" endtime="20181021 15:48:21.333" starttime="20181021 15:48:21.326"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${CLIENTS Element}</arg>
 </arguments>
-<msg timestamp="20181011 09:07:52.040" level="INFO">Clicking element 'xpath=//a/span[contains(text(),'clients')]'.</msg>
-<status status="PASS" endtime="20181011 09:07:52.260" starttime="20181011 09:07:52.039"></status>
+<msg timestamp="20181021 15:48:21.334" level="INFO">Clicking element 'xpath=//a/span[contains(text(),'clients')]'.</msg>
+<status status="PASS" endtime="20181021 15:48:21.560" starttime="20181021 15:48:21.334"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${Delete Client Button}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:07:52.275" starttime="20181011 09:07:52.261"></status>
+<status status="PASS" endtime="20181021 15:48:21.568" starttime="20181021 15:48:21.561"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${Delete Client Button}</arg>
 </arguments>
-<msg timestamp="20181011 09:07:52.276" level="INFO">Clicking element 'xpath=//a[@class="buttons-workspaces--cross"]'.</msg>
-<status status="PASS" endtime="20181011 09:07:52.545" starttime="20181011 09:07:52.275"></status>
+<msg timestamp="20181021 15:48:21.569" level="INFO">Clicking element 'xpath=//a[@class="buttons-workspaces--cross"]'.</msg>
+<status status="PASS" endtime="20181021 15:48:21.797" starttime="20181021 15:48:21.569"></status>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks button identified by ``locator``.</doc>
 <arguments>
 <arg>YES</arg>
 </arguments>
-<msg timestamp="20181011 09:07:52.547" level="INFO">Clicking button 'YES'.</msg>
-<status status="PASS" endtime="20181011 09:07:52.841" starttime="20181011 09:07:52.546"></status>
+<msg timestamp="20181021 15:48:21.798" level="INFO">Clicking button 'YES'.</msg>
+<status status="PASS" endtime="20181021 15:48:22.048" starttime="20181021 15:48:21.798"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on current page.</doc>
 <arguments>
 <arg>Client deleted</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:07:53.067" starttime="20181011 09:07:52.842"></status>
+<status status="PASS" endtime="20181021 15:48:22.474" starttime="20181021 15:48:22.048"></status>
 </kw>
 <kw name="Page Should Contain" library="Selenium2Library">
 <doc>Verifies that current page contains ``text``.</doc>
 <arguments>
 <arg>Client deleted</arg>
 </arguments>
-<msg timestamp="20181011 09:07:53.083" level="INFO">Current page contains text 'Client deleted'.</msg>
-<status status="PASS" endtime="20181011 09:07:53.083" starttime="20181011 09:07:53.067"></status>
+<msg timestamp="20181021 15:48:22.490" level="INFO">Current page contains text 'Client deleted'.</msg>
+<status status="PASS" endtime="20181021 15:48:22.491" starttime="20181021 15:48:22.475"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:07:53.083" starttime="20181011 09:07:52.031"></status>
+<status status="PASS" endtime="20181021 15:48:22.491" starttime="20181021 15:48:21.325"></status>
 </kw>
 <kw name="Logout" library="TimeTrackerPage">
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
@@ -468,46 +222,46 @@
 <arguments>
 <arg>${User Name Element}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:07:53.091" starttime="20181011 09:07:53.084"></status>
+<status status="PASS" endtime="20181021 15:48:22.498" starttime="20181021 15:48:22.492"></status>
 </kw>
 <kw name="Mouse Over" library="Selenium2Library">
 <doc>Simulates hovering mouse over the element ``locator``.</doc>
 <arguments>
 <arg>${User Name Element}</arg>
 </arguments>
-<msg timestamp="20181011 09:07:53.092" level="INFO">Simulating Mouse Over on element 'xpath=//sidebar/div/section/a/div[1]/span'.</msg>
-<status status="PASS" endtime="20181011 09:07:53.373" starttime="20181011 09:07:53.092"></status>
+<msg timestamp="20181021 15:48:22.499" level="INFO">Simulating Mouse Over on element 'xpath=//sidebar/div/section/a/div[1]/span'.</msg>
+<status status="PASS" endtime="20181021 15:48:22.785" starttime="20181021 15:48:22.498"></status>
 </kw>
 <kw name="Click Link" library="Selenium2Library">
 <doc>Clicks a link identified by ``locator``.</doc>
 <arguments>
 <arg>${Log Out Link}</arg>
 </arguments>
-<msg timestamp="20181011 09:07:53.374" level="INFO">Clicking link 'Log out'.</msg>
-<status status="PASS" endtime="20181011 09:07:53.658" starttime="20181011 09:07:53.374"></status>
+<msg timestamp="20181021 15:48:22.788" level="INFO">Clicking link 'Log out'.</msg>
+<status status="PASS" endtime="20181021 15:48:23.099" starttime="20181021 15:48:22.786"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on current page.</doc>
 <arguments>
 <arg>Log in</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:07:53.674" starttime="20181011 09:07:53.658"></status>
+<status status="PASS" endtime="20181021 15:48:23.114" starttime="20181021 15:48:23.100"></status>
 </kw>
 <kw name="Page Should Contain" library="Selenium2Library">
 <doc>Verifies that current page contains ``text``.</doc>
 <arguments>
 <arg>Log in</arg>
 </arguments>
-<msg timestamp="20181011 09:07:53.693" level="INFO">Current page contains text 'Log in'.</msg>
-<status status="PASS" endtime="20181011 09:07:53.694" starttime="20181011 09:07:53.674"></status>
+<msg timestamp="20181021 15:48:23.135" level="INFO">Current page contains text 'Log in'.</msg>
+<status status="PASS" endtime="20181021 15:48:23.135" starttime="20181021 15:48:23.114"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:07:53.694" starttime="20181011 09:07:53.084"></status>
+<status status="PASS" endtime="20181021 15:48:23.135" starttime="20181021 15:48:22.491"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:07:53.694" starttime="20181011 09:07:52.031"></status>
+<status status="PASS" endtime="20181021 15:48:23.136" starttime="20181021 15:48:21.325"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:07:53.695" critical="yes" starttime="20181011 09:07:49.269"></status>
+<status status="PASS" endtime="20181021 15:48:23.136" critical="yes" starttime="20181021 15:48:15.312"></status>
 </test>
-<test id="s1-t4" name="Test case 4 Delete Client">
+<test id="s1-t2" name="Test case 2 Delete Client">
 <kw type="setup" name="Login" library="Clockify_App">
 <kw name="Login" library="LandingPage">
 <kw name="Go To" library="Selenium2Library">
@@ -515,29 +269,29 @@
 <arguments>
 <arg>${URL}</arg>
 </arguments>
-<msg timestamp="20181011 09:07:53.702" level="INFO">Opening url 'https://clockify.me/login'</msg>
-<status status="PASS" endtime="20181011 09:07:55.278" starttime="20181011 09:07:53.701"></status>
+<msg timestamp="20181021 15:48:23.141" level="INFO">Opening url 'https://clockify.me/login'</msg>
+<status status="PASS" endtime="20181021 15:48:25.362" starttime="20181021 15:48:23.141"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${UserName}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:07:55.426" starttime="20181011 09:07:55.279"></status>
+<status status="PASS" endtime="20181021 15:48:25.386" starttime="20181021 15:48:25.363"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${PassWord}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:07:55.432" starttime="20181011 09:07:55.426"></status>
+<status status="PASS" endtime="20181021 15:48:25.415" starttime="20181021 15:48:25.386"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${LoginButton}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:07:55.439" starttime="20181011 09:07:55.433"></status>
+<status status="PASS" endtime="20181021 15:48:25.457" starttime="20181021 15:48:25.415"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -545,8 +299,8 @@
 <arg>${UserName}</arg>
 <arg>pruthvi2k1@yahoo.com</arg>
 </arguments>
-<msg timestamp="20181011 09:07:55.440" level="INFO">Typing text 'pruthvi2k1@yahoo.com' into text field 'xpath=//*[@id="email"]'.</msg>
-<status status="PASS" endtime="20181011 09:07:55.532" starttime="20181011 09:07:55.440"></status>
+<msg timestamp="20181021 15:48:25.457" level="INFO">Typing text 'pruthvi2k1@yahoo.com' into text field 'xpath=//*[@id="email"]'.</msg>
+<status status="PASS" endtime="20181021 15:48:25.593" starttime="20181021 15:48:25.457"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -554,35 +308,35 @@
 <arg>${PassWord}</arg>
 <arg>pruthviraj</arg>
 </arguments>
-<msg timestamp="20181011 09:07:55.533" level="INFO">Typing text 'pruthviraj' into text field 'xpath=//*[@id="password"]'.</msg>
-<status status="PASS" endtime="20181011 09:07:55.579" starttime="20181011 09:07:55.532"></status>
+<msg timestamp="20181021 15:48:25.594" level="INFO">Typing text 'pruthviraj' into text field 'xpath=//*[@id="password"]'.</msg>
+<status status="PASS" endtime="20181021 15:48:25.681" starttime="20181021 15:48:25.593"></status>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks button identified by ``locator``.</doc>
 <arguments>
 <arg>${LoginButton}</arg>
 </arguments>
-<msg timestamp="20181011 09:07:55.580" level="INFO">Clicking button 'xpath=//*[@type="button"]'.</msg>
-<status status="PASS" endtime="20181011 09:07:55.956" starttime="20181011 09:07:55.579"></status>
+<msg timestamp="20181021 15:48:25.682" level="INFO">Clicking button 'xpath=//*[@type="button"]'.</msg>
+<status status="PASS" endtime="20181021 15:48:25.965" starttime="20181021 15:48:25.681"></status>
 </kw>
 <kw name="Wait Until Page Does Not Contain" library="Selenium2Library">
 <doc>Waits until ``text`` disappears from current page.</doc>
 <arguments>
 <arg>Log in</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:07:55.975" starttime="20181011 09:07:55.956"></status>
+<status status="PASS" endtime="20181021 15:48:26.125" starttime="20181021 15:48:25.966"></status>
 </kw>
 <kw name="Page Should Not Contain" library="Selenium2Library">
 <doc>Verifies the current page does not contain ``text``.</doc>
 <arguments>
 <arg>'Log in'</arg>
 </arguments>
-<msg timestamp="20181011 09:07:56.216" level="INFO">Current page does not contain text ''Log in''.</msg>
-<status status="PASS" endtime="20181011 09:07:56.216" starttime="20181011 09:07:55.975"></status>
+<msg timestamp="20181021 15:48:26.314" level="INFO">Current page does not contain text ''Log in''.</msg>
+<status status="PASS" endtime="20181021 15:48:26.314" starttime="20181021 15:48:26.125"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:07:56.216" starttime="20181011 09:07:53.701"></status>
+<status status="PASS" endtime="20181021 15:48:26.315" starttime="20181021 15:48:23.140"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:07:56.216" starttime="20181011 09:07:53.700"></status>
+<status status="PASS" endtime="20181021 15:48:26.315" starttime="20181021 15:48:23.140"></status>
 </kw>
 <kw name="Delete Client" library="Clockify_App">
 <arguments>
@@ -597,22 +351,22 @@
 <arguments>
 <arg>${CLIENTS Element}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:07:56.237" starttime="20181011 09:07:56.218"></status>
+<status status="PASS" endtime="20181021 15:48:26.327" starttime="20181021 15:48:26.317"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${CLIENTS Element}</arg>
 </arguments>
-<msg timestamp="20181011 09:07:56.237" level="INFO">Clicking element 'xpath=//a/span[contains(text(),'clients')]'.</msg>
-<status status="PASS" endtime="20181011 09:07:56.897" starttime="20181011 09:07:56.237"></status>
+<msg timestamp="20181021 15:48:26.328" level="INFO">Clicking element 'xpath=//a/span[contains(text(),'clients')]'.</msg>
+<status status="PASS" endtime="20181021 15:48:26.570" starttime="20181021 15:48:26.327"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${client name text box}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:07:57.217" starttime="20181011 09:07:56.898"></status>
+<status status="PASS" endtime="20181021 15:48:26.786" starttime="20181021 15:48:26.571"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -620,26 +374,26 @@
 <arg>${client name text box}</arg>
 <arg>${NEW_CLIENT_NAME}</arg>
 </arguments>
-<msg timestamp="20181011 09:07:57.218" level="INFO">Typing text 'some client' into text field 'xpath=//input[@placeholder="New Client name..."]'.</msg>
-<status status="PASS" endtime="20181011 09:07:57.295" starttime="20181011 09:07:57.218"></status>
+<msg timestamp="20181021 15:48:26.787" level="INFO">Typing text 'some client' into text field 'xpath=//input[@placeholder="New Client name..."]'.</msg>
+<status status="PASS" endtime="20181021 15:48:26.910" starttime="20181021 15:48:26.786"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${Client ADD Button}</arg>
 </arguments>
-<msg timestamp="20181011 09:07:57.296" level="INFO">Clicking element 'xpath=//span[contains(text(),'Add')]'.</msg>
-<status status="PASS" endtime="20181011 09:07:57.543" starttime="20181011 09:07:57.295"></status>
+<msg timestamp="20181021 15:48:26.911" level="INFO">Clicking element 'xpath=//span[contains(text(),'Add')]'.</msg>
+<status status="PASS" endtime="20181021 15:48:27.151" starttime="20181021 15:48:26.910"></status>
 </kw>
 <kw name="Page Should Contain" library="Selenium2Library">
 <doc>Verifies that current page contains ``text``.</doc>
 <arguments>
 <arg>${NEW_CLIENT_NAME}</arg>
 </arguments>
-<msg timestamp="20181011 09:07:57.561" level="INFO">Current page contains text 'some client'.</msg>
-<status status="PASS" endtime="20181011 09:07:57.562" starttime="20181011 09:07:57.543"></status>
+<msg timestamp="20181021 15:48:27.174" level="INFO">Current page contains text 'some client'.</msg>
+<status status="PASS" endtime="20181021 15:48:27.174" starttime="20181021 15:48:27.152"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:07:57.562" starttime="20181011 09:07:56.217"></status>
+<status status="PASS" endtime="20181021 15:48:27.174" starttime="20181021 15:48:26.316"></status>
 </kw>
 <kw name="Delete Client" library="TimeTrackerPage">
 <arguments>
@@ -650,57 +404,57 @@
 <arguments>
 <arg>${CLIENTS Element}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:07:57.567" starttime="20181011 09:07:57.563"></status>
+<status status="PASS" endtime="20181021 15:48:27.182" starttime="20181021 15:48:27.175"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${CLIENTS Element}</arg>
 </arguments>
-<msg timestamp="20181011 09:07:57.568" level="INFO">Clicking element 'xpath=//a/span[contains(text(),'clients')]'.</msg>
-<status status="PASS" endtime="20181011 09:07:57.796" starttime="20181011 09:07:57.568"></status>
+<msg timestamp="20181021 15:48:27.183" level="INFO">Clicking element 'xpath=//a/span[contains(text(),'clients')]'.</msg>
+<status status="PASS" endtime="20181021 15:48:27.405" starttime="20181021 15:48:27.182"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${Delete Client Button}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:07:57.801" starttime="20181011 09:07:57.796"></status>
+<status status="PASS" endtime="20181021 15:48:27.413" starttime="20181021 15:48:27.405"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${Delete Client Button}</arg>
 </arguments>
-<msg timestamp="20181011 09:07:57.801" level="INFO">Clicking element 'xpath=//a[@class="buttons-workspaces--cross"]'.</msg>
-<status status="PASS" endtime="20181011 09:07:58.025" starttime="20181011 09:07:57.801"></status>
+<msg timestamp="20181021 15:48:27.414" level="INFO">Clicking element 'xpath=//a[@class="buttons-workspaces--cross"]'.</msg>
+<status status="PASS" endtime="20181021 15:48:27.644" starttime="20181021 15:48:27.413"></status>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks button identified by ``locator``.</doc>
 <arguments>
 <arg>YES</arg>
 </arguments>
-<msg timestamp="20181011 09:07:58.026" level="INFO">Clicking button 'YES'.</msg>
-<status status="PASS" endtime="20181011 09:07:58.258" starttime="20181011 09:07:58.025"></status>
+<msg timestamp="20181021 15:48:27.645" level="INFO">Clicking button 'YES'.</msg>
+<status status="PASS" endtime="20181021 15:48:27.886" starttime="20181021 15:48:27.644"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on current page.</doc>
 <arguments>
 <arg>Client deleted</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:07:58.510" starttime="20181011 09:07:58.258"></status>
+<status status="PASS" endtime="20181021 15:48:28.314" starttime="20181021 15:48:27.887"></status>
 </kw>
 <kw name="Page Should Contain" library="Selenium2Library">
 <doc>Verifies that current page contains ``text``.</doc>
 <arguments>
 <arg>Client deleted</arg>
 </arguments>
-<msg timestamp="20181011 09:07:58.526" level="INFO">Current page contains text 'Client deleted'.</msg>
-<status status="PASS" endtime="20181011 09:07:58.526" starttime="20181011 09:07:58.511"></status>
+<msg timestamp="20181021 15:48:28.330" level="INFO">Current page contains text 'Client deleted'.</msg>
+<status status="PASS" endtime="20181021 15:48:28.330" starttime="20181021 15:48:28.314"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:07:58.527" starttime="20181011 09:07:57.562"></status>
+<status status="PASS" endtime="20181021 15:48:28.331" starttime="20181021 15:48:27.175"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:07:58.528" starttime="20181011 09:07:56.217"></status>
+<status status="PASS" endtime="20181021 15:48:28.331" starttime="20181021 15:48:26.315"></status>
 </kw>
 <kw type="teardown" name="Logout" library="Clockify_App">
 <kw name="Logout" library="TimeTrackerPage">
@@ -709,46 +463,46 @@
 <arguments>
 <arg>${User Name Element}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:07:58.534" starttime="20181011 09:07:58.529"></status>
+<status status="PASS" endtime="20181021 15:48:28.340" starttime="20181021 15:48:28.333"></status>
 </kw>
 <kw name="Mouse Over" library="Selenium2Library">
 <doc>Simulates hovering mouse over the element ``locator``.</doc>
 <arguments>
 <arg>${User Name Element}</arg>
 </arguments>
-<msg timestamp="20181011 09:07:58.535" level="INFO">Simulating Mouse Over on element 'xpath=//sidebar/div/section/a/div[1]/span'.</msg>
-<status status="PASS" endtime="20181011 09:07:58.803" starttime="20181011 09:07:58.535"></status>
+<msg timestamp="20181021 15:48:28.341" level="INFO">Simulating Mouse Over on element 'xpath=//sidebar/div/section/a/div[1]/span'.</msg>
+<status status="PASS" endtime="20181021 15:48:28.619" starttime="20181021 15:48:28.340"></status>
 </kw>
 <kw name="Click Link" library="Selenium2Library">
 <doc>Clicks a link identified by ``locator``.</doc>
 <arguments>
 <arg>${Log Out Link}</arg>
 </arguments>
-<msg timestamp="20181011 09:07:58.803" level="INFO">Clicking link 'Log out'.</msg>
-<status status="PASS" endtime="20181011 09:07:59.054" starttime="20181011 09:07:58.803"></status>
+<msg timestamp="20181021 15:48:28.620" level="INFO">Clicking link 'Log out'.</msg>
+<status status="PASS" endtime="20181021 15:48:28.883" starttime="20181021 15:48:28.619"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on current page.</doc>
 <arguments>
 <arg>Log in</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:07:59.062" starttime="20181011 09:07:59.054"></status>
+<status status="PASS" endtime="20181021 15:48:28.894" starttime="20181021 15:48:28.883"></status>
 </kw>
 <kw name="Page Should Contain" library="Selenium2Library">
 <doc>Verifies that current page contains ``text``.</doc>
 <arguments>
 <arg>Log in</arg>
 </arguments>
-<msg timestamp="20181011 09:07:59.074" level="INFO">Current page contains text 'Log in'.</msg>
-<status status="PASS" endtime="20181011 09:07:59.075" starttime="20181011 09:07:59.063"></status>
+<msg timestamp="20181021 15:48:28.910" level="INFO">Current page contains text 'Log in'.</msg>
+<status status="PASS" endtime="20181021 15:48:28.911" starttime="20181021 15:48:28.895"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:07:59.075" starttime="20181011 09:07:58.528"></status>
+<status status="PASS" endtime="20181021 15:48:28.911" starttime="20181021 15:48:28.332"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:07:59.075" starttime="20181011 09:07:58.528"></status>
+<status status="PASS" endtime="20181021 15:48:28.911" starttime="20181021 15:48:28.332"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:07:59.076" critical="yes" starttime="20181011 09:07:53.699"></status>
+<status status="PASS" endtime="20181021 15:48:28.911" critical="yes" starttime="20181021 15:48:23.139"></status>
 </test>
-<test id="s1-t5" name="Test case 5 Create Project">
+<test id="s1-t3" name="Test case 3 Create Project">
 <kw type="setup" name="Login" library="Clockify_App">
 <kw name="Login" library="LandingPage">
 <kw name="Go To" library="Selenium2Library">
@@ -756,29 +510,29 @@
 <arguments>
 <arg>${URL}</arg>
 </arguments>
-<msg timestamp="20181011 09:07:59.080" level="INFO">Opening url 'https://clockify.me/login'</msg>
-<status status="PASS" endtime="20181011 09:08:00.365" starttime="20181011 09:07:59.080"></status>
+<msg timestamp="20181021 15:48:28.916" level="INFO">Opening url 'https://clockify.me/login'</msg>
+<status status="PASS" endtime="20181021 15:48:31.212" starttime="20181021 15:48:28.915"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${UserName}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:00.372" starttime="20181011 09:08:00.365"></status>
+<status status="PASS" endtime="20181021 15:48:31.302" starttime="20181021 15:48:31.212"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${PassWord}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:00.378" starttime="20181011 09:08:00.372"></status>
+<status status="PASS" endtime="20181021 15:48:31.322" starttime="20181021 15:48:31.302"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${LoginButton}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:00.384" starttime="20181011 09:08:00.378"></status>
+<status status="PASS" endtime="20181021 15:48:31.331" starttime="20181021 15:48:31.322"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -786,8 +540,8 @@
 <arg>${UserName}</arg>
 <arg>pruthvi2k1@yahoo.com</arg>
 </arguments>
-<msg timestamp="20181011 09:08:00.385" level="INFO">Typing text 'pruthvi2k1@yahoo.com' into text field 'xpath=//*[@id="email"]'.</msg>
-<status status="PASS" endtime="20181011 09:08:00.467" starttime="20181011 09:08:00.384"></status>
+<msg timestamp="20181021 15:48:31.332" level="INFO">Typing text 'pruthvi2k1@yahoo.com' into text field 'xpath=//*[@id="email"]'.</msg>
+<status status="PASS" endtime="20181021 15:48:31.465" starttime="20181021 15:48:31.332"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -795,35 +549,35 @@
 <arg>${PassWord}</arg>
 <arg>pruthviraj</arg>
 </arguments>
-<msg timestamp="20181011 09:08:00.468" level="INFO">Typing text 'pruthviraj' into text field 'xpath=//*[@id="password"]'.</msg>
-<status status="PASS" endtime="20181011 09:08:00.508" starttime="20181011 09:08:00.467"></status>
+<msg timestamp="20181021 15:48:31.466" level="INFO">Typing text 'pruthviraj' into text field 'xpath=//*[@id="password"]'.</msg>
+<status status="PASS" endtime="20181021 15:48:31.538" starttime="20181021 15:48:31.466"></status>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks button identified by ``locator``.</doc>
 <arguments>
 <arg>${LoginButton}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:00.510" level="INFO">Clicking button 'xpath=//*[@type="button"]'.</msg>
-<status status="PASS" endtime="20181011 09:08:00.756" starttime="20181011 09:08:00.509"></status>
+<msg timestamp="20181021 15:48:31.539" level="INFO">Clicking button 'xpath=//*[@type="button"]'.</msg>
+<status status="PASS" endtime="20181021 15:48:31.845" starttime="20181021 15:48:31.539"></status>
 </kw>
 <kw name="Wait Until Page Does Not Contain" library="Selenium2Library">
 <doc>Waits until ``text`` disappears from current page.</doc>
 <arguments>
 <arg>Log in</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:00.847" starttime="20181011 09:08:00.757"></status>
+<status status="PASS" endtime="20181021 15:48:32.125" starttime="20181021 15:48:31.846"></status>
 </kw>
 <kw name="Page Should Not Contain" library="Selenium2Library">
 <doc>Verifies the current page does not contain ``text``.</doc>
 <arguments>
 <arg>'Log in'</arg>
 </arguments>
-<msg timestamp="20181011 09:08:00.941" level="INFO">Current page does not contain text ''Log in''.</msg>
-<status status="PASS" endtime="20181011 09:08:00.942" starttime="20181011 09:08:00.847"></status>
+<msg timestamp="20181021 15:48:32.364" level="INFO">Current page does not contain text ''Log in''.</msg>
+<status status="PASS" endtime="20181021 15:48:32.364" starttime="20181021 15:48:32.126"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:00.942" starttime="20181011 09:07:59.079"></status>
+<status status="PASS" endtime="20181021 15:48:32.365" starttime="20181021 15:48:28.915"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:00.942" starttime="20181011 09:07:59.079"></status>
+<status status="PASS" endtime="20181021 15:48:32.365" starttime="20181021 15:48:28.914"></status>
 </kw>
 <kw name="Create Project" library="Clockify_App">
 <arguments>
@@ -838,23 +592,23 @@
 <arguments>
 <arg>${PROJECTS Element}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:00.949" starttime="20181011 09:08:00.943"></status>
+<status status="PASS" endtime="20181021 15:48:32.510" starttime="20181021 15:48:32.367"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${PROJECTS Element}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:00.950" level="INFO">Clicking element 'xpath=//li/a/span[contains(text(),'projects')]'.</msg>
-<status status="PASS" endtime="20181011 09:08:01.246" starttime="20181011 09:08:00.950"></status>
+<msg timestamp="20181021 15:48:32.511" level="INFO">Clicking element 'xpath=//li/a/span[contains(text(),'projects')]'.</msg>
+<status status="PASS" endtime="20181021 15:48:33.002" starttime="20181021 15:48:32.510"></status>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks button identified by ``locator``.</doc>
 <arguments>
 <arg>${CREATE NEW PROJECT BUTTON}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:01.247" level="INFO">Clicking button 'xpath=//button[@class="button-create-new"]'.</msg>
-<status status="PASS" endtime="20181011 09:08:01.534" starttime="20181011 09:08:01.247"></status>
+<msg timestamp="20181021 15:48:33.003" level="INFO">Clicking button 'xpath=//button[@class="button-create-new"]'.</msg>
+<status status="PASS" endtime="20181021 15:48:33.394" starttime="20181021 15:48:33.003"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -862,28 +616,28 @@
 <arg>${project name text box}</arg>
 <arg>${NEW_PROJECT_NAME}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:01.535" level="INFO">Typing text 'some project' into text field 'xpath=//input[@placeholder="Project name..."]'.</msg>
-<status status="PASS" endtime="20181011 09:08:01.582" starttime="20181011 09:08:01.535"></status>
+<msg timestamp="20181021 15:48:33.395" level="INFO">Typing text 'some project' into text field 'xpath=//input[@placeholder="Project name..."]'.</msg>
+<status status="PASS" endtime="20181021 15:48:33.493" starttime="20181021 15:48:33.395"></status>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks button identified by ``locator``.</doc>
 <arguments>
 <arg>CREATE</arg>
 </arguments>
-<msg timestamp="20181011 09:08:01.583" level="INFO">Clicking button 'CREATE'.</msg>
-<status status="PASS" endtime="20181011 09:08:01.868" starttime="20181011 09:08:01.582"></status>
+<msg timestamp="20181021 15:48:33.494" level="INFO">Clicking button 'CREATE'.</msg>
+<status status="PASS" endtime="20181021 15:48:33.826" starttime="20181021 15:48:33.493"></status>
 </kw>
 <kw name="Page Should Contain" library="Selenium2Library">
 <doc>Verifies that current page contains ``text``.</doc>
 <arguments>
 <arg>${NEW_PROJECT_NAME}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:01.887" level="INFO">Current page contains text 'some project'.</msg>
-<status status="PASS" endtime="20181011 09:08:01.887" starttime="20181011 09:08:01.868"></status>
+<msg timestamp="20181021 15:48:33.904" level="INFO">Current page contains text 'some project'.</msg>
+<status status="PASS" endtime="20181021 15:48:33.904" starttime="20181021 15:48:33.826"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:01.888" starttime="20181011 09:08:00.943"></status>
+<status status="PASS" endtime="20181021 15:48:33.905" starttime="20181021 15:48:32.367"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:01.888" starttime="20181011 09:08:00.942"></status>
+<status status="PASS" endtime="20181021 15:48:33.906" starttime="20181021 15:48:32.366"></status>
 </kw>
 <kw type="teardown" name="Delete Project and Logout" library="Clockify_App">
 <arguments>
@@ -895,81 +649,81 @@
 </arguments>
 <kw name="Reload Page" library="Selenium2Library">
 <doc>Simulates user reloading page.</doc>
-<status status="PASS" endtime="20181011 09:08:04.865" starttime="20181011 09:08:01.889"></status>
+<status status="PASS" endtime="20181021 15:48:38.325" starttime="20181021 15:48:33.909"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${PROJECTS Element}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:04.918" starttime="20181011 09:08:04.865"></status>
+<status status="PASS" endtime="20181021 15:48:38.350" starttime="20181021 15:48:38.326"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${PROJECTS Element}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:04.918" level="INFO">Clicking element 'xpath=//li/a/span[contains(text(),'projects')]'.</msg>
-<status status="PASS" endtime="20181011 09:08:05.152" starttime="20181011 09:08:04.918"></status>
+<msg timestamp="20181021 15:48:38.352" level="INFO">Clicking element 'xpath=//li/a/span[contains(text(),'projects')]'.</msg>
+<status status="PASS" endtime="20181021 15:48:38.603" starttime="20181021 15:48:38.351"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${Dots Icon In Projects Page}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:05.154" level="INFO">Clicking element 'xpath=//table/tbody/tr[1]/td[1]/section/i[@class="icon--dots"]'.</msg>
-<status status="PASS" endtime="20181011 09:08:05.393" starttime="20181011 09:08:05.153"></status>
+<msg timestamp="20181021 15:48:38.604" level="INFO">Clicking element 'xpath=//table/tbody/tr[1]/td[1]/section/i[@class="icon--dots"]'.</msg>
+<status status="PASS" endtime="20181021 15:48:38.864" starttime="20181021 15:48:38.603"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on current page.</doc>
 <arguments>
 <arg>Delete</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:05.432" starttime="20181011 09:08:05.394"></status>
+<status status="PASS" endtime="20181021 15:48:38.901" starttime="20181021 15:48:38.864"></status>
 </kw>
 <kw name="Click Link" library="Selenium2Library">
 <doc>Clicks a link identified by ``locator``.</doc>
 <arguments>
 <arg>Delete</arg>
 </arguments>
-<msg timestamp="20181011 09:08:05.433" level="INFO">Clicking link 'Delete'.</msg>
-<status status="PASS" endtime="20181011 09:08:05.669" starttime="20181011 09:08:05.433"></status>
+<msg timestamp="20181021 15:48:38.902" level="INFO">Clicking link 'Delete'.</msg>
+<status status="PASS" endtime="20181021 15:48:39.146" starttime="20181021 15:48:38.902"></status>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks button identified by ``locator``.</doc>
 <arguments>
 <arg>YES</arg>
 </arguments>
-<msg timestamp="20181011 09:08:05.670" level="INFO">Clicking button 'YES'.</msg>
-<status status="PASS" endtime="20181011 09:08:05.916" starttime="20181011 09:08:05.669"></status>
+<msg timestamp="20181021 15:48:39.146" level="INFO">Clicking button 'YES'.</msg>
+<status status="PASS" endtime="20181021 15:48:39.412" starttime="20181021 15:48:39.146"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on current page.</doc>
 <arguments>
 <arg>Project deleted</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:06.183" starttime="20181011 09:08:05.916"></status>
+<status status="PASS" endtime="20181021 15:48:39.844" starttime="20181021 15:48:39.412"></status>
 </kw>
 <kw name="Page Should Contain" library="Selenium2Library">
 <doc>Verifies that current page contains ``text``.</doc>
 <arguments>
 <arg>Project deleted</arg>
 </arguments>
-<msg timestamp="20181011 09:08:06.199" level="INFO">Current page contains text 'Project deleted'.</msg>
-<status status="PASS" endtime="20181011 09:08:06.199" starttime="20181011 09:08:06.184"></status>
+<msg timestamp="20181021 15:48:39.867" level="INFO">Current page contains text 'Project deleted'.</msg>
+<status status="PASS" endtime="20181021 15:48:39.867" starttime="20181021 15:48:39.844"></status>
 </kw>
 <kw name="Reload Page" library="Selenium2Library">
 <doc>Simulates user reloading page.</doc>
-<status status="PASS" endtime="20181011 09:08:08.881" starttime="20181011 09:08:06.199"></status>
+<status status="PASS" endtime="20181021 15:48:43.349" starttime="20181021 15:48:39.867"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${PROJECTS Element}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:08.886" starttime="20181011 09:08:08.881"></status>
+<status status="PASS" endtime="20181021 15:48:43.362" starttime="20181021 15:48:43.349"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:08.886" starttime="20181011 09:08:01.889"></status>
+<status status="PASS" endtime="20181021 15:48:43.363" starttime="20181021 15:48:33.909"></status>
 </kw>
 <kw name="Logout" library="TimeTrackerPage">
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
@@ -977,46 +731,46 @@
 <arguments>
 <arg>${User Name Element}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:08.892" starttime="20181011 09:08:08.887"></status>
+<status status="PASS" endtime="20181021 15:48:43.406" starttime="20181021 15:48:43.364"></status>
 </kw>
 <kw name="Mouse Over" library="Selenium2Library">
 <doc>Simulates hovering mouse over the element ``locator``.</doc>
 <arguments>
 <arg>${User Name Element}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:08.893" level="INFO">Simulating Mouse Over on element 'xpath=//sidebar/div/section/a/div[1]/span'.</msg>
-<status status="PASS" endtime="20181011 09:08:09.163" starttime="20181011 09:08:08.893"></status>
+<msg timestamp="20181021 15:48:43.407" level="INFO">Simulating Mouse Over on element 'xpath=//sidebar/div/section/a/div[1]/span'.</msg>
+<status status="PASS" endtime="20181021 15:48:43.692" starttime="20181021 15:48:43.406"></status>
 </kw>
 <kw name="Click Link" library="Selenium2Library">
 <doc>Clicks a link identified by ``locator``.</doc>
 <arguments>
 <arg>${Log Out Link}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:09.164" level="INFO">Clicking link 'Log out'.</msg>
-<status status="PASS" endtime="20181011 09:08:09.413" starttime="20181011 09:08:09.164"></status>
+<msg timestamp="20181021 15:48:43.693" level="INFO">Clicking link 'Log out'.</msg>
+<status status="PASS" endtime="20181021 15:48:43.970" starttime="20181021 15:48:43.693"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on current page.</doc>
 <arguments>
 <arg>Log in</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:09.423" starttime="20181011 09:08:09.414"></status>
+<status status="PASS" endtime="20181021 15:48:44.003" starttime="20181021 15:48:43.971"></status>
 </kw>
 <kw name="Page Should Contain" library="Selenium2Library">
 <doc>Verifies that current page contains ``text``.</doc>
 <arguments>
 <arg>Log in</arg>
 </arguments>
-<msg timestamp="20181011 09:08:09.443" level="INFO">Current page contains text 'Log in'.</msg>
-<status status="PASS" endtime="20181011 09:08:09.443" starttime="20181011 09:08:09.423"></status>
+<msg timestamp="20181021 15:48:44.031" level="INFO">Current page contains text 'Log in'.</msg>
+<status status="PASS" endtime="20181021 15:48:44.032" starttime="20181021 15:48:44.004"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:09.443" starttime="20181011 09:08:08.886"></status>
+<status status="PASS" endtime="20181021 15:48:44.032" starttime="20181021 15:48:43.363"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:09.444" starttime="20181011 09:08:01.888"></status>
+<status status="PASS" endtime="20181021 15:48:44.032" starttime="20181021 15:48:33.908"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:09.444" critical="yes" starttime="20181011 09:07:59.078"></status>
+<status status="PASS" endtime="20181021 15:48:44.033" critical="yes" starttime="20181021 15:48:28.913"></status>
 </test>
-<test id="s1-t6" name="Test case 6 Delete Project">
+<test id="s1-t4" name="Test case 4 Delete Project">
 <kw type="setup" name="Login" library="Clockify_App">
 <kw name="Login" library="LandingPage">
 <kw name="Go To" library="Selenium2Library">
@@ -1024,29 +778,29 @@
 <arguments>
 <arg>${URL}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:09.447" level="INFO">Opening url 'https://clockify.me/login'</msg>
-<status status="PASS" endtime="20181011 09:08:10.901" starttime="20181011 09:08:09.447"></status>
+<msg timestamp="20181021 15:48:44.038" level="INFO">Opening url 'https://clockify.me/login'</msg>
+<status status="PASS" endtime="20181021 15:48:46.547" starttime="20181021 15:48:44.038"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${UserName}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:10.912" starttime="20181011 09:08:10.901"></status>
+<status status="PASS" endtime="20181021 15:48:46.619" starttime="20181021 15:48:46.547"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${PassWord}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:10.935" starttime="20181011 09:08:10.912"></status>
+<status status="PASS" endtime="20181021 15:48:46.635" starttime="20181021 15:48:46.619"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${LoginButton}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:10.943" starttime="20181011 09:08:10.935"></status>
+<status status="PASS" endtime="20181021 15:48:46.644" starttime="20181021 15:48:46.635"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -1054,8 +808,8 @@
 <arg>${UserName}</arg>
 <arg>pruthvi2k1@yahoo.com</arg>
 </arguments>
-<msg timestamp="20181011 09:08:10.944" level="INFO">Typing text 'pruthvi2k1@yahoo.com' into text field 'xpath=//*[@id="email"]'.</msg>
-<status status="PASS" endtime="20181011 09:08:11.019" starttime="20181011 09:08:10.943"></status>
+<msg timestamp="20181021 15:48:46.645" level="INFO">Typing text 'pruthvi2k1@yahoo.com' into text field 'xpath=//*[@id="email"]'.</msg>
+<status status="PASS" endtime="20181021 15:48:46.775" starttime="20181021 15:48:46.645"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -1063,35 +817,35 @@
 <arg>${PassWord}</arg>
 <arg>pruthviraj</arg>
 </arguments>
-<msg timestamp="20181011 09:08:11.020" level="INFO">Typing text 'pruthviraj' into text field 'xpath=//*[@id="password"]'.</msg>
-<status status="PASS" endtime="20181011 09:08:11.057" starttime="20181011 09:08:11.020"></status>
+<msg timestamp="20181021 15:48:46.777" level="INFO">Typing text 'pruthviraj' into text field 'xpath=//*[@id="password"]'.</msg>
+<status status="PASS" endtime="20181021 15:48:46.848" starttime="20181021 15:48:46.776"></status>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks button identified by ``locator``.</doc>
 <arguments>
 <arg>${LoginButton}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:11.059" level="INFO">Clicking button 'xpath=//*[@type="button"]'.</msg>
-<status status="PASS" endtime="20181011 09:08:11.307" starttime="20181011 09:08:11.058"></status>
+<msg timestamp="20181021 15:48:46.850" level="INFO">Clicking button 'xpath=//*[@type="button"]'.</msg>
+<status status="PASS" endtime="20181021 15:48:47.124" starttime="20181021 15:48:46.849"></status>
 </kw>
 <kw name="Wait Until Page Does Not Contain" library="Selenium2Library">
 <doc>Waits until ``text`` disappears from current page.</doc>
 <arguments>
 <arg>Log in</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:11.556" starttime="20181011 09:08:11.307"></status>
+<status status="PASS" endtime="20181021 15:48:47.440" starttime="20181021 15:48:47.124"></status>
 </kw>
 <kw name="Page Should Not Contain" library="Selenium2Library">
 <doc>Verifies the current page does not contain ``text``.</doc>
 <arguments>
 <arg>'Log in'</arg>
 </arguments>
-<msg timestamp="20181011 09:08:11.585" level="INFO">Current page does not contain text ''Log in''.</msg>
-<status status="PASS" endtime="20181011 09:08:11.585" starttime="20181011 09:08:11.557"></status>
+<msg timestamp="20181021 15:48:47.532" level="INFO">Current page does not contain text ''Log in''.</msg>
+<status status="PASS" endtime="20181021 15:48:47.533" starttime="20181021 15:48:47.441"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:11.585" starttime="20181011 09:08:09.447"></status>
+<status status="PASS" endtime="20181021 15:48:47.533" starttime="20181021 15:48:44.037"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:11.585" starttime="20181011 09:08:09.446"></status>
+<status status="PASS" endtime="20181021 15:48:47.533" starttime="20181021 15:48:44.037"></status>
 </kw>
 <kw name="Delete Project" library="Clockify_App">
 <arguments>
@@ -1106,23 +860,23 @@
 <arguments>
 <arg>${PROJECTS Element}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:11.592" starttime="20181011 09:08:11.587"></status>
+<status status="PASS" endtime="20181021 15:48:47.545" starttime="20181021 15:48:47.536"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${PROJECTS Element}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:11.592" level="INFO">Clicking element 'xpath=//li/a/span[contains(text(),'projects')]'.</msg>
-<status status="PASS" endtime="20181011 09:08:11.871" starttime="20181011 09:08:11.592"></status>
+<msg timestamp="20181021 15:48:47.545" level="INFO">Clicking element 'xpath=//li/a/span[contains(text(),'projects')]'.</msg>
+<status status="PASS" endtime="20181021 15:48:48.021" starttime="20181021 15:48:47.545"></status>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks button identified by ``locator``.</doc>
 <arguments>
 <arg>${CREATE NEW PROJECT BUTTON}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:11.871" level="INFO">Clicking button 'xpath=//button[@class="button-create-new"]'.</msg>
-<status status="PASS" endtime="20181011 09:08:12.151" starttime="20181011 09:08:11.871"></status>
+<msg timestamp="20181021 15:48:48.022" level="INFO">Clicking button 'xpath=//button[@class="button-create-new"]'.</msg>
+<status status="PASS" endtime="20181021 15:48:48.341" starttime="20181021 15:48:48.022"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -1130,26 +884,26 @@
 <arg>${project name text box}</arg>
 <arg>${NEW_PROJECT_NAME}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:12.152" level="INFO">Typing text 'some project' into text field 'xpath=//input[@placeholder="Project name..."]'.</msg>
-<status status="PASS" endtime="20181011 09:08:12.196" starttime="20181011 09:08:12.151"></status>
+<msg timestamp="20181021 15:48:48.342" level="INFO">Typing text 'some project' into text field 'xpath=//input[@placeholder="Project name..."]'.</msg>
+<status status="PASS" endtime="20181021 15:48:48.493" starttime="20181021 15:48:48.341"></status>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks button identified by ``locator``.</doc>
 <arguments>
 <arg>CREATE</arg>
 </arguments>
-<msg timestamp="20181011 09:08:12.196" level="INFO">Clicking button 'CREATE'.</msg>
-<status status="PASS" endtime="20181011 09:08:12.477" starttime="20181011 09:08:12.196"></status>
+<msg timestamp="20181021 15:48:48.494" level="INFO">Clicking button 'CREATE'.</msg>
+<status status="PASS" endtime="20181021 15:48:48.823" starttime="20181021 15:48:48.493"></status>
 </kw>
 <kw name="Page Should Contain" library="Selenium2Library">
 <doc>Verifies that current page contains ``text``.</doc>
 <arguments>
 <arg>${NEW_PROJECT_NAME}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:12.501" level="INFO">Current page contains text 'some project'.</msg>
-<status status="PASS" endtime="20181011 09:08:12.501" starttime="20181011 09:08:12.477"></status>
+<msg timestamp="20181021 15:48:48.875" level="INFO">Current page contains text 'some project'.</msg>
+<status status="PASS" endtime="20181021 15:48:48.875" starttime="20181021 15:48:48.823"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:12.501" starttime="20181011 09:08:11.586"></status>
+<status status="PASS" endtime="20181021 15:48:48.875" starttime="20181021 15:48:47.535"></status>
 </kw>
 <kw name="Delete Project" library="TimeTrackerPage">
 <arguments>
@@ -1157,83 +911,83 @@
 </arguments>
 <kw name="Reload Page" library="Selenium2Library">
 <doc>Simulates user reloading page.</doc>
-<status status="PASS" endtime="20181011 09:08:15.143" starttime="20181011 09:08:12.502"></status>
+<status status="PASS" endtime="20181021 15:48:52.248" starttime="20181021 15:48:48.876"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${PROJECTS Element}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:15.149" starttime="20181011 09:08:15.144"></status>
+<status status="PASS" endtime="20181021 15:48:52.275" starttime="20181021 15:48:52.248"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${PROJECTS Element}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:15.149" level="INFO">Clicking element 'xpath=//li/a/span[contains(text(),'projects')]'.</msg>
-<status status="PASS" endtime="20181011 09:08:15.379" starttime="20181011 09:08:15.149"></status>
+<msg timestamp="20181021 15:48:52.276" level="INFO">Clicking element 'xpath=//li/a/span[contains(text(),'projects')]'.</msg>
+<status status="PASS" endtime="20181021 15:48:52.510" starttime="20181021 15:48:52.275"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${Dots Icon In Projects Page}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:15.379" level="INFO">Clicking element 'xpath=//table/tbody/tr[1]/td[1]/section/i[@class="icon--dots"]'.</msg>
-<status status="PASS" endtime="20181011 09:08:15.619" starttime="20181011 09:08:15.379"></status>
+<msg timestamp="20181021 15:48:52.511" level="INFO">Clicking element 'xpath=//table/tbody/tr[1]/td[1]/section/i[@class="icon--dots"]'.</msg>
+<status status="PASS" endtime="20181021 15:48:52.744" starttime="20181021 15:48:52.510"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on current page.</doc>
 <arguments>
 <arg>Delete</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:15.633" starttime="20181011 09:08:15.619"></status>
+<status status="PASS" endtime="20181021 15:48:52.768" starttime="20181021 15:48:52.744"></status>
 </kw>
 <kw name="Click Link" library="Selenium2Library">
 <doc>Clicks a link identified by ``locator``.</doc>
 <arguments>
 <arg>Delete</arg>
 </arguments>
-<msg timestamp="20181011 09:08:15.633" level="INFO">Clicking link 'Delete'.</msg>
-<status status="PASS" endtime="20181011 09:08:15.876" starttime="20181011 09:08:15.633"></status>
+<msg timestamp="20181021 15:48:52.769" level="INFO">Clicking link 'Delete'.</msg>
+<status status="PASS" endtime="20181021 15:48:53.051" starttime="20181021 15:48:52.768"></status>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks button identified by ``locator``.</doc>
 <arguments>
 <arg>YES</arg>
 </arguments>
-<msg timestamp="20181011 09:08:15.876" level="INFO">Clicking button 'YES'.</msg>
-<status status="PASS" endtime="20181011 09:08:16.130" starttime="20181011 09:08:15.876"></status>
+<msg timestamp="20181021 15:48:53.052" level="INFO">Clicking button 'YES'.</msg>
+<status status="PASS" endtime="20181021 15:48:53.304" starttime="20181021 15:48:53.051"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on current page.</doc>
 <arguments>
 <arg>Project deleted</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:16.586" starttime="20181011 09:08:16.130"></status>
+<status status="PASS" endtime="20181021 15:48:53.744" starttime="20181021 15:48:53.305"></status>
 </kw>
 <kw name="Page Should Contain" library="Selenium2Library">
 <doc>Verifies that current page contains ``text``.</doc>
 <arguments>
 <arg>Project deleted</arg>
 </arguments>
-<msg timestamp="20181011 09:08:16.611" level="INFO">Current page contains text 'Project deleted'.</msg>
-<status status="PASS" endtime="20181011 09:08:16.611" starttime="20181011 09:08:16.586"></status>
+<msg timestamp="20181021 15:48:53.792" level="INFO">Current page contains text 'Project deleted'.</msg>
+<status status="PASS" endtime="20181021 15:48:53.792" starttime="20181021 15:48:53.744"></status>
 </kw>
 <kw name="Reload Page" library="Selenium2Library">
 <doc>Simulates user reloading page.</doc>
-<status status="PASS" endtime="20181011 09:08:19.103" starttime="20181011 09:08:16.612"></status>
+<status status="PASS" endtime="20181021 15:48:57.126" starttime="20181021 15:48:53.792"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${PROJECTS Element}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:19.112" starttime="20181011 09:08:19.103"></status>
+<status status="PASS" endtime="20181021 15:48:57.155" starttime="20181021 15:48:57.126"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:19.113" starttime="20181011 09:08:12.501"></status>
+<status status="PASS" endtime="20181021 15:48:57.155" starttime="20181021 15:48:48.876"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:19.113" starttime="20181011 09:08:11.586"></status>
+<status status="PASS" endtime="20181021 15:48:57.155" starttime="20181021 15:48:47.534"></status>
 </kw>
 <kw type="teardown" name="Logout" library="Clockify_App">
 <kw name="Logout" library="TimeTrackerPage">
@@ -1242,46 +996,46 @@
 <arguments>
 <arg>${User Name Element}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:19.119" starttime="20181011 09:08:19.114"></status>
+<status status="PASS" endtime="20181021 15:48:57.171" starttime="20181021 15:48:57.157"></status>
 </kw>
 <kw name="Mouse Over" library="Selenium2Library">
 <doc>Simulates hovering mouse over the element ``locator``.</doc>
 <arguments>
 <arg>${User Name Element}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:19.119" level="INFO">Simulating Mouse Over on element 'xpath=//sidebar/div/section/a/div[1]/span'.</msg>
-<status status="PASS" endtime="20181011 09:08:19.386" starttime="20181011 09:08:19.119"></status>
+<msg timestamp="20181021 15:48:57.172" level="INFO">Simulating Mouse Over on element 'xpath=//sidebar/div/section/a/div[1]/span'.</msg>
+<status status="PASS" endtime="20181021 15:48:57.449" starttime="20181021 15:48:57.172"></status>
 </kw>
 <kw name="Click Link" library="Selenium2Library">
 <doc>Clicks a link identified by ``locator``.</doc>
 <arguments>
 <arg>${Log Out Link}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:19.387" level="INFO">Clicking link 'Log out'.</msg>
-<status status="PASS" endtime="20181011 09:08:19.631" starttime="20181011 09:08:19.387"></status>
+<msg timestamp="20181021 15:48:57.449" level="INFO">Clicking link 'Log out'.</msg>
+<status status="PASS" endtime="20181021 15:48:57.738" starttime="20181021 15:48:57.449"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on current page.</doc>
 <arguments>
 <arg>Log in</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:19.642" starttime="20181011 09:08:19.631"></status>
+<status status="PASS" endtime="20181021 15:48:57.773" starttime="20181021 15:48:57.738"></status>
 </kw>
 <kw name="Page Should Contain" library="Selenium2Library">
 <doc>Verifies that current page contains ``text``.</doc>
 <arguments>
 <arg>Log in</arg>
 </arguments>
-<msg timestamp="20181011 09:08:19.658" level="INFO">Current page contains text 'Log in'.</msg>
-<status status="PASS" endtime="20181011 09:08:19.659" starttime="20181011 09:08:19.642"></status>
+<msg timestamp="20181021 15:48:57.846" level="INFO">Current page contains text 'Log in'.</msg>
+<status status="PASS" endtime="20181021 15:48:57.846" starttime="20181021 15:48:57.774"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:19.659" starttime="20181011 09:08:19.114"></status>
+<status status="PASS" endtime="20181021 15:48:57.847" starttime="20181021 15:48:57.157"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:19.659" starttime="20181011 09:08:19.113"></status>
+<status status="PASS" endtime="20181021 15:48:57.847" starttime="20181021 15:48:57.156"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:19.659" critical="yes" starttime="20181011 09:08:09.445"></status>
+<status status="PASS" endtime="20181021 15:48:57.848" critical="yes" starttime="20181021 15:48:44.035"></status>
 </test>
-<test id="s1-t7" name="Test case 7 Create Work Space">
+<test id="s1-t5" name="Test case 5 Create Work Space">
 <kw type="setup" name="Login" library="Clockify_App">
 <kw name="Login" library="LandingPage">
 <kw name="Go To" library="Selenium2Library">
@@ -1289,29 +1043,29 @@
 <arguments>
 <arg>${URL}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:19.664" level="INFO">Opening url 'https://clockify.me/login'</msg>
-<status status="PASS" endtime="20181011 09:08:21.044" starttime="20181011 09:08:19.664"></status>
+<msg timestamp="20181021 15:48:57.855" level="INFO">Opening url 'https://clockify.me/login'</msg>
+<status status="PASS" endtime="20181021 15:49:00.092" starttime="20181021 15:48:57.855"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${UserName}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:21.051" starttime="20181011 09:08:21.044"></status>
+<status status="PASS" endtime="20181021 15:49:00.105" starttime="20181021 15:49:00.092"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${PassWord}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:21.056" starttime="20181011 09:08:21.051"></status>
+<status status="PASS" endtime="20181021 15:49:00.133" starttime="20181021 15:49:00.105"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${LoginButton}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:21.063" starttime="20181011 09:08:21.057"></status>
+<status status="PASS" endtime="20181021 15:49:00.143" starttime="20181021 15:49:00.133"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -1319,8 +1073,8 @@
 <arg>${UserName}</arg>
 <arg>pruthvi2k1@yahoo.com</arg>
 </arguments>
-<msg timestamp="20181011 09:08:21.063" level="INFO">Typing text 'pruthvi2k1@yahoo.com' into text field 'xpath=//*[@id="email"]'.</msg>
-<status status="PASS" endtime="20181011 09:08:21.145" starttime="20181011 09:08:21.063"></status>
+<msg timestamp="20181021 15:49:00.144" level="INFO">Typing text 'pruthvi2k1@yahoo.com' into text field 'xpath=//*[@id="email"]'.</msg>
+<status status="PASS" endtime="20181021 15:49:00.294" starttime="20181021 15:49:00.144"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -1328,35 +1082,35 @@
 <arg>${PassWord}</arg>
 <arg>pruthviraj</arg>
 </arguments>
-<msg timestamp="20181011 09:08:21.146" level="INFO">Typing text 'pruthviraj' into text field 'xpath=//*[@id="password"]'.</msg>
-<status status="PASS" endtime="20181011 09:08:21.184" starttime="20181011 09:08:21.145"></status>
+<msg timestamp="20181021 15:49:00.296" level="INFO">Typing text 'pruthviraj' into text field 'xpath=//*[@id="password"]'.</msg>
+<status status="PASS" endtime="20181021 15:49:00.432" starttime="20181021 15:49:00.295"></status>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks button identified by ``locator``.</doc>
 <arguments>
 <arg>${LoginButton}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:21.184" level="INFO">Clicking button 'xpath=//*[@type="button"]'.</msg>
-<status status="PASS" endtime="20181011 09:08:21.433" starttime="20181011 09:08:21.184"></status>
+<msg timestamp="20181021 15:49:00.433" level="INFO">Clicking button 'xpath=//*[@type="button"]'.</msg>
+<status status="PASS" endtime="20181021 15:49:00.741" starttime="20181021 15:49:00.433"></status>
 </kw>
 <kw name="Wait Until Page Does Not Contain" library="Selenium2Library">
 <doc>Waits until ``text`` disappears from current page.</doc>
 <arguments>
 <arg>Log in</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:21.670" starttime="20181011 09:08:21.434"></status>
+<status status="PASS" endtime="20181021 15:49:00.999" starttime="20181021 15:49:00.742"></status>
 </kw>
 <kw name="Page Should Not Contain" library="Selenium2Library">
 <doc>Verifies the current page does not contain ``text``.</doc>
 <arguments>
 <arg>'Log in'</arg>
 </arguments>
-<msg timestamp="20181011 09:08:21.782" level="INFO">Current page does not contain text ''Log in''.</msg>
-<status status="PASS" endtime="20181011 09:08:21.782" starttime="20181011 09:08:21.670"></status>
+<msg timestamp="20181021 15:49:01.173" level="INFO">Current page does not contain text ''Log in''.</msg>
+<status status="PASS" endtime="20181021 15:49:01.173" starttime="20181021 15:49:00.999"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:21.783" starttime="20181011 09:08:19.664"></status>
+<status status="PASS" endtime="20181021 15:49:01.174" starttime="20181021 15:48:57.854"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:21.783" starttime="20181011 09:08:19.663"></status>
+<status status="PASS" endtime="20181021 15:49:01.174" starttime="20181021 15:48:57.854"></status>
 </kw>
 <kw name="Create Work Space" library="Clockify_App">
 <arguments>
@@ -1371,37 +1125,37 @@
 <arguments>
 <arg>${WORKSPACES Element}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:21.805" starttime="20181011 09:08:21.787"></status>
+<status status="PASS" endtime="20181021 15:49:01.185" starttime="20181021 15:49:01.176"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${WORKSPACES Element}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:21.805" level="INFO">Clicking element 'xpath=//li/a/span[contains(text(),'workspaces')]'.</msg>
-<status status="PASS" endtime="20181011 09:08:22.090" starttime="20181011 09:08:21.805"></status>
+<msg timestamp="20181021 15:49:01.185" level="INFO">Clicking element 'xpath=//li/a/span[contains(text(),'workspaces')]'.</msg>
+<status status="PASS" endtime="20181021 15:49:01.574" starttime="20181021 15:49:01.185"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${CREATE NEW WORKSPACE BUTTON}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:22.097" starttime="20181011 09:08:22.091"></status>
+<status status="PASS" endtime="20181021 15:49:01.584" starttime="20181021 15:49:01.575"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${CREATE NEW WORKSPACE BUTTON}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:22.097" level="INFO">Clicking element 'xpath=//a[@class="workspace__button-create-new"]'.</msg>
-<status status="PASS" endtime="20181011 09:08:22.348" starttime="20181011 09:08:22.097"></status>
+<msg timestamp="20181021 15:49:01.585" level="INFO">Clicking element 'xpath=//a[@class="workspace__button-create-new"]'.</msg>
+<status status="PASS" endtime="20181021 15:49:01.850" starttime="20181021 15:49:01.585"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${WORKSPACE NAME text box}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:22.364" starttime="20181011 09:08:22.349"></status>
+<status status="PASS" endtime="20181021 15:49:01.858" starttime="20181021 15:49:01.850"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -1409,50 +1163,50 @@
 <arg>${WORKSPACE NAME text box}</arg>
 <arg>${NEW_WORKSPACE_NAME}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:22.366" level="INFO">Typing text 'some workspace' into text field 'xpath=//create-new-workspace/div/div/div[2]/div/input'.</msg>
-<status status="PASS" endtime="20181011 09:08:22.432" starttime="20181011 09:08:22.365"></status>
+<msg timestamp="20181021 15:49:01.859" level="INFO">Typing text 'some workspace' into text field 'xpath=//create-new-workspace/div/div/div[2]/div/input'.</msg>
+<status status="PASS" endtime="20181021 15:49:01.931" starttime="20181021 15:49:01.859"></status>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks button identified by ``locator``.</doc>
 <arguments>
 <arg>Continue</arg>
 </arguments>
-<msg timestamp="20181011 09:08:22.433" level="INFO">Clicking button 'Continue'.</msg>
-<status status="PASS" endtime="20181011 09:08:22.681" starttime="20181011 09:08:22.432"></status>
+<msg timestamp="20181021 15:49:01.931" level="INFO">Clicking button 'Continue'.</msg>
+<status status="PASS" endtime="20181021 15:49:02.180" starttime="20181021 15:49:01.931"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on current page.</doc>
 <arguments>
 <arg>Create</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:22.723" starttime="20181011 09:08:22.682"></status>
+<status status="PASS" endtime="20181021 15:49:02.203" starttime="20181021 15:49:02.180"></status>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks button identified by ``locator``.</doc>
 <arguments>
 <arg>Create</arg>
 </arguments>
-<msg timestamp="20181011 09:08:22.724" level="INFO">Clicking button 'Create'.</msg>
-<status status="PASS" endtime="20181011 09:08:22.995" starttime="20181011 09:08:22.724"></status>
+<msg timestamp="20181021 15:49:02.204" level="INFO">Clicking button 'Create'.</msg>
+<status status="PASS" endtime="20181021 15:49:02.442" starttime="20181021 15:49:02.203"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on current page.</doc>
 <arguments>
 <arg>${NEW_WORKSPACE_NAME}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:23.012" starttime="20181011 09:08:22.995"></status>
+<status status="PASS" endtime="20181021 15:49:02.482" starttime="20181021 15:49:02.442"></status>
 </kw>
 <kw name="Page Should Contain" library="Selenium2Library">
 <doc>Verifies that current page contains ``text``.</doc>
 <arguments>
 <arg>${NEW_WORKSPACE_NAME}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:23.031" level="INFO">Current page contains text 'some workspace'.</msg>
-<status status="PASS" endtime="20181011 09:08:23.032" starttime="20181011 09:08:23.012"></status>
+<msg timestamp="20181021 15:49:02.530" level="INFO">Current page contains text 'some workspace'.</msg>
+<status status="PASS" endtime="20181021 15:49:02.530" starttime="20181021 15:49:02.482"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:23.032" starttime="20181011 09:08:21.787"></status>
+<status status="PASS" endtime="20181021 15:49:02.530" starttime="20181021 15:49:01.175"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:23.032" starttime="20181011 09:08:21.786"></status>
+<status status="PASS" endtime="20181021 15:49:02.530" starttime="20181021 15:49:01.174"></status>
 </kw>
 <kw type="teardown" name="Delete Work Space and Logout" library="Clockify_App">
 <arguments>
@@ -1467,77 +1221,77 @@
 <arguments>
 <arg>${WORKSPACES Element}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:23.039" starttime="20181011 09:08:23.034"></status>
+<status status="PASS" endtime="20181021 15:49:02.538" starttime="20181021 15:49:02.532"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${WORKSPACES Element}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:23.040" level="INFO">Clicking element 'xpath=//li/a/span[contains(text(),'workspaces')]'.</msg>
-<status status="PASS" endtime="20181011 09:08:23.262" starttime="20181011 09:08:23.039"></status>
+<msg timestamp="20181021 15:49:02.538" level="INFO">Clicking element 'xpath=//li/a/span[contains(text(),'workspaces')]'.</msg>
+<status status="PASS" endtime="20181021 15:49:02.763" starttime="20181021 15:49:02.538"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${DELETE WORKSPACE BUTTON}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:23.280" starttime="20181011 09:08:23.263"></status>
+<status status="PASS" endtime="20181021 15:49:02.784" starttime="20181021 15:49:02.764"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <doc>Waits until element ``locator`` is visible.</doc>
 <arguments>
 <arg>${DELETE WORKSPACE BUTTON}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:23.349" starttime="20181011 09:08:23.281"></status>
+<status status="PASS" endtime="20181021 15:49:02.819" starttime="20181021 15:49:02.784"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${DELETE WORKSPACE BUTTON}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:23.350" level="INFO">Clicking element 'xpath=//span[@class="item--leave-workspace"]'.</msg>
-<status status="PASS" endtime="20181011 09:08:23.588" starttime="20181011 09:08:23.349"></status>
+<msg timestamp="20181021 15:49:02.820" level="INFO">Clicking element 'xpath=//span[@class="item--leave-workspace"]'.</msg>
+<status status="PASS" endtime="20181021 15:49:03.043" starttime="20181021 15:49:02.819"></status>
 </kw>
 <kw name="Select Checkbox" library="Selenium2Library">
 <doc>Selects checkbox identified by ``locator``.</doc>
 <arguments>
 <arg>${Check Box}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:23.589" level="INFO">Selecting checkbox 'xpath=//input[@id="checkbox"]'.</msg>
-<status status="PASS" endtime="20181011 09:08:23.872" starttime="20181011 09:08:23.589"></status>
+<msg timestamp="20181021 15:49:03.044" level="INFO">Selecting checkbox 'xpath=//input[@id="checkbox"]'.</msg>
+<status status="PASS" endtime="20181021 15:49:03.293" starttime="20181021 15:49:03.043"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on current page.</doc>
 <arguments>
 <arg>LEAVE</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:23.918" starttime="20181011 09:08:23.872"></status>
+<status status="PASS" endtime="20181021 15:49:03.317" starttime="20181021 15:49:03.293"></status>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks button identified by ``locator``.</doc>
 <arguments>
 <arg>LEAVE</arg>
 </arguments>
-<msg timestamp="20181011 09:08:23.918" level="INFO">Clicking button 'LEAVE'.</msg>
-<status status="PASS" endtime="20181011 09:08:24.162" starttime="20181011 09:08:23.918"></status>
+<msg timestamp="20181021 15:49:03.318" level="INFO">Clicking button 'LEAVE'.</msg>
+<status status="PASS" endtime="20181021 15:49:03.564" starttime="20181021 15:49:03.317"></status>
 </kw>
 <kw name="Wait Until Page Does Not Contain" library="Selenium2Library">
 <doc>Waits until ``text`` disappears from current page.</doc>
 <arguments>
 <arg>${NEW_WORKSPACE_NAME}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:27.951" starttime="20181011 09:08:24.162"></status>
+<status status="PASS" endtime="20181021 15:49:07.320" starttime="20181021 15:49:03.564"></status>
 </kw>
 <kw name="Page Should Not Contain" library="Selenium2Library">
 <doc>Verifies the current page does not contain ``text``.</doc>
 <arguments>
 <arg>${NEW_WORKSPACE_NAME}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:28.069" level="INFO">Current page does not contain text 'some workspace'.</msg>
-<status status="PASS" endtime="20181011 09:08:28.069" starttime="20181011 09:08:27.951"></status>
+<msg timestamp="20181021 15:49:07.359" level="INFO">Current page does not contain text 'some workspace'.</msg>
+<status status="PASS" endtime="20181021 15:49:07.359" starttime="20181021 15:49:07.321"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:28.069" starttime="20181011 09:08:23.033"></status>
+<status status="PASS" endtime="20181021 15:49:07.360" starttime="20181021 15:49:02.531"></status>
 </kw>
 <kw name="Logout" library="TimeTrackerPage">
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
@@ -1545,46 +1299,46 @@
 <arguments>
 <arg>${User Name Element}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:28.077" starttime="20181011 09:08:28.070"></status>
+<status status="PASS" endtime="20181021 15:49:07.369" starttime="20181021 15:49:07.361"></status>
 </kw>
 <kw name="Mouse Over" library="Selenium2Library">
 <doc>Simulates hovering mouse over the element ``locator``.</doc>
 <arguments>
 <arg>${User Name Element}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:28.078" level="INFO">Simulating Mouse Over on element 'xpath=//sidebar/div/section/a/div[1]/span'.</msg>
-<status status="PASS" endtime="20181011 09:08:28.380" starttime="20181011 09:08:28.078"></status>
+<msg timestamp="20181021 15:49:07.370" level="INFO">Simulating Mouse Over on element 'xpath=//sidebar/div/section/a/div[1]/span'.</msg>
+<status status="PASS" endtime="20181021 15:49:07.642" starttime="20181021 15:49:07.370"></status>
 </kw>
 <kw name="Click Link" library="Selenium2Library">
 <doc>Clicks a link identified by ``locator``.</doc>
 <arguments>
 <arg>${Log Out Link}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:28.381" level="INFO">Clicking link 'Log out'.</msg>
-<status status="PASS" endtime="20181011 09:08:28.652" starttime="20181011 09:08:28.381"></status>
+<msg timestamp="20181021 15:49:07.643" level="INFO">Clicking link 'Log out'.</msg>
+<status status="PASS" endtime="20181021 15:49:07.925" starttime="20181021 15:49:07.643"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on current page.</doc>
 <arguments>
 <arg>Log in</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:28.697" starttime="20181011 09:08:28.652"></status>
+<status status="PASS" endtime="20181021 15:49:07.942" starttime="20181021 15:49:07.925"></status>
 </kw>
 <kw name="Page Should Contain" library="Selenium2Library">
 <doc>Verifies that current page contains ``text``.</doc>
 <arguments>
 <arg>Log in</arg>
 </arguments>
-<msg timestamp="20181011 09:08:28.754" level="INFO">Current page contains text 'Log in'.</msg>
-<status status="PASS" endtime="20181011 09:08:28.754" starttime="20181011 09:08:28.698"></status>
+<msg timestamp="20181021 15:49:07.964" level="INFO">Current page contains text 'Log in'.</msg>
+<status status="PASS" endtime="20181021 15:49:07.964" starttime="20181021 15:49:07.943"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:28.754" starttime="20181011 09:08:28.070"></status>
+<status status="PASS" endtime="20181021 15:49:07.965" starttime="20181021 15:49:07.360"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:28.754" starttime="20181011 09:08:23.033"></status>
+<status status="PASS" endtime="20181021 15:49:07.965" starttime="20181021 15:49:02.531"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:28.755" critical="yes" starttime="20181011 09:08:19.662"></status>
+<status status="PASS" endtime="20181021 15:49:07.965" critical="yes" starttime="20181021 15:48:57.851"></status>
 </test>
-<test id="s1-t8" name="Test case 8 Delete Work Space">
+<test id="s1-t6" name="Test case 6 Delete Work Space">
 <kw type="setup" name="Login" library="Clockify_App">
 <kw name="Login" library="LandingPage">
 <kw name="Go To" library="Selenium2Library">
@@ -1592,29 +1346,29 @@
 <arguments>
 <arg>${URL}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:28.759" level="INFO">Opening url 'https://clockify.me/login'</msg>
-<status status="PASS" endtime="20181011 09:08:30.186" starttime="20181011 09:08:28.759"></status>
+<msg timestamp="20181021 15:49:07.970" level="INFO">Opening url 'https://clockify.me/login'</msg>
+<status status="PASS" endtime="20181021 15:49:10.038" starttime="20181021 15:49:07.969"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${UserName}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:30.197" starttime="20181011 09:08:30.187"></status>
+<status status="PASS" endtime="20181021 15:49:10.052" starttime="20181021 15:49:10.038"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${PassWord}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:30.202" starttime="20181011 09:08:30.197"></status>
+<status status="PASS" endtime="20181021 15:49:10.070" starttime="20181021 15:49:10.052"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${LoginButton}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:30.213" starttime="20181011 09:08:30.202"></status>
+<status status="PASS" endtime="20181021 15:49:10.084" starttime="20181021 15:49:10.070"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -1622,8 +1376,8 @@
 <arg>${UserName}</arg>
 <arg>pruthvi2k1@yahoo.com</arg>
 </arguments>
-<msg timestamp="20181011 09:08:30.213" level="INFO">Typing text 'pruthvi2k1@yahoo.com' into text field 'xpath=//*[@id="email"]'.</msg>
-<status status="PASS" endtime="20181011 09:08:30.296" starttime="20181011 09:08:30.213"></status>
+<msg timestamp="20181021 15:49:10.085" level="INFO">Typing text 'pruthvi2k1@yahoo.com' into text field 'xpath=//*[@id="email"]'.</msg>
+<status status="PASS" endtime="20181021 15:49:10.215" starttime="20181021 15:49:10.084"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -1631,35 +1385,35 @@
 <arg>${PassWord}</arg>
 <arg>pruthviraj</arg>
 </arguments>
-<msg timestamp="20181011 09:08:30.297" level="INFO">Typing text 'pruthviraj' into text field 'xpath=//*[@id="password"]'.</msg>
-<status status="PASS" endtime="20181011 09:08:30.336" starttime="20181011 09:08:30.297"></status>
+<msg timestamp="20181021 15:49:10.218" level="INFO">Typing text 'pruthviraj' into text field 'xpath=//*[@id="password"]'.</msg>
+<status status="PASS" endtime="20181021 15:49:10.282" starttime="20181021 15:49:10.216"></status>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks button identified by ``locator``.</doc>
 <arguments>
 <arg>${LoginButton}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:30.337" level="INFO">Clicking button 'xpath=//*[@type="button"]'.</msg>
-<status status="PASS" endtime="20181011 09:08:30.583" starttime="20181011 09:08:30.336"></status>
+<msg timestamp="20181021 15:49:10.283" level="INFO">Clicking button 'xpath=//*[@type="button"]'.</msg>
+<status status="PASS" endtime="20181021 15:49:10.717" starttime="20181021 15:49:10.282"></status>
 </kw>
 <kw name="Wait Until Page Does Not Contain" library="Selenium2Library">
 <doc>Waits until ``text`` disappears from current page.</doc>
 <arguments>
 <arg>Log in</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:30.812" starttime="20181011 09:08:30.583"></status>
+<status status="PASS" endtime="20181021 15:49:10.763" starttime="20181021 15:49:10.717"></status>
 </kw>
 <kw name="Page Should Not Contain" library="Selenium2Library">
 <doc>Verifies the current page does not contain ``text``.</doc>
 <arguments>
 <arg>'Log in'</arg>
 </arguments>
-<msg timestamp="20181011 09:08:30.838" level="INFO">Current page does not contain text ''Log in''.</msg>
-<status status="PASS" endtime="20181011 09:08:30.838" starttime="20181011 09:08:30.813"></status>
+<msg timestamp="20181021 15:49:10.940" level="INFO">Current page does not contain text ''Log in''.</msg>
+<status status="PASS" endtime="20181021 15:49:10.940" starttime="20181021 15:49:10.763"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:30.838" starttime="20181011 09:08:28.758"></status>
+<status status="PASS" endtime="20181021 15:49:10.940" starttime="20181021 15:49:07.969"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:30.838" starttime="20181011 09:08:28.758"></status>
+<status status="PASS" endtime="20181021 15:49:10.940" starttime="20181021 15:49:07.968"></status>
 </kw>
 <kw name="Delete Work Space" library="Clockify_App">
 <arguments>
@@ -1674,37 +1428,37 @@
 <arguments>
 <arg>${WORKSPACES Element}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:30.846" starttime="20181011 09:08:30.840"></status>
+<status status="PASS" endtime="20181021 15:49:10.952" starttime="20181021 15:49:10.943"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${WORKSPACES Element}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:30.846" level="INFO">Clicking element 'xpath=//li/a/span[contains(text(),'workspaces')]'.</msg>
-<status status="PASS" endtime="20181011 09:08:31.093" starttime="20181011 09:08:30.846"></status>
+<msg timestamp="20181021 15:49:10.953" level="INFO">Clicking element 'xpath=//li/a/span[contains(text(),'workspaces')]'.</msg>
+<status status="PASS" endtime="20181021 15:49:11.347" starttime="20181021 15:49:10.952"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${CREATE NEW WORKSPACE BUTTON}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:31.099" starttime="20181011 09:08:31.093"></status>
+<status status="PASS" endtime="20181021 15:49:11.358" starttime="20181021 15:49:11.347"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${CREATE NEW WORKSPACE BUTTON}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:31.099" level="INFO">Clicking element 'xpath=//a[@class="workspace__button-create-new"]'.</msg>
-<status status="PASS" endtime="20181011 09:08:31.351" starttime="20181011 09:08:31.099"></status>
+<msg timestamp="20181021 15:49:11.359" level="INFO">Clicking element 'xpath=//a[@class="workspace__button-create-new"]'.</msg>
+<status status="PASS" endtime="20181021 15:49:11.624" starttime="20181021 15:49:11.358"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${WORKSPACE NAME text box}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:31.367" starttime="20181011 09:08:31.352"></status>
+<status status="PASS" endtime="20181021 15:49:11.633" starttime="20181021 15:49:11.624"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -1712,48 +1466,48 @@
 <arg>${WORKSPACE NAME text box}</arg>
 <arg>${NEW_WORKSPACE_NAME}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:31.368" level="INFO">Typing text 'some workspace' into text field 'xpath=//create-new-workspace/div/div/div[2]/div/input'.</msg>
-<status status="PASS" endtime="20181011 09:08:31.477" starttime="20181011 09:08:31.367"></status>
+<msg timestamp="20181021 15:49:11.633" level="INFO">Typing text 'some workspace' into text field 'xpath=//create-new-workspace/div/div/div[2]/div/input'.</msg>
+<status status="PASS" endtime="20181021 15:49:11.704" starttime="20181021 15:49:11.633"></status>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks button identified by ``locator``.</doc>
 <arguments>
 <arg>Continue</arg>
 </arguments>
-<msg timestamp="20181011 09:08:31.478" level="INFO">Clicking button 'Continue'.</msg>
-<status status="PASS" endtime="20181011 09:08:31.710" starttime="20181011 09:08:31.477"></status>
+<msg timestamp="20181021 15:49:11.705" level="INFO">Clicking button 'Continue'.</msg>
+<status status="PASS" endtime="20181021 15:49:11.956" starttime="20181021 15:49:11.705"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on current page.</doc>
 <arguments>
 <arg>Create</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:31.752" starttime="20181011 09:08:31.711"></status>
+<status status="PASS" endtime="20181021 15:49:11.982" starttime="20181021 15:49:11.956"></status>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks button identified by ``locator``.</doc>
 <arguments>
 <arg>Create</arg>
 </arguments>
-<msg timestamp="20181011 09:08:31.752" level="INFO">Clicking button 'Create'.</msg>
-<status status="PASS" endtime="20181011 09:08:31.985" starttime="20181011 09:08:31.752"></status>
+<msg timestamp="20181021 15:49:11.983" level="INFO">Clicking button 'Create'.</msg>
+<status status="PASS" endtime="20181021 15:49:12.227" starttime="20181021 15:49:11.983"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on current page.</doc>
 <arguments>
 <arg>${NEW_WORKSPACE_NAME}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:32.004" starttime="20181011 09:08:31.986"></status>
+<status status="PASS" endtime="20181021 15:49:12.262" starttime="20181021 15:49:12.229"></status>
 </kw>
 <kw name="Page Should Contain" library="Selenium2Library">
 <doc>Verifies that current page contains ``text``.</doc>
 <arguments>
 <arg>${NEW_WORKSPACE_NAME}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:32.031" level="INFO">Current page contains text 'some workspace'.</msg>
-<status status="PASS" endtime="20181011 09:08:32.032" starttime="20181011 09:08:32.005"></status>
+<msg timestamp="20181021 15:49:12.313" level="INFO">Current page contains text 'some workspace'.</msg>
+<status status="PASS" endtime="20181021 15:49:12.313" starttime="20181021 15:49:12.262"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:32.032" starttime="20181011 09:08:30.839"></status>
+<status status="PASS" endtime="20181021 15:49:12.313" starttime="20181021 15:49:10.942"></status>
 </kw>
 <kw name="Delete Work Space" library="TimeTrackerPage">
 <arguments>
@@ -1764,79 +1518,79 @@
 <arguments>
 <arg>${WORKSPACES Element}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:32.041" starttime="20181011 09:08:32.033"></status>
+<status status="PASS" endtime="20181021 15:49:12.322" starttime="20181021 15:49:12.314"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${WORKSPACES Element}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:32.042" level="INFO">Clicking element 'xpath=//li/a/span[contains(text(),'workspaces')]'.</msg>
-<status status="PASS" endtime="20181011 09:08:32.266" starttime="20181011 09:08:32.042"></status>
+<msg timestamp="20181021 15:49:12.323" level="INFO">Clicking element 'xpath=//li/a/span[contains(text(),'workspaces')]'.</msg>
+<status status="PASS" endtime="20181021 15:49:12.548" starttime="20181021 15:49:12.322"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${DELETE WORKSPACE BUTTON}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:32.282" starttime="20181011 09:08:32.267"></status>
+<status status="PASS" endtime="20181021 15:49:12.557" starttime="20181021 15:49:12.548"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <doc>Waits until element ``locator`` is visible.</doc>
 <arguments>
 <arg>${DELETE WORKSPACE BUTTON}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:32.318" starttime="20181011 09:08:32.283"></status>
+<status status="PASS" endtime="20181021 15:49:12.575" starttime="20181021 15:49:12.557"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${DELETE WORKSPACE BUTTON}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:32.319" level="INFO">Clicking element 'xpath=//span[@class="item--leave-workspace"]'.</msg>
-<status status="PASS" endtime="20181011 09:08:32.571" starttime="20181011 09:08:32.318"></status>
+<msg timestamp="20181021 15:49:12.576" level="INFO">Clicking element 'xpath=//span[@class="item--leave-workspace"]'.</msg>
+<status status="PASS" endtime="20181021 15:49:12.805" starttime="20181021 15:49:12.576"></status>
 </kw>
 <kw name="Select Checkbox" library="Selenium2Library">
 <doc>Selects checkbox identified by ``locator``.</doc>
 <arguments>
 <arg>${Check Box}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:32.573" level="INFO">Selecting checkbox 'xpath=//input[@id="checkbox"]'.</msg>
-<status status="PASS" endtime="20181011 09:08:32.846" starttime="20181011 09:08:32.572"></status>
+<msg timestamp="20181021 15:49:12.806" level="INFO">Selecting checkbox 'xpath=//input[@id="checkbox"]'.</msg>
+<status status="PASS" endtime="20181021 15:49:13.069" starttime="20181021 15:49:12.805"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on current page.</doc>
 <arguments>
 <arg>LEAVE</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:32.888" starttime="20181011 09:08:32.847"></status>
+<status status="PASS" endtime="20181021 15:49:13.090" starttime="20181021 15:49:13.069"></status>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks button identified by ``locator``.</doc>
 <arguments>
 <arg>LEAVE</arg>
 </arguments>
-<msg timestamp="20181011 09:08:32.888" level="INFO">Clicking button 'LEAVE'.</msg>
-<status status="PASS" endtime="20181011 09:08:33.116" starttime="20181011 09:08:32.888"></status>
+<msg timestamp="20181021 15:49:13.091" level="INFO">Clicking button 'LEAVE'.</msg>
+<status status="PASS" endtime="20181021 15:49:13.333" starttime="20181021 15:49:13.091"></status>
 </kw>
 <kw name="Wait Until Page Does Not Contain" library="Selenium2Library">
 <doc>Waits until ``text`` disappears from current page.</doc>
 <arguments>
 <arg>${NEW_WORKSPACE_NAME}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:37.031" starttime="20181011 09:08:33.117"></status>
+<status status="PASS" endtime="20181021 15:49:17.114" starttime="20181021 15:49:13.333"></status>
 </kw>
 <kw name="Page Should Not Contain" library="Selenium2Library">
 <doc>Verifies the current page does not contain ``text``.</doc>
 <arguments>
 <arg>${NEW_WORKSPACE_NAME}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:37.102" level="INFO">Current page does not contain text 'some workspace'.</msg>
-<status status="PASS" endtime="20181011 09:08:37.102" starttime="20181011 09:08:37.031"></status>
+<msg timestamp="20181021 15:49:17.155" level="INFO">Current page does not contain text 'some workspace'.</msg>
+<status status="PASS" endtime="20181021 15:49:17.155" starttime="20181021 15:49:17.114"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:37.102" starttime="20181011 09:08:32.032"></status>
+<status status="PASS" endtime="20181021 15:49:17.155" starttime="20181021 15:49:12.314"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:37.103" starttime="20181011 09:08:30.839"></status>
+<status status="PASS" endtime="20181021 15:49:17.155" starttime="20181021 15:49:10.942"></status>
 </kw>
 <kw type="teardown" name="Logout" library="Clockify_App">
 <kw name="Logout" library="TimeTrackerPage">
@@ -1845,46 +1599,46 @@
 <arguments>
 <arg>${User Name Element}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:37.123" starttime="20181011 09:08:37.107"></status>
+<status status="PASS" endtime="20181021 15:49:17.164" starttime="20181021 15:49:17.157"></status>
 </kw>
 <kw name="Mouse Over" library="Selenium2Library">
 <doc>Simulates hovering mouse over the element ``locator``.</doc>
 <arguments>
 <arg>${User Name Element}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:37.125" level="INFO">Simulating Mouse Over on element 'xpath=//sidebar/div/section/a/div[1]/span'.</msg>
-<status status="PASS" endtime="20181011 09:08:37.406" starttime="20181011 09:08:37.124"></status>
+<msg timestamp="20181021 15:49:17.165" level="INFO">Simulating Mouse Over on element 'xpath=//sidebar/div/section/a/div[1]/span'.</msg>
+<status status="PASS" endtime="20181021 15:49:17.444" starttime="20181021 15:49:17.165"></status>
 </kw>
 <kw name="Click Link" library="Selenium2Library">
 <doc>Clicks a link identified by ``locator``.</doc>
 <arguments>
 <arg>${Log Out Link}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:37.407" level="INFO">Clicking link 'Log out'.</msg>
-<status status="PASS" endtime="20181011 09:08:37.677" starttime="20181011 09:08:37.407"></status>
+<msg timestamp="20181021 15:49:17.445" level="INFO">Clicking link 'Log out'.</msg>
+<status status="PASS" endtime="20181021 15:49:17.724" starttime="20181021 15:49:17.444"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on current page.</doc>
 <arguments>
 <arg>Log in</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:37.725" starttime="20181011 09:08:37.678"></status>
+<status status="PASS" endtime="20181021 15:49:17.747" starttime="20181021 15:49:17.724"></status>
 </kw>
 <kw name="Page Should Contain" library="Selenium2Library">
 <doc>Verifies that current page contains ``text``.</doc>
 <arguments>
 <arg>Log in</arg>
 </arguments>
-<msg timestamp="20181011 09:08:37.751" level="INFO">Current page contains text 'Log in'.</msg>
-<status status="PASS" endtime="20181011 09:08:37.751" starttime="20181011 09:08:37.725"></status>
+<msg timestamp="20181021 15:49:17.770" level="INFO">Current page contains text 'Log in'.</msg>
+<status status="PASS" endtime="20181021 15:49:17.770" starttime="20181021 15:49:17.747"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:37.751" starttime="20181011 09:08:37.106"></status>
+<status status="PASS" endtime="20181021 15:49:17.771" starttime="20181021 15:49:17.156"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:37.751" starttime="20181011 09:08:37.105"></status>
+<status status="PASS" endtime="20181021 15:49:17.771" starttime="20181021 15:49:17.156"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:37.751" critical="yes" starttime="20181011 09:08:28.757"></status>
+<status status="PASS" endtime="20181021 15:49:17.771" critical="yes" starttime="20181021 15:49:07.967"></status>
 </test>
-<test id="s1-t9" name="Test case 9 Create Tags">
+<test id="s1-t7" name="Test case 7 Create Tags">
 <kw type="setup" name="Login" library="Clockify_App">
 <kw name="Login" library="LandingPage">
 <kw name="Go To" library="Selenium2Library">
@@ -1892,29 +1646,29 @@
 <arguments>
 <arg>${URL}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:37.755" level="INFO">Opening url 'https://clockify.me/login'</msg>
-<status status="PASS" endtime="20181011 09:08:39.145" starttime="20181011 09:08:37.754"></status>
+<msg timestamp="20181021 15:49:17.776" level="INFO">Opening url 'https://clockify.me/login'</msg>
+<status status="PASS" endtime="20181021 15:49:19.839" starttime="20181021 15:49:17.776"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${UserName}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:39.153" starttime="20181011 09:08:39.145"></status>
+<status status="PASS" endtime="20181021 15:49:19.864" starttime="20181021 15:49:19.839"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${PassWord}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:39.233" starttime="20181011 09:08:39.153"></status>
+<status status="PASS" endtime="20181021 15:49:20.012" starttime="20181021 15:49:19.865"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${LoginButton}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:39.242" starttime="20181011 09:08:39.233"></status>
+<status status="PASS" endtime="20181021 15:49:20.023" starttime="20181021 15:49:20.013"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -1922,8 +1676,8 @@
 <arg>${UserName}</arg>
 <arg>pruthvi2k1@yahoo.com</arg>
 </arguments>
-<msg timestamp="20181011 09:08:39.243" level="INFO">Typing text 'pruthvi2k1@yahoo.com' into text field 'xpath=//*[@id="email"]'.</msg>
-<status status="PASS" endtime="20181011 09:08:39.326" starttime="20181011 09:08:39.243"></status>
+<msg timestamp="20181021 15:49:20.024" level="INFO">Typing text 'pruthvi2k1@yahoo.com' into text field 'xpath=//*[@id="email"]'.</msg>
+<status status="PASS" endtime="20181021 15:49:20.152" starttime="20181021 15:49:20.024"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -1931,35 +1685,35 @@
 <arg>${PassWord}</arg>
 <arg>pruthviraj</arg>
 </arguments>
-<msg timestamp="20181011 09:08:39.328" level="INFO">Typing text 'pruthviraj' into text field 'xpath=//*[@id="password"]'.</msg>
-<status status="PASS" endtime="20181011 09:08:39.370" starttime="20181011 09:08:39.326"></status>
+<msg timestamp="20181021 15:49:20.155" level="INFO">Typing text 'pruthviraj' into text field 'xpath=//*[@id="password"]'.</msg>
+<status status="PASS" endtime="20181021 15:49:20.224" starttime="20181021 15:49:20.153"></status>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks button identified by ``locator``.</doc>
 <arguments>
 <arg>${LoginButton}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:39.371" level="INFO">Clicking button 'xpath=//*[@type="button"]'.</msg>
-<status status="PASS" endtime="20181011 09:08:39.725" starttime="20181011 09:08:39.370"></status>
+<msg timestamp="20181021 15:49:20.225" level="INFO">Clicking button 'xpath=//*[@type="button"]'.</msg>
+<status status="PASS" endtime="20181021 15:49:20.499" starttime="20181021 15:49:20.224"></status>
 </kw>
 <kw name="Wait Until Page Does Not Contain" library="Selenium2Library">
 <doc>Waits until ``text`` disappears from current page.</doc>
 <arguments>
 <arg>Log in</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:39.731" starttime="20181011 09:08:39.726"></status>
+<status status="PASS" endtime="20181021 15:49:20.680" starttime="20181021 15:49:20.499"></status>
 </kw>
 <kw name="Page Should Not Contain" library="Selenium2Library">
 <doc>Verifies the current page does not contain ``text``.</doc>
 <arguments>
 <arg>'Log in'</arg>
 </arguments>
-<msg timestamp="20181011 09:08:39.851" level="INFO">Current page does not contain text ''Log in''.</msg>
-<status status="PASS" endtime="20181011 09:08:39.851" starttime="20181011 09:08:39.731"></status>
+<msg timestamp="20181021 15:49:20.867" level="INFO">Current page does not contain text ''Log in''.</msg>
+<status status="PASS" endtime="20181021 15:49:20.867" starttime="20181021 15:49:20.680"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:39.851" starttime="20181011 09:08:37.754"></status>
+<status status="PASS" endtime="20181021 15:49:20.867" starttime="20181021 15:49:17.775"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:39.851" starttime="20181011 09:08:37.754"></status>
+<status status="PASS" endtime="20181021 15:49:20.867" starttime="20181021 15:49:17.775"></status>
 </kw>
 <kw name="Create Tags" library="Clockify_App">
 <arguments>
@@ -1974,22 +1728,22 @@
 <arguments>
 <arg>${TAGS Element}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:39.859" starttime="20181011 09:08:39.853"></status>
+<status status="PASS" endtime="20181021 15:49:20.878" starttime="20181021 15:49:20.869"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${TAGS Element}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:39.859" level="INFO">Clicking element 'xpath=//a/span[contains(text(),'tags')]'.</msg>
-<status status="PASS" endtime="20181011 09:08:40.087" starttime="20181011 09:08:39.859"></status>
+<msg timestamp="20181021 15:49:20.878" level="INFO">Clicking element 'xpath=//a/span[contains(text(),'tags')]'.</msg>
+<status status="PASS" endtime="20181021 15:49:21.239" starttime="20181021 15:49:20.878"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${Tag name text box}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:40.095" starttime="20181011 09:08:40.087"></status>
+<status status="PASS" endtime="20181021 15:49:21.328" starttime="20181021 15:49:21.239"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -1997,28 +1751,28 @@
 <arg>${Tag name text box}</arg>
 <arg>${NEW_TAG_NAME}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:40.096" level="INFO">Typing text 'some tag' into text field 'xpath=//input[@placeholder="New tag name..."]'.</msg>
-<status status="PASS" endtime="20181011 09:08:40.196" starttime="20181011 09:08:40.096"></status>
+<msg timestamp="20181021 15:49:21.329" level="INFO">Typing text 'some tag' into text field 'xpath=//input[@placeholder="New tag name..."]'.</msg>
+<status status="PASS" endtime="20181021 15:49:21.423" starttime="20181021 15:49:21.328"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${Tag ADD Button}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:40.197" level="INFO">Clicking element 'xpath=//span[contains(text(),'Add')]'.</msg>
-<status status="PASS" endtime="20181011 09:08:40.435" starttime="20181011 09:08:40.197"></status>
+<msg timestamp="20181021 15:49:21.425" level="INFO">Clicking element 'xpath=//span[contains(text(),'Add')]'.</msg>
+<status status="PASS" endtime="20181021 15:49:21.685" starttime="20181021 15:49:21.424"></status>
 </kw>
 <kw name="Page Should Contain" library="Selenium2Library">
 <doc>Verifies that current page contains ``text``.</doc>
 <arguments>
 <arg>${NEW_TAG_NAME}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:40.460" level="INFO">Current page contains text 'some tag'.</msg>
-<status status="PASS" endtime="20181011 09:08:40.460" starttime="20181011 09:08:40.436"></status>
+<msg timestamp="20181021 15:49:21.728" level="INFO">Current page contains text 'some tag'.</msg>
+<status status="PASS" endtime="20181021 15:49:21.728" starttime="20181021 15:49:21.685"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:40.460" starttime="20181011 09:08:39.853"></status>
+<status status="PASS" endtime="20181021 15:49:21.728" starttime="20181021 15:49:20.869"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:40.460" starttime="20181011 09:08:39.852"></status>
+<status status="PASS" endtime="20181021 15:49:21.728" starttime="20181021 15:49:20.868"></status>
 </kw>
 <kw type="teardown" name="Delete Tags and Logout" library="Clockify_App">
 <arguments>
@@ -2033,55 +1787,55 @@
 <arguments>
 <arg>${TAGS Element}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:40.467" starttime="20181011 09:08:40.462"></status>
+<status status="PASS" endtime="20181021 15:49:21.739" starttime="20181021 15:49:21.731"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${TAGS Element}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:40.468" level="INFO">Clicking element 'xpath=//a/span[contains(text(),'tags')]'.</msg>
-<status status="PASS" endtime="20181011 09:08:40.694" starttime="20181011 09:08:40.468"></status>
+<msg timestamp="20181021 15:49:21.740" level="INFO">Clicking element 'xpath=//a/span[contains(text(),'tags')]'.</msg>
+<status status="PASS" endtime="20181021 15:49:21.966" starttime="20181021 15:49:21.739"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${Delete Tag Button}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:40.716" starttime="20181011 09:08:40.695"></status>
+<status status="PASS" endtime="20181021 15:49:21.977" starttime="20181021 15:49:21.966"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${Delete Tag Button}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:40.717" level="INFO">Clicking element 'xpath=//a[@class="buttons-workspaces--cross"]'.</msg>
-<status status="PASS" endtime="20181011 09:08:40.962" starttime="20181011 09:08:40.717"></status>
+<msg timestamp="20181021 15:49:21.978" level="INFO">Clicking element 'xpath=//a[@class="buttons-workspaces--cross"]'.</msg>
+<status status="PASS" endtime="20181021 15:49:22.208" starttime="20181021 15:49:21.978"></status>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks button identified by ``locator``.</doc>
 <arguments>
 <arg>YES</arg>
 </arguments>
-<msg timestamp="20181011 09:08:40.963" level="INFO">Clicking button 'YES'.</msg>
-<status status="PASS" endtime="20181011 09:08:41.251" starttime="20181011 09:08:40.963"></status>
+<msg timestamp="20181021 15:49:22.209" level="INFO">Clicking button 'YES'.</msg>
+<status status="PASS" endtime="20181021 15:49:22.461" starttime="20181021 15:49:22.209"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on current page.</doc>
 <arguments>
 <arg>Tag deleted</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:41.263" starttime="20181011 09:08:41.251"></status>
+<status status="PASS" endtime="20181021 15:49:22.484" starttime="20181021 15:49:22.461"></status>
 </kw>
 <kw name="Page Should Contain" library="Selenium2Library">
 <doc>Verifies that current page contains ``text``.</doc>
 <arguments>
 <arg>Tag deleted</arg>
 </arguments>
-<msg timestamp="20181011 09:08:41.278" level="INFO">Current page contains text 'Tag deleted'.</msg>
-<status status="PASS" endtime="20181011 09:08:41.278" starttime="20181011 09:08:41.263"></status>
+<msg timestamp="20181021 15:49:22.512" level="INFO">Current page contains text 'Tag deleted'.</msg>
+<status status="PASS" endtime="20181021 15:49:22.513" starttime="20181021 15:49:22.484"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:41.278" starttime="20181011 09:08:40.461"></status>
+<status status="PASS" endtime="20181021 15:49:22.513" starttime="20181021 15:49:21.730"></status>
 </kw>
 <kw name="Logout" library="TimeTrackerPage">
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
@@ -2089,46 +1843,46 @@
 <arguments>
 <arg>${User Name Element}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:41.284" starttime="20181011 09:08:41.279"></status>
+<status status="PASS" endtime="20181021 15:49:22.523" starttime="20181021 15:49:22.514"></status>
 </kw>
 <kw name="Mouse Over" library="Selenium2Library">
 <doc>Simulates hovering mouse over the element ``locator``.</doc>
 <arguments>
 <arg>${User Name Element}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:41.285" level="INFO">Simulating Mouse Over on element 'xpath=//sidebar/div/section/a/div[1]/span'.</msg>
-<status status="PASS" endtime="20181011 09:08:41.556" starttime="20181011 09:08:41.285"></status>
+<msg timestamp="20181021 15:49:22.524" level="INFO">Simulating Mouse Over on element 'xpath=//sidebar/div/section/a/div[1]/span'.</msg>
+<status status="PASS" endtime="20181021 15:49:22.842" starttime="20181021 15:49:22.524"></status>
 </kw>
 <kw name="Click Link" library="Selenium2Library">
 <doc>Clicks a link identified by ``locator``.</doc>
 <arguments>
 <arg>${Log Out Link}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:41.557" level="INFO">Clicking link 'Log out'.</msg>
-<status status="PASS" endtime="20181011 09:08:41.810" starttime="20181011 09:08:41.557"></status>
+<msg timestamp="20181021 15:49:22.843" level="INFO">Clicking link 'Log out'.</msg>
+<status status="PASS" endtime="20181021 15:49:23.095" starttime="20181021 15:49:22.842"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on current page.</doc>
 <arguments>
 <arg>Log in</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:41.847" starttime="20181011 09:08:41.810"></status>
+<status status="PASS" endtime="20181021 15:49:23.131" starttime="20181021 15:49:23.096"></status>
 </kw>
 <kw name="Page Should Contain" library="Selenium2Library">
 <doc>Verifies that current page contains ``text``.</doc>
 <arguments>
 <arg>Log in</arg>
 </arguments>
-<msg timestamp="20181011 09:08:41.869" level="INFO">Current page contains text 'Log in'.</msg>
-<status status="PASS" endtime="20181011 09:08:41.869" starttime="20181011 09:08:41.847"></status>
+<msg timestamp="20181021 15:49:23.165" level="INFO">Current page contains text 'Log in'.</msg>
+<status status="PASS" endtime="20181021 15:49:23.165" starttime="20181021 15:49:23.132"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:41.869" starttime="20181011 09:08:41.278"></status>
+<status status="PASS" endtime="20181021 15:49:23.165" starttime="20181021 15:49:22.513"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:41.869" starttime="20181011 09:08:40.461"></status>
+<status status="PASS" endtime="20181021 15:49:23.165" starttime="20181021 15:49:21.729"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:41.870" critical="yes" starttime="20181011 09:08:37.753"></status>
+<status status="PASS" endtime="20181021 15:49:23.166" critical="yes" starttime="20181021 15:49:17.774"></status>
 </test>
-<test id="s1-t10" name="Test case 10 Delete Tags">
+<test id="s1-t8" name="Test case 8 Delete Tags">
 <kw type="setup" name="Login" library="Clockify_App">
 <kw name="Login" library="LandingPage">
 <kw name="Go To" library="Selenium2Library">
@@ -2136,29 +1890,29 @@
 <arguments>
 <arg>${URL}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:41.873" level="INFO">Opening url 'https://clockify.me/login'</msg>
-<status status="PASS" endtime="20181011 09:08:43.329" starttime="20181011 09:08:41.872"></status>
+<msg timestamp="20181021 15:49:23.170" level="INFO">Opening url 'https://clockify.me/login'</msg>
+<status status="PASS" endtime="20181021 15:49:24.718" starttime="20181021 15:49:23.170"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${UserName}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:43.341" starttime="20181011 09:08:43.329"></status>
+<status status="PASS" endtime="20181021 15:49:24.736" starttime="20181021 15:49:24.718"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${PassWord}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:43.349" starttime="20181011 09:08:43.342"></status>
+<status status="PASS" endtime="20181021 15:49:24.758" starttime="20181021 15:49:24.737"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${LoginButton}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:43.362" starttime="20181011 09:08:43.350"></status>
+<status status="PASS" endtime="20181021 15:49:24.813" starttime="20181021 15:49:24.758"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -2166,8 +1920,8 @@
 <arg>${UserName}</arg>
 <arg>pruthvi2k1@yahoo.com</arg>
 </arguments>
-<msg timestamp="20181011 09:08:43.363" level="INFO">Typing text 'pruthvi2k1@yahoo.com' into text field 'xpath=//*[@id="email"]'.</msg>
-<status status="PASS" endtime="20181011 09:08:43.450" starttime="20181011 09:08:43.362"></status>
+<msg timestamp="20181021 15:49:24.814" level="INFO">Typing text 'pruthvi2k1@yahoo.com' into text field 'xpath=//*[@id="email"]'.</msg>
+<status status="PASS" endtime="20181021 15:49:24.978" starttime="20181021 15:49:24.813"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -2175,35 +1929,35 @@
 <arg>${PassWord}</arg>
 <arg>pruthviraj</arg>
 </arguments>
-<msg timestamp="20181011 09:08:43.451" level="INFO">Typing text 'pruthviraj' into text field 'xpath=//*[@id="password"]'.</msg>
-<status status="PASS" endtime="20181011 09:08:43.501" starttime="20181011 09:08:43.450"></status>
+<msg timestamp="20181021 15:49:24.979" level="INFO">Typing text 'pruthviraj' into text field 'xpath=//*[@id="password"]'.</msg>
+<status status="PASS" endtime="20181021 15:49:25.050" starttime="20181021 15:49:24.978"></status>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks button identified by ``locator``.</doc>
 <arguments>
 <arg>${LoginButton}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:43.503" level="INFO">Clicking button 'xpath=//*[@type="button"]'.</msg>
-<status status="PASS" endtime="20181011 09:08:43.746" starttime="20181011 09:08:43.501"></status>
+<msg timestamp="20181021 15:49:25.052" level="INFO">Clicking button 'xpath=//*[@type="button"]'.</msg>
+<status status="PASS" endtime="20181021 15:49:25.338" starttime="20181021 15:49:25.051"></status>
 </kw>
 <kw name="Wait Until Page Does Not Contain" library="Selenium2Library">
 <doc>Waits until ``text`` disappears from current page.</doc>
 <arguments>
 <arg>Log in</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:44.011" starttime="20181011 09:08:43.746"></status>
+<status status="PASS" endtime="20181021 15:49:25.504" starttime="20181021 15:49:25.339"></status>
 </kw>
 <kw name="Page Should Not Contain" library="Selenium2Library">
 <doc>Verifies the current page does not contain ``text``.</doc>
 <arguments>
 <arg>'Log in'</arg>
 </arguments>
-<msg timestamp="20181011 09:08:44.047" level="INFO">Current page does not contain text ''Log in''.</msg>
-<status status="PASS" endtime="20181011 09:08:44.047" starttime="20181011 09:08:44.011"></status>
+<msg timestamp="20181021 15:49:25.702" level="INFO">Current page does not contain text ''Log in''.</msg>
+<status status="PASS" endtime="20181021 15:49:25.702" starttime="20181021 15:49:25.505"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:44.047" starttime="20181011 09:08:41.872"></status>
+<status status="PASS" endtime="20181021 15:49:25.702" starttime="20181021 15:49:23.169"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:44.047" starttime="20181011 09:08:41.872"></status>
+<status status="PASS" endtime="20181021 15:49:25.702" starttime="20181021 15:49:23.169"></status>
 </kw>
 <kw name="Delete Tags" library="Clockify_App">
 <arguments>
@@ -2218,22 +1972,22 @@
 <arguments>
 <arg>${TAGS Element}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:44.056" starttime="20181011 09:08:44.049"></status>
+<status status="PASS" endtime="20181021 15:49:25.714" starttime="20181021 15:49:25.705"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${TAGS Element}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:44.056" level="INFO">Clicking element 'xpath=//a/span[contains(text(),'tags')]'.</msg>
-<status status="PASS" endtime="20181011 09:08:44.628" starttime="20181011 09:08:44.056"></status>
+<msg timestamp="20181021 15:49:25.715" level="INFO">Clicking element 'xpath=//a/span[contains(text(),'tags')]'.</msg>
+<status status="PASS" endtime="20181021 15:49:26.104" starttime="20181021 15:49:25.714"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${Tag name text box}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:44.909" starttime="20181011 09:08:44.629"></status>
+<status status="PASS" endtime="20181021 15:49:26.149" starttime="20181021 15:49:26.104"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -2241,26 +1995,26 @@
 <arg>${Tag name text box}</arg>
 <arg>${NEW_TAG_NAME}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:44.910" level="INFO">Typing text 'some tag' into text field 'xpath=//input[@placeholder="New tag name..."]'.</msg>
-<status status="PASS" endtime="20181011 09:08:44.978" starttime="20181011 09:08:44.909"></status>
+<msg timestamp="20181021 15:49:26.150" level="INFO">Typing text 'some tag' into text field 'xpath=//input[@placeholder="New tag name..."]'.</msg>
+<status status="PASS" endtime="20181021 15:49:26.281" starttime="20181021 15:49:26.150"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${Tag ADD Button}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:44.979" level="INFO">Clicking element 'xpath=//span[contains(text(),'Add')]'.</msg>
-<status status="PASS" endtime="20181011 09:08:45.209" starttime="20181011 09:08:44.979"></status>
+<msg timestamp="20181021 15:49:26.283" level="INFO">Clicking element 'xpath=//span[contains(text(),'Add')]'.</msg>
+<status status="PASS" endtime="20181021 15:49:26.537" starttime="20181021 15:49:26.282"></status>
 </kw>
 <kw name="Page Should Contain" library="Selenium2Library">
 <doc>Verifies that current page contains ``text``.</doc>
 <arguments>
 <arg>${NEW_TAG_NAME}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:45.232" level="INFO">Current page contains text 'some tag'.</msg>
-<status status="PASS" endtime="20181011 09:08:45.232" starttime="20181011 09:08:45.209"></status>
+<msg timestamp="20181021 15:49:26.588" level="INFO">Current page contains text 'some tag'.</msg>
+<status status="PASS" endtime="20181021 15:49:26.588" starttime="20181021 15:49:26.537"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:45.233" starttime="20181011 09:08:44.048"></status>
+<status status="PASS" endtime="20181021 15:49:26.588" starttime="20181021 15:49:25.704"></status>
 </kw>
 <kw name="Delete Tags" library="TimeTrackerPage">
 <arguments>
@@ -2271,57 +2025,57 @@
 <arguments>
 <arg>${TAGS Element}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:45.239" starttime="20181011 09:08:45.233"></status>
+<status status="PASS" endtime="20181021 15:49:26.602" starttime="20181021 15:49:26.590"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${TAGS Element}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:45.239" level="INFO">Clicking element 'xpath=//a/span[contains(text(),'tags')]'.</msg>
-<status status="PASS" endtime="20181011 09:08:45.459" starttime="20181011 09:08:45.239"></status>
+<msg timestamp="20181021 15:49:26.603" level="INFO">Clicking element 'xpath=//a/span[contains(text(),'tags')]'.</msg>
+<status status="PASS" endtime="20181021 15:49:26.846" starttime="20181021 15:49:26.602"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${Delete Tag Button}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:45.481" starttime="20181011 09:08:45.460"></status>
+<status status="PASS" endtime="20181021 15:49:26.855" starttime="20181021 15:49:26.846"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${Delete Tag Button}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:45.482" level="INFO">Clicking element 'xpath=//a[@class="buttons-workspaces--cross"]'.</msg>
-<status status="PASS" endtime="20181011 09:08:45.752" starttime="20181011 09:08:45.482"></status>
+<msg timestamp="20181021 15:49:26.856" level="INFO">Clicking element 'xpath=//a[@class="buttons-workspaces--cross"]'.</msg>
+<status status="PASS" endtime="20181021 15:49:27.088" starttime="20181021 15:49:26.856"></status>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks button identified by ``locator``.</doc>
 <arguments>
 <arg>YES</arg>
 </arguments>
-<msg timestamp="20181011 09:08:45.753" level="INFO">Clicking button 'YES'.</msg>
-<status status="PASS" endtime="20181011 09:08:45.993" starttime="20181011 09:08:45.752"></status>
+<msg timestamp="20181021 15:49:27.089" level="INFO">Clicking button 'YES'.</msg>
+<status status="PASS" endtime="20181021 15:49:27.351" starttime="20181021 15:49:27.089"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on current page.</doc>
 <arguments>
 <arg>Tag deleted</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:46.005" starttime="20181011 09:08:45.993"></status>
+<status status="PASS" endtime="20181021 15:49:27.370" starttime="20181021 15:49:27.351"></status>
 </kw>
 <kw name="Page Should Contain" library="Selenium2Library">
 <doc>Verifies that current page contains ``text``.</doc>
 <arguments>
 <arg>Tag deleted</arg>
 </arguments>
-<msg timestamp="20181011 09:08:46.021" level="INFO">Current page contains text 'Tag deleted'.</msg>
-<status status="PASS" endtime="20181011 09:08:46.021" starttime="20181011 09:08:46.006"></status>
+<msg timestamp="20181021 15:49:27.401" level="INFO">Current page contains text 'Tag deleted'.</msg>
+<status status="PASS" endtime="20181021 15:49:27.401" starttime="20181021 15:49:27.370"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:46.021" starttime="20181011 09:08:45.233"></status>
+<status status="PASS" endtime="20181021 15:49:27.401" starttime="20181021 15:49:26.589"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:46.021" starttime="20181011 09:08:44.048"></status>
+<status status="PASS" endtime="20181021 15:49:27.401" starttime="20181021 15:49:25.703"></status>
 </kw>
 <kw type="teardown" name="Logout" library="Clockify_App">
 <kw name="Logout" library="TimeTrackerPage">
@@ -2330,46 +2084,46 @@
 <arguments>
 <arg>${User Name Element}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:46.028" starttime="20181011 09:08:46.023"></status>
+<status status="PASS" endtime="20181021 15:49:27.452" starttime="20181021 15:49:27.402"></status>
 </kw>
 <kw name="Mouse Over" library="Selenium2Library">
 <doc>Simulates hovering mouse over the element ``locator``.</doc>
 <arguments>
 <arg>${User Name Element}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:46.029" level="INFO">Simulating Mouse Over on element 'xpath=//sidebar/div/section/a/div[1]/span'.</msg>
-<status status="PASS" endtime="20181011 09:08:46.295" starttime="20181011 09:08:46.028"></status>
+<msg timestamp="20181021 15:49:27.452" level="INFO">Simulating Mouse Over on element 'xpath=//sidebar/div/section/a/div[1]/span'.</msg>
+<status status="PASS" endtime="20181021 15:49:27.732" starttime="20181021 15:49:27.452"></status>
 </kw>
 <kw name="Click Link" library="Selenium2Library">
 <doc>Clicks a link identified by ``locator``.</doc>
 <arguments>
 <arg>${Log Out Link}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:46.296" level="INFO">Clicking link 'Log out'.</msg>
-<status status="PASS" endtime="20181011 09:08:46.550" starttime="20181011 09:08:46.296"></status>
+<msg timestamp="20181021 15:49:27.732" level="INFO">Clicking link 'Log out'.</msg>
+<status status="PASS" endtime="20181021 15:49:28.008" starttime="20181021 15:49:27.732"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on current page.</doc>
 <arguments>
 <arg>Log in</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:46.580" starttime="20181011 09:08:46.551"></status>
+<status status="PASS" endtime="20181021 15:49:28.038" starttime="20181021 15:49:28.008"></status>
 </kw>
 <kw name="Page Should Contain" library="Selenium2Library">
 <doc>Verifies that current page contains ``text``.</doc>
 <arguments>
 <arg>Log in</arg>
 </arguments>
-<msg timestamp="20181011 09:08:46.601" level="INFO">Current page contains text 'Log in'.</msg>
-<status status="PASS" endtime="20181011 09:08:46.602" starttime="20181011 09:08:46.580"></status>
+<msg timestamp="20181021 15:49:28.078" level="INFO">Current page contains text 'Log in'.</msg>
+<status status="PASS" endtime="20181021 15:49:28.078" starttime="20181021 15:49:28.038"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:46.602" starttime="20181011 09:08:46.022"></status>
+<status status="PASS" endtime="20181021 15:49:28.078" starttime="20181021 15:49:27.402"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:46.602" starttime="20181011 09:08:46.022"></status>
+<status status="PASS" endtime="20181021 15:49:28.078" starttime="20181021 15:49:27.402"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:46.602" critical="yes" starttime="20181011 09:08:41.871"></status>
+<status status="PASS" endtime="20181021 15:49:28.079" critical="yes" starttime="20181021 15:49:23.168"></status>
 </test>
-<test id="s1-t11" name="Test case 11 Add Team Member">
+<test id="s1-t9" name="Test case 9 Add Team Member">
 <kw type="setup" name="Login" library="Clockify_App">
 <kw name="Login" library="LandingPage">
 <kw name="Go To" library="Selenium2Library">
@@ -2377,29 +2131,29 @@
 <arguments>
 <arg>${URL}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:46.607" level="INFO">Opening url 'https://clockify.me/login'</msg>
-<status status="PASS" endtime="20181011 09:08:47.633" starttime="20181011 09:08:46.606"></status>
+<msg timestamp="20181021 15:49:28.083" level="INFO">Opening url 'https://clockify.me/login'</msg>
+<status status="PASS" endtime="20181021 15:49:29.695" starttime="20181021 15:49:28.083"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${UserName}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:47.641" starttime="20181011 09:08:47.633"></status>
+<status status="PASS" endtime="20181021 15:49:29.715" starttime="20181021 15:49:29.695"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${PassWord}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:47.646" starttime="20181011 09:08:47.641"></status>
+<status status="PASS" endtime="20181021 15:49:29.734" starttime="20181021 15:49:29.715"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${LoginButton}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:47.657" starttime="20181011 09:08:47.647"></status>
+<status status="PASS" endtime="20181021 15:49:29.752" starttime="20181021 15:49:29.735"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -2407,8 +2161,8 @@
 <arg>${UserName}</arg>
 <arg>pruthvi2k1@yahoo.com</arg>
 </arguments>
-<msg timestamp="20181011 09:08:47.657" level="INFO">Typing text 'pruthvi2k1@yahoo.com' into text field 'xpath=//*[@id="email"]'.</msg>
-<status status="PASS" endtime="20181011 09:08:47.729" starttime="20181011 09:08:47.657"></status>
+<msg timestamp="20181021 15:49:29.753" level="INFO">Typing text 'pruthvi2k1@yahoo.com' into text field 'xpath=//*[@id="email"]'.</msg>
+<status status="PASS" endtime="20181021 15:49:29.910" starttime="20181021 15:49:29.753"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -2416,35 +2170,35 @@
 <arg>${PassWord}</arg>
 <arg>pruthviraj</arg>
 </arguments>
-<msg timestamp="20181011 09:08:47.730" level="INFO">Typing text 'pruthviraj' into text field 'xpath=//*[@id="password"]'.</msg>
-<status status="PASS" endtime="20181011 09:08:47.855" starttime="20181011 09:08:47.730"></status>
+<msg timestamp="20181021 15:49:29.911" level="INFO">Typing text 'pruthviraj' into text field 'xpath=//*[@id="password"]'.</msg>
+<status status="PASS" endtime="20181021 15:49:29.997" starttime="20181021 15:49:29.911"></status>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks button identified by ``locator``.</doc>
 <arguments>
 <arg>${LoginButton}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:47.855" level="INFO">Clicking button 'xpath=//*[@type="button"]'.</msg>
-<status status="PASS" endtime="20181011 09:08:48.153" starttime="20181011 09:08:47.855"></status>
+<msg timestamp="20181021 15:49:29.998" level="INFO">Clicking button 'xpath=//*[@type="button"]'.</msg>
+<status status="PASS" endtime="20181021 15:49:30.464" starttime="20181021 15:49:29.997"></status>
 </kw>
 <kw name="Wait Until Page Does Not Contain" library="Selenium2Library">
 <doc>Waits until ``text`` disappears from current page.</doc>
 <arguments>
 <arg>Log in</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:48.259" starttime="20181011 09:08:48.153"></status>
+<status status="PASS" endtime="20181021 15:49:30.514" starttime="20181021 15:49:30.465"></status>
 </kw>
 <kw name="Page Should Not Contain" library="Selenium2Library">
 <doc>Verifies the current page does not contain ``text``.</doc>
 <arguments>
 <arg>'Log in'</arg>
 </arguments>
-<msg timestamp="20181011 09:08:48.358" level="INFO">Current page does not contain text ''Log in''.</msg>
-<status status="PASS" endtime="20181011 09:08:48.358" starttime="20181011 09:08:48.259"></status>
+<msg timestamp="20181021 15:49:30.694" level="INFO">Current page does not contain text ''Log in''.</msg>
+<status status="PASS" endtime="20181021 15:49:30.695" starttime="20181021 15:49:30.514"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:48.358" starttime="20181011 09:08:46.606"></status>
+<status status="PASS" endtime="20181021 15:49:30.695" starttime="20181021 15:49:28.082"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:48.359" starttime="20181011 09:08:46.606"></status>
+<status status="PASS" endtime="20181021 15:49:30.695" starttime="20181021 15:49:28.082"></status>
 </kw>
 <kw name="Add Team Member" library="Clockify_App">
 <arguments>
@@ -2459,22 +2213,22 @@
 <arguments>
 <arg>${TEAM Element}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:48.367" starttime="20181011 09:08:48.360"></status>
+<status status="PASS" endtime="20181021 15:49:30.789" starttime="20181021 15:49:30.698"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${TEAM Element}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:48.367" level="INFO">Clicking element 'xpath=//a/span[contains(text(),'team')]'.</msg>
-<status status="PASS" endtime="20181011 09:08:48.657" starttime="20181011 09:08:48.367"></status>
+<msg timestamp="20181021 15:49:30.791" level="INFO">Clicking element 'xpath=//a/span[contains(text(),'team')]'.</msg>
+<status status="PASS" endtime="20181021 15:49:31.167" starttime="20181021 15:49:30.790"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${TEAM Member name text box}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:48.674" starttime="20181011 09:08:48.657"></status>
+<status status="PASS" endtime="20181021 15:49:31.178" starttime="20181021 15:49:31.167"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -2482,35 +2236,35 @@
 <arg>${TEAM Member name text box}</arg>
 <arg>${NEW_TEAM_MEMBER_NAME}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:48.675" level="INFO">Typing text 'some@some.com' into text field 'xpath=//input[@placeholder="Add new members by email address..."]'.</msg>
-<status status="PASS" endtime="20181011 09:08:48.771" starttime="20181011 09:08:48.675"></status>
+<msg timestamp="20181021 15:49:31.179" level="INFO">Typing text 'some@some.com' into text field 'xpath=//input[@placeholder="Add new members by email address..."]'.</msg>
+<status status="PASS" endtime="20181021 15:49:31.287" starttime="20181021 15:49:31.178"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${TEAM Member ADD Button}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:48.772" level="INFO">Clicking element 'xpath=//button[@type="button"]'.</msg>
-<status status="PASS" endtime="20181011 09:08:49.013" starttime="20181011 09:08:48.771"></status>
+<msg timestamp="20181021 15:49:31.288" level="INFO">Clicking element 'xpath=//button[@type="button"]'.</msg>
+<status status="PASS" endtime="20181021 15:49:31.530" starttime="20181021 15:49:31.287"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on current page.</doc>
 <arguments>
 <arg>Users invited</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:49.471" starttime="20181011 09:08:49.013"></status>
+<status status="PASS" endtime="20181021 15:49:31.980" starttime="20181021 15:49:31.530"></status>
 </kw>
 <kw name="Page Should Contain" library="Selenium2Library">
 <doc>Verifies that current page contains ``text``.</doc>
 <arguments>
 <arg>Users invited</arg>
 </arguments>
-<msg timestamp="20181011 09:08:49.492" level="INFO">Current page contains text 'Users invited'.</msg>
-<status status="PASS" endtime="20181011 09:08:49.492" starttime="20181011 09:08:49.472"></status>
+<msg timestamp="20181021 15:49:31.998" level="INFO">Current page contains text 'Users invited'.</msg>
+<status status="PASS" endtime="20181021 15:49:31.998" starttime="20181021 15:49:31.981"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:49.492" starttime="20181011 09:08:48.360"></status>
+<status status="PASS" endtime="20181021 15:49:31.998" starttime="20181021 15:49:30.697"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:49.492" starttime="20181011 09:08:48.359"></status>
+<status status="PASS" endtime="20181021 15:49:31.998" starttime="20181021 15:49:30.696"></status>
 </kw>
 <kw type="teardown" name="Logout" library="Clockify_App">
 <kw name="Logout" library="TimeTrackerPage">
@@ -2519,46 +2273,46 @@
 <arguments>
 <arg>${User Name Element}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:49.500" starttime="20181011 09:08:49.494"></status>
+<status status="PASS" endtime="20181021 15:49:32.007" starttime="20181021 15:49:32.000"></status>
 </kw>
 <kw name="Mouse Over" library="Selenium2Library">
 <doc>Simulates hovering mouse over the element ``locator``.</doc>
 <arguments>
 <arg>${User Name Element}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:49.500" level="INFO">Simulating Mouse Over on element 'xpath=//sidebar/div/section/a/div[1]/span'.</msg>
-<status status="PASS" endtime="20181011 09:08:49.779" starttime="20181011 09:08:49.500"></status>
+<msg timestamp="20181021 15:49:32.007" level="INFO">Simulating Mouse Over on element 'xpath=//sidebar/div/section/a/div[1]/span'.</msg>
+<status status="PASS" endtime="20181021 15:49:32.281" starttime="20181021 15:49:32.007"></status>
 </kw>
 <kw name="Click Link" library="Selenium2Library">
 <doc>Clicks a link identified by ``locator``.</doc>
 <arguments>
 <arg>${Log Out Link}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:49.779" level="INFO">Clicking link 'Log out'.</msg>
-<status status="PASS" endtime="20181011 09:08:50.034" starttime="20181011 09:08:49.779"></status>
+<msg timestamp="20181021 15:49:32.282" level="INFO">Clicking link 'Log out'.</msg>
+<status status="PASS" endtime="20181021 15:49:32.546" starttime="20181021 15:49:32.281"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on current page.</doc>
 <arguments>
 <arg>Log in</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:50.059" starttime="20181011 09:08:50.034"></status>
+<status status="PASS" endtime="20181021 15:49:32.571" starttime="20181021 15:49:32.546"></status>
 </kw>
 <kw name="Page Should Contain" library="Selenium2Library">
 <doc>Verifies that current page contains ``text``.</doc>
 <arguments>
 <arg>Log in</arg>
 </arguments>
-<msg timestamp="20181011 09:08:50.097" level="INFO">Current page contains text 'Log in'.</msg>
-<status status="PASS" endtime="20181011 09:08:50.097" starttime="20181011 09:08:50.059"></status>
+<msg timestamp="20181021 15:49:32.602" level="INFO">Current page contains text 'Log in'.</msg>
+<status status="PASS" endtime="20181021 15:49:32.602" starttime="20181021 15:49:32.572"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:50.097" starttime="20181011 09:08:49.493"></status>
+<status status="PASS" endtime="20181021 15:49:32.602" starttime="20181021 15:49:31.999"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:50.098" starttime="20181011 09:08:49.493"></status>
+<status status="PASS" endtime="20181021 15:49:32.603" starttime="20181021 15:49:31.999"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:50.098" critical="yes" starttime="20181011 09:08:46.605"></status>
+<status status="PASS" endtime="20181021 15:49:32.603" critical="yes" starttime="20181021 15:49:28.081"></status>
 </test>
-<test id="s1-t12" name="Test case 12 Report Checking">
+<test id="s1-t10" name="Test case 10 Report Checking">
 <kw type="setup" name="Login" library="Clockify_App">
 <kw name="Login" library="LandingPage">
 <kw name="Go To" library="Selenium2Library">
@@ -2566,29 +2320,29 @@
 <arguments>
 <arg>${URL}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:50.101" level="INFO">Opening url 'https://clockify.me/login'</msg>
-<status status="PASS" endtime="20181011 09:08:51.357" starttime="20181011 09:08:50.101"></status>
+<msg timestamp="20181021 15:49:32.608" level="INFO">Opening url 'https://clockify.me/login'</msg>
+<status status="PASS" endtime="20181021 15:49:34.167" starttime="20181021 15:49:32.608"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${UserName}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:51.365" starttime="20181011 09:08:51.357"></status>
+<status status="PASS" endtime="20181021 15:49:34.181" starttime="20181021 15:49:34.167"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${PassWord}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:51.373" starttime="20181011 09:08:51.365"></status>
+<status status="PASS" endtime="20181021 15:49:34.217" starttime="20181021 15:49:34.181"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${LoginButton}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:51.381" starttime="20181011 09:08:51.374"></status>
+<status status="PASS" endtime="20181021 15:49:34.231" starttime="20181021 15:49:34.217"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -2596,8 +2350,8 @@
 <arg>${UserName}</arg>
 <arg>pruthvi2k1@yahoo.com</arg>
 </arguments>
-<msg timestamp="20181011 09:08:51.381" level="INFO">Typing text 'pruthvi2k1@yahoo.com' into text field 'xpath=//*[@id="email"]'.</msg>
-<status status="PASS" endtime="20181011 09:08:51.459" starttime="20181011 09:08:51.381"></status>
+<msg timestamp="20181021 15:49:34.231" level="INFO">Typing text 'pruthvi2k1@yahoo.com' into text field 'xpath=//*[@id="email"]'.</msg>
+<status status="PASS" endtime="20181021 15:49:34.369" starttime="20181021 15:49:34.231"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -2605,35 +2359,35 @@
 <arg>${PassWord}</arg>
 <arg>pruthviraj</arg>
 </arguments>
-<msg timestamp="20181011 09:08:51.460" level="INFO">Typing text 'pruthviraj' into text field 'xpath=//*[@id="password"]'.</msg>
-<status status="PASS" endtime="20181011 09:08:51.495" starttime="20181011 09:08:51.459"></status>
+<msg timestamp="20181021 15:49:34.370" level="INFO">Typing text 'pruthviraj' into text field 'xpath=//*[@id="password"]'.</msg>
+<status status="PASS" endtime="20181021 15:49:34.458" starttime="20181021 15:49:34.370"></status>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks button identified by ``locator``.</doc>
 <arguments>
 <arg>${LoginButton}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:51.496" level="INFO">Clicking button 'xpath=//*[@type="button"]'.</msg>
-<status status="PASS" endtime="20181011 09:08:51.749" starttime="20181011 09:08:51.496"></status>
+<msg timestamp="20181021 15:49:34.459" level="INFO">Clicking button 'xpath=//*[@type="button"]'.</msg>
+<status status="PASS" endtime="20181021 15:49:34.745" starttime="20181021 15:49:34.459"></status>
 </kw>
 <kw name="Wait Until Page Does Not Contain" library="Selenium2Library">
 <doc>Waits until ``text`` disappears from current page.</doc>
 <arguments>
 <arg>Log in</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:52.024" starttime="20181011 09:08:51.749"></status>
+<status status="PASS" endtime="20181021 15:49:34.904" starttime="20181021 15:49:34.745"></status>
 </kw>
 <kw name="Page Should Not Contain" library="Selenium2Library">
 <doc>Verifies the current page does not contain ``text``.</doc>
 <arguments>
 <arg>'Log in'</arg>
 </arguments>
-<msg timestamp="20181011 09:08:52.073" level="INFO">Current page does not contain text ''Log in''.</msg>
-<status status="PASS" endtime="20181011 09:08:52.074" starttime="20181011 09:08:52.024"></status>
+<msg timestamp="20181021 15:49:35.103" level="INFO">Current page does not contain text ''Log in''.</msg>
+<status status="PASS" endtime="20181021 15:49:35.104" starttime="20181021 15:49:34.904"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:52.074" starttime="20181011 09:08:50.101"></status>
+<status status="PASS" endtime="20181021 15:49:35.104" starttime="20181021 15:49:32.607"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:52.074" starttime="20181011 09:08:50.100"></status>
+<status status="PASS" endtime="20181021 15:49:35.104" starttime="20181021 15:49:32.607"></status>
 </kw>
 <kw name="Report Checking" library="Clockify_App">
 <kw name="Report Checking" library="TimeTrackerPage">
@@ -2642,34 +2396,34 @@
 <arguments>
 <arg>${REPORTS Element}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:52.091" starttime="20181011 09:08:52.075"></status>
+<status status="PASS" endtime="20181021 15:49:35.115" starttime="20181021 15:49:35.106"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${REPORTS Element}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:52.092" level="INFO">Clicking element 'xpath=//a/span[contains(text(),'reports')]'.</msg>
-<status status="PASS" endtime="20181011 09:08:52.473" starttime="20181011 09:08:52.091"></status>
+<msg timestamp="20181021 15:49:35.116" level="INFO">Clicking element 'xpath=//a/span[contains(text(),'reports')]'.</msg>
+<status status="PASS" endtime="20181021 15:49:35.792" starttime="20181021 15:49:35.116"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on current page.</doc>
 <arguments>
 <arg>Summary report</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:52.744" starttime="20181011 09:08:52.474"></status>
+<status status="PASS" endtime="20181021 15:49:35.912" starttime="20181021 15:49:35.794"></status>
 </kw>
 <kw name="Page Should Contain" library="Selenium2Library">
 <doc>Verifies that current page contains ``text``.</doc>
 <arguments>
 <arg>Summary report</arg>
 </arguments>
-<msg timestamp="20181011 09:08:52.860" level="INFO">Current page contains text 'Summary report'.</msg>
-<status status="PASS" endtime="20181011 09:08:52.860" starttime="20181011 09:08:52.744"></status>
+<msg timestamp="20181021 15:49:36.428" level="INFO">Current page contains text 'Summary report'.</msg>
+<status status="PASS" endtime="20181021 15:49:36.428" starttime="20181021 15:49:35.912"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:52.861" starttime="20181011 09:08:52.075"></status>
+<status status="PASS" endtime="20181021 15:49:36.428" starttime="20181021 15:49:35.106"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:52.861" starttime="20181011 09:08:52.074"></status>
+<status status="PASS" endtime="20181021 15:49:36.429" starttime="20181021 15:49:35.105"></status>
 </kw>
 <kw type="teardown" name="Logout" library="Clockify_App">
 <kw name="Logout" library="TimeTrackerPage">
@@ -2678,46 +2432,46 @@
 <arguments>
 <arg>${User Name Element}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:52.892" starttime="20181011 09:08:52.862"></status>
+<status status="PASS" endtime="20181021 15:49:36.509" starttime="20181021 15:49:36.431"></status>
 </kw>
 <kw name="Mouse Over" library="Selenium2Library">
 <doc>Simulates hovering mouse over the element ``locator``.</doc>
 <arguments>
 <arg>${User Name Element}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:52.893" level="INFO">Simulating Mouse Over on element 'xpath=//sidebar/div/section/a/div[1]/span'.</msg>
-<status status="PASS" endtime="20181011 09:08:53.213" starttime="20181011 09:08:52.892"></status>
+<msg timestamp="20181021 15:49:36.510" level="INFO">Simulating Mouse Over on element 'xpath=//sidebar/div/section/a/div[1]/span'.</msg>
+<status status="PASS" endtime="20181021 15:49:36.881" starttime="20181021 15:49:36.509"></status>
 </kw>
 <kw name="Click Link" library="Selenium2Library">
 <doc>Clicks a link identified by ``locator``.</doc>
 <arguments>
 <arg>${Log Out Link}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:53.214" level="INFO">Clicking link 'Log out'.</msg>
-<status status="PASS" endtime="20181011 09:08:53.565" starttime="20181011 09:08:53.214"></status>
+<msg timestamp="20181021 15:49:36.881" level="INFO">Clicking link 'Log out'.</msg>
+<status status="PASS" endtime="20181021 15:49:37.201" starttime="20181021 15:49:36.881"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on current page.</doc>
 <arguments>
 <arg>Log in</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:53.622" starttime="20181011 09:08:53.566"></status>
+<status status="PASS" endtime="20181021 15:49:37.240" starttime="20181021 15:49:37.201"></status>
 </kw>
 <kw name="Page Should Contain" library="Selenium2Library">
 <doc>Verifies that current page contains ``text``.</doc>
 <arguments>
 <arg>Log in</arg>
 </arguments>
-<msg timestamp="20181011 09:08:53.656" level="INFO">Current page contains text 'Log in'.</msg>
-<status status="PASS" endtime="20181011 09:08:53.656" starttime="20181011 09:08:53.622"></status>
+<msg timestamp="20181021 15:49:37.317" level="INFO">Current page contains text 'Log in'.</msg>
+<status status="PASS" endtime="20181021 15:49:37.318" starttime="20181021 15:49:37.241"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:53.656" starttime="20181011 09:08:52.862"></status>
+<status status="PASS" endtime="20181021 15:49:37.318" starttime="20181021 15:49:36.430"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:53.657" starttime="20181011 09:08:52.861"></status>
+<status status="PASS" endtime="20181021 15:49:37.318" starttime="20181021 15:49:36.429"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:53.657" critical="yes" starttime="20181011 09:08:50.099"></status>
+<status status="PASS" endtime="20181021 15:49:37.318" critical="yes" starttime="20181021 15:49:32.605"></status>
 </test>
-<test id="s1-t13" name="Test case 13 Dashboard Checking">
+<test id="s1-t11" name="Test case 11 Dashboard Checking">
 <kw type="setup" name="Login" library="Clockify_App">
 <kw name="Login" library="LandingPage">
 <kw name="Go To" library="Selenium2Library">
@@ -2725,29 +2479,29 @@
 <arguments>
 <arg>${URL}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:53.662" level="INFO">Opening url 'https://clockify.me/login'</msg>
-<status status="PASS" endtime="20181011 09:08:54.904" starttime="20181011 09:08:53.661"></status>
+<msg timestamp="20181021 15:49:37.324" level="INFO">Opening url 'https://clockify.me/login'</msg>
+<status status="PASS" endtime="20181021 15:49:39.040" starttime="20181021 15:49:37.323"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${UserName}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:54.916" starttime="20181011 09:08:54.904"></status>
+<status status="PASS" endtime="20181021 15:49:39.064" starttime="20181021 15:49:39.040"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${PassWord}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:54.928" starttime="20181011 09:08:54.917"></status>
+<status status="PASS" endtime="20181021 15:49:39.095" starttime="20181021 15:49:39.064"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
 <arg>${LoginButton}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:54.942" starttime="20181011 09:08:54.928"></status>
+<status status="PASS" endtime="20181021 15:49:39.139" starttime="20181021 15:49:39.095"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -2755,8 +2509,8 @@
 <arg>${UserName}</arg>
 <arg>pruthvi2k1@yahoo.com</arg>
 </arguments>
-<msg timestamp="20181011 09:08:54.943" level="INFO">Typing text 'pruthvi2k1@yahoo.com' into text field 'xpath=//*[@id="email"]'.</msg>
-<status status="PASS" endtime="20181011 09:08:55.018" starttime="20181011 09:08:54.943"></status>
+<msg timestamp="20181021 15:49:39.140" level="INFO">Typing text 'pruthvi2k1@yahoo.com' into text field 'xpath=//*[@id="email"]'.</msg>
+<status status="PASS" endtime="20181021 15:49:39.307" starttime="20181021 15:49:39.140"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -2764,71 +2518,71 @@
 <arg>${PassWord}</arg>
 <arg>pruthviraj</arg>
 </arguments>
-<msg timestamp="20181011 09:08:55.019" level="INFO">Typing text 'pruthviraj' into text field 'xpath=//*[@id="password"]'.</msg>
-<status status="PASS" endtime="20181011 09:08:55.059" starttime="20181011 09:08:55.018"></status>
+<msg timestamp="20181021 15:49:39.308" level="INFO">Typing text 'pruthviraj' into text field 'xpath=//*[@id="password"]'.</msg>
+<status status="PASS" endtime="20181021 15:49:39.413" starttime="20181021 15:49:39.308"></status>
 </kw>
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks button identified by ``locator``.</doc>
 <arguments>
 <arg>${LoginButton}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:55.059" level="INFO">Clicking button 'xpath=//*[@type="button"]'.</msg>
-<status status="PASS" endtime="20181011 09:08:55.316" starttime="20181011 09:08:55.059"></status>
+<msg timestamp="20181021 15:49:39.413" level="INFO">Clicking button 'xpath=//*[@type="button"]'.</msg>
+<status status="PASS" endtime="20181021 15:49:39.721" starttime="20181021 15:49:39.413"></status>
 </kw>
 <kw name="Wait Until Page Does Not Contain" library="Selenium2Library">
 <doc>Waits until ``text`` disappears from current page.</doc>
 <arguments>
 <arg>Log in</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:55.448" starttime="20181011 09:08:55.317"></status>
+<status status="PASS" endtime="20181021 15:49:39.926" starttime="20181021 15:49:39.721"></status>
 </kw>
 <kw name="Page Should Not Contain" library="Selenium2Library">
 <doc>Verifies the current page does not contain ``text``.</doc>
 <arguments>
 <arg>'Log in'</arg>
 </arguments>
-<msg timestamp="20181011 09:08:55.545" level="INFO">Current page does not contain text ''Log in''.</msg>
-<status status="PASS" endtime="20181011 09:08:55.545" starttime="20181011 09:08:55.448"></status>
+<msg timestamp="20181021 15:49:40.162" level="INFO">Current page does not contain text ''Log in''.</msg>
+<status status="PASS" endtime="20181021 15:49:40.162" starttime="20181021 15:49:39.927"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:55.545" starttime="20181011 09:08:53.661"></status>
+<status status="PASS" endtime="20181021 15:49:40.162" starttime="20181021 15:49:37.323"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:55.545" starttime="20181011 09:08:53.661"></status>
+<status status="PASS" endtime="20181021 15:49:40.163" starttime="20181021 15:49:37.322"></status>
 </kw>
 <kw name="Dashboard Checking" library="Clockify_App">
 <kw name="Dashboard Checking" library="TimeTrackerPage">
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
 <doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
-<arg>xpath=//a/span[contains(text(),'dashboard')]</arg>
+<arg>${DASHBOARD Element}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:55.570" starttime="20181011 09:08:55.547"></status>
+<status status="PASS" endtime="20181021 15:49:40.175" starttime="20181021 15:49:40.164"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
-<arg>xpath=//a/span[contains(text(),'dashboard')]</arg>
+<arg>${DASHBOARD Element}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:55.571" level="INFO">Clicking element 'xpath=//a/span[contains(text(),'dashboard')]'.</msg>
-<status status="PASS" endtime="20181011 09:08:55.966" starttime="20181011 09:08:55.571"></status>
+<msg timestamp="20181021 15:49:40.175" level="INFO">Clicking element 'xpath=//a/span[contains(text(),'dashboard')]'.</msg>
+<status status="PASS" endtime="20181021 15:49:40.793" starttime="20181021 15:49:40.175"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on current page.</doc>
 <arguments>
 <arg>Dashboard</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:56.020" starttime="20181011 09:08:55.967"></status>
+<status status="PASS" endtime="20181021 15:49:41.566" starttime="20181021 15:49:40.794"></status>
 </kw>
 <kw name="Page Should Contain" library="Selenium2Library">
 <doc>Verifies that current page contains ``text``.</doc>
 <arguments>
 <arg>Dashboard</arg>
 </arguments>
-<msg timestamp="20181011 09:08:56.044" level="INFO">Current page contains text 'Dashboard'.</msg>
-<status status="PASS" endtime="20181011 09:08:56.044" starttime="20181011 09:08:56.020"></status>
+<msg timestamp="20181021 15:49:41.599" level="INFO">Current page contains text 'Dashboard'.</msg>
+<status status="PASS" endtime="20181021 15:49:41.599" starttime="20181021 15:49:41.566"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:56.045" starttime="20181011 09:08:55.546"></status>
+<status status="PASS" endtime="20181021 15:49:41.600" starttime="20181021 15:49:40.164"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:56.045" starttime="20181011 09:08:55.546"></status>
+<status status="PASS" endtime="20181021 15:49:41.600" starttime="20181021 15:49:40.163"></status>
 </kw>
 <kw type="teardown" name="Logout" library="Clockify_App">
 <kw name="Logout" library="TimeTrackerPage">
@@ -2837,63 +2591,63 @@
 <arguments>
 <arg>${User Name Element}</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:56.061" starttime="20181011 09:08:56.046"></status>
+<status status="PASS" endtime="20181021 15:49:41.615" starttime="20181021 15:49:41.602"></status>
 </kw>
 <kw name="Mouse Over" library="Selenium2Library">
 <doc>Simulates hovering mouse over the element ``locator``.</doc>
 <arguments>
 <arg>${User Name Element}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:56.062" level="INFO">Simulating Mouse Over on element 'xpath=//sidebar/div/section/a/div[1]/span'.</msg>
-<status status="PASS" endtime="20181011 09:08:56.344" starttime="20181011 09:08:56.061"></status>
+<msg timestamp="20181021 15:49:41.615" level="INFO">Simulating Mouse Over on element 'xpath=//sidebar/div/section/a/div[1]/span'.</msg>
+<status status="PASS" endtime="20181021 15:49:42.055" starttime="20181021 15:49:41.615"></status>
 </kw>
 <kw name="Click Link" library="Selenium2Library">
 <doc>Clicks a link identified by ``locator``.</doc>
 <arguments>
 <arg>${Log Out Link}</arg>
 </arguments>
-<msg timestamp="20181011 09:08:56.345" level="INFO">Clicking link 'Log out'.</msg>
-<status status="PASS" endtime="20181011 09:08:56.615" starttime="20181011 09:08:56.344"></status>
+<msg timestamp="20181021 15:49:42.056" level="INFO">Clicking link 'Log out'.</msg>
+<status status="PASS" endtime="20181021 15:49:42.380" starttime="20181021 15:49:42.055"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on current page.</doc>
 <arguments>
 <arg>Log in</arg>
 </arguments>
-<status status="PASS" endtime="20181011 09:08:56.632" starttime="20181011 09:08:56.616"></status>
+<status status="PASS" endtime="20181021 15:49:42.411" starttime="20181021 15:49:42.380"></status>
 </kw>
 <kw name="Page Should Contain" library="Selenium2Library">
 <doc>Verifies that current page contains ``text``.</doc>
 <arguments>
 <arg>Log in</arg>
 </arguments>
-<msg timestamp="20181011 09:08:56.712" level="INFO">Current page contains text 'Log in'.</msg>
-<status status="PASS" endtime="20181011 09:08:56.712" starttime="20181011 09:08:56.633"></status>
+<msg timestamp="20181021 15:49:42.449" level="INFO">Current page contains text 'Log in'.</msg>
+<status status="PASS" endtime="20181021 15:49:42.450" starttime="20181021 15:49:42.411"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:56.713" starttime="20181011 09:08:56.046"></status>
+<status status="PASS" endtime="20181021 15:49:42.450" starttime="20181021 15:49:41.601"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:56.713" starttime="20181011 09:08:56.045"></status>
+<status status="PASS" endtime="20181021 15:49:42.450" starttime="20181021 15:49:41.601"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:56.714" critical="yes" starttime="20181011 09:08:53.660"></status>
+<status status="PASS" endtime="20181021 15:49:42.451" critical="yes" starttime="20181021 15:49:37.321"></status>
 </test>
 <kw type="teardown" name="End web test" library="Common">
 <kw name="Close Browser" library="Selenium2Library">
 <doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20181011 09:08:57.332" starttime="20181011 09:08:56.719"></status>
+<status status="PASS" endtime="20181021 15:49:43.153" starttime="20181021 15:49:42.457"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:57.332" starttime="20181011 09:08:56.718"></status>
+<status status="PASS" endtime="20181021 15:49:43.153" starttime="20181021 15:49:42.456"></status>
 </kw>
-<status status="PASS" endtime="20181011 09:08:57.333" starttime="20181011 09:07:30.123"></status>
+<status status="PASS" endtime="20181021 15:49:43.153" starttime="20181021 15:48:02.828"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="0" pass="13">Critical Tests</stat>
-<stat fail="0" pass="13">All Tests</stat>
+<stat fail="0" pass="11">Critical Tests</stat>
+<stat fail="0" pass="11">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat fail="0" id="s1" name="Clockify admin panel" pass="13">Clockify admin panel</stat>
+<stat fail="0" id="s1" name="Clockify admin panel" pass="11">Clockify admin panel</stat>
 </suite>
 </statistics>
 <errors>
